@@ -159,11 +159,6 @@ class Sequence() :
             string += atom.__str__() +" "
         return string
 
-@dataclass
-class SequenceContainer():
-    """Sequences container"""
-    sequences_list : List[Sequence]=field(default_factory=list)
-
 if __name__ == '__main__':
     seq = Sequence()
     seq.append_multiple_from_string('P,P,P,1C,X,2C,X,XX,3C')

@@ -8,7 +8,7 @@ LEVELS = '2 3 4 5 6 7 8 9 T J Q K A'.split()
 class Card(ABC) :
     sort_index: int = field(init=False, repr=False)
     level: str
-    hcp_value : int = field(init=False, repr=False)
+    hcp_value : int = 0
 
     def __post_init__(self):
         if self.level not in LEVELS :
@@ -69,7 +69,10 @@ class Hand() :
         for suit in [self.spades,self.hearts,self.diamonds,self.clubs] :
             suit.clear()
 
-    def create_from_string(self, string : str) :
+    def get_every_suit(self) -> list[list[Card]] :
+        return [self.spades,self.hearts,self.diamonds,self.clubs]
+
+    def create_from_string(self, string : str) : #return self
         """Create a hand from a string with the following syntax '752.Q864.84.AT62'"""
         self.clear()
         tab_of_suit = string.split('.')
@@ -88,7 +91,7 @@ class Hand() :
         self.hearts.sort(reverse=True)
         self.diamonds.sort(reverse=True)
         self.clubs.sort(reverse=True)
-
+        print(self)
         return self
 
     def __str__(self) :
@@ -101,43 +104,20 @@ class Hand() :
 
 @dataclass
 class Diagramm() :
-    board_number : int
-    vul : str
-    dealer : str
     south : Hand()
     north : Hand()
     west : Hand()
     east : Hand()
 
-    def get_board_number(self) -> int :
-        return self.board_number
-
-    def set_board_number(self, board_number : int) -> None :
-        self.board_number = board_number
-
-    def get_vul(self) -> str :
-        return self.vul
-
-    def set_vul(self, vul : str) -> None :
-        self.vul = vul
-
-    def get_dealer(self) -> str :
-        return self.dealer
-
-    def set_dealer(self, dealer : str) -> None :
-        self.dealer = dealer
-
     def __str__(self) :
         string = ""
-        string += "Numéro : " + str(self.board_number) + "\nVul : " + self.vul +"\nDealer : " + self.dealer +"\n"
         for hand in [self.north,self.south,self.west,self.east] :
             string += hand.__str__() +"\n"
         return string
 
-    def __init__(self, string : str, board_number : str, vul : str, dealer : str) :
+    def __init__(self, string : str,dealer : str) :
         """ Create a diagramm from this syntax : 'N:752.Q864.84.AT62 A98.AT9.Q753.J98 KT.KJ73.JT.K7543 QJ643.52.AK962.Q'"""
         string = string[4:-2]
-        hand_class = Hand()
         hand_list = string.split(" ")
 
         """This spagetthi code ranks the hands in the right order"""
@@ -153,17 +133,29 @@ class Diagramm() :
             hand_list.insert(0,hand_list.pop())
             hand_list.insert(0,hand_list.pop())  #3 rotatoes
 
-        self.north = hand_class.create_from_string(hand_list[0])
-        self.east = hand_class.create_from_string(hand_list[1])
-        self.south = hand_class.create_from_string(hand_list[2])
-        self.west = hand_class.create_from_string(hand_list[3])
+        self.north = Hand().create_from_string(hand_list[0])
+        self.east = Hand().create_from_string(hand_list[1])
+        self.south = Hand().create_from_string(hand_list[2])
+        self.west = Hand().create_from_string(hand_list[3])
 
-        self.board_number = board_number
-        self.vul = vul
-        self.dealer = dealer
-
-        #print(self)
-
+    def is_valid(self) -> bool :
+        list_of_cards = []
+        for hand in [self.north,self.south,self.west,self.east] :
+            for suit in hand.get_every_suit() :
+                for card in suit :
+                    if card in list_of_cards :
+                        """
+                        print(self)
+                        print(list_of_cards)
+                        print(card)
+                        """
+                        return False
+                    else :
+                        list_of_cards.append(card)
+        if len(list_of_cards) == 52 :
+            return True
+        else :
+            return False
 
 if __name__ == '__main__':
     pass
