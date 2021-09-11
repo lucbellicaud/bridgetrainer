@@ -1,8 +1,9 @@
 from dataclasses import dataclass, field
-from Séquence import Sequence
+from Séquence import Sequence,FinalContract
 from Hand import Diagramm
 import os
 from Parameters import MAIN_REPERTORY2
+from ast import literal_eval
 
 @dataclass
 class Board() :
@@ -11,6 +12,7 @@ class Board() :
     diag : Diagramm = field(init=False)
     sequence_user : Sequence = field(init=False)
     sequence_correction : Sequence = field(init=False)
+    points_scale : dict = field(default_factory=list)
     title : str = ""
     board_number : int = 0
     vul : str = ""
@@ -32,25 +34,30 @@ class Board() :
             if 'Exercice Title' in line :
                 self.set_title(line.split('"')[1])
             if 'Points Scale' in line :
-                """possible de dictionnariser un string ?"""
+                self.set_points_scale(self.dictionnarize_string(line.split('{')[1].split('}')[0]))
             if 'User Sequence' in line :
-                """To do"""
+                self.set_sequence_user(Sequence().append_multiple_from_string(line.split('"')[1]))
             if 'Correction Sequence' in line :
-                """To do"""
-
+                self.set_sequence_correction(Sequence().append_multiple_from_string(line.split('"')[1]))
         return self
 
     def is_valid(self) -> bool :
         if self.get_board_number() == 0 or  self.get_vul() == "" or self.get_dealer() == "" :
             return False
         if self.get_diagramm().is_valid() == False :
-            print(f"Invalid diagramm on board {self.board_number}")
+            PbnError(f"Invalid diagramm on board {self.board_number}")
             return False
         return True
 
 
     def __str__(self) :
         return str(self.get_board_number())
+
+    def dictionnarize_string(self,s : str) -> dict :
+        dict = {}
+        for step in s.split(",") :
+            dict[FinalContract().init_from_string(step.split(":")[0])]=int(step.split(":")[1])
+        return dict
 
     """set and get"""
     def get_board_number(self) -> int :
@@ -73,6 +80,12 @@ class Board() :
 
     def get_dealer(self) -> str :
         return self.dealer
+
+    def set_points_scale(self, dict : dict) -> None :
+        self.points_scale = dict
+
+    def get_points_scale(self) -> dict :
+        return self.points_scale
 
     def set_dealer(self, dealer : str) -> None :
         self.dealer = dealer

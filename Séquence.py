@@ -10,6 +10,13 @@ DECLARATIONS = 'P X XX'.split()
 class SequenceAtom(ABC) :
     """A SequenceAtom represents an action by a player during the biding"""
 
+    def sequence_atom_filter(s : str) : #return SequenceAtom
+        """return a declaration or a bid bases on the string"""
+        if s in DECLARATIONS :
+            return Declaration(s)
+        else :
+            return Bid(int(s[0]),s[1])
+
 @dataclass(order=True)
 class Bid(SequenceAtom):
     """"""
@@ -42,6 +49,61 @@ class Declaration(SequenceAtom) :
     def __str__(self):
         return self.type
 
+    def get_type(self) -> str :
+        return self.type
+
+@dataclass
+class FinalContract() :
+    bid : Bid = None
+    declaration : Declaration = 'P'
+
+    def set_bid (self,bid : Bid) -> None :
+        self.bid = bid
+
+    def get_bid (self) -> Bid :
+        return self.bid
+
+    def set_declaration (self,decla : Declaration) -> None :
+        self.declaration = declaration
+
+    def get_declaration (self,decla : Declaration) -> Declaration :
+        return self.declaration
+
+    def clear(self) -> None :
+        self.bid = None
+        self.declaration = None
+
+    def init_from_string(self,s : str) : # -> return self
+        if len(s)==0 or len(s)>=4 :
+            raise ErrorBid ("Invalid final contract !")
+        if len(s)==1 : #Pass or nothin !
+            if s!="P" :
+                raise ErrorBid ("Invalid final contract !")
+            else :
+                self.declaration = Declaration('P')
+        if len(s)==2 : #contract without double or redouble
+            self.bid = Bid(int(s[0]),s[1])
+        if len(s)==3 : #Doubled contract
+            if s[2] != 'X' :
+                raise ErrorBid ("Invalid final contract !")
+            self.bid = Bid(int(s[0]),s[1])
+            self.declaration = Declaration('X')
+        if len(s)==4 : #Pull off the blue card !
+            if s[3:]!="XX" :
+                raise ErrorBid ("Invalid final contract !")
+            self.bid = Bid(int(s[0]),s[1])
+            self.declaration = Declaration('XX')
+
+        return self
+
+    def __eq__(self,other) :
+        return self.get_bid()==other.get_bid() and other.get_declaration()==self.declaration
+
+    def __hash__(self):
+        return id(self)
+
+
+
 class ErrorBid(Exception):
     def __init__(self, value):
         self.value = value
@@ -50,13 +112,6 @@ class ErrorBid(Exception):
     def __str__(self):
         return repr(self.value)
 
-def sequence_atom_filter(s : str) -> SequenceAtom :
-    """return a declaration or a bid bases on the string"""
-    if s in DECLARATIONS :
-        return Declaration(s)
-    else :
-        return Bid(int(s[0]),s[1])
-
 
 @dataclass
 class Sequence() :
@@ -64,6 +119,7 @@ class Sequence() :
     sequence : List[SequenceAtom]=field(default_factory=list)
     description : str =""
     done : bool = False
+    final_contract : FinalContract = None
 
     def set_sequence(self, sq : list[SequenceAtom]) -> None :
         self.sequence = sq
@@ -88,6 +144,7 @@ class Sequence() :
                     self.done = False
                     return
             self.done = True
+            self.set_final_contract(self.get_last_bid(),self.get_last_declaration())
             return
         if len(self.sequence)>=5 : # Check is 3 passes
             for at in self.sequence[-3:] :
@@ -95,9 +152,29 @@ class Sequence() :
                     self.done = False
                     return
             self.done = True
+            self.set_final_contract(self.get_last_bid(),self.get_last_declaration())
             return
         self.done = False
         return
+
+    def get_last_bid(self) -> Bid :
+        """Return the last bid made"""
+        for seq_atom in reversed(self.get_sequence()) :
+            if type(seq_atom) is Bid :
+                return seq_atom
+        return None
+
+    def get_last_declaration(self) -> Declaration :
+        """Return if the final contract is passed, doubled or redoubled"""
+        for seq_atom in reversed(self.get_sequence()) :
+            if (type(seq_atom) is not Bid) :
+                break
+            if seq_atom.get_type()!="P" :
+                 return seq_atom
+            return Declaration('P')
+
+    def set_final_contract(self, bid : Bid, declaration : Declaration) :
+        self.final_contract = FinalContract(bid,declaration)
 
     def check_append_validity(self,at : SequenceAtom) -> bool :
         """Check if a new bid is valid"""
@@ -145,12 +222,13 @@ class Sequence() :
 
     def replace_bid (self, old_atom : str, new_atom : str) -> None :
         """Replace a bid with a certain value with a new one"""
-        self.replace_with_index(self.sequence.index(sequence_atom_filter(old_atom)), sequence_atom_filter(new_atom))
+        self.replace_with_index(self.sequence.index(SequenceAtom.sequence_atom_filter(old_atom)), SequenceAtom.sequence_atom_filter(new_atom))
 
     def append_multiple_from_string(self,string : str) :
         """Add multiple bids from a string, each bid being separated with a coma"""
         for s in string.split(",") :
-            self.append(sequence_atom_filter(s))
+            self.append(SequenceAtom.sequence_atom_filter(s))
+        return self
 
     def __str__(self) :
         """Print the bidding""" #To be improved
@@ -164,4 +242,3 @@ if __name__ == '__main__':
     seq.append_multiple_from_string('P,P,P,1C,X,2C,X,XX,3C')
     seq.replace_with_index(4,Bid(1,'D'))
     seq.replace_bid('3C','3D')
-    print(seq)

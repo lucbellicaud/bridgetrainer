@@ -91,7 +91,6 @@ class Hand() :
         self.hearts.sort(reverse=True)
         self.diamonds.sort(reverse=True)
         self.clubs.sort(reverse=True)
-        print(self)
         return self
 
     def __str__(self) :
@@ -144,11 +143,6 @@ class Diagramm() :
             for suit in hand.get_every_suit() :
                 for card in suit :
                     if card in list_of_cards :
-                        """
-                        print(self)
-                        print(list_of_cards)
-                        print(card)
-                        """
                         return False
                     else :
                         list_of_cards.append(card)
