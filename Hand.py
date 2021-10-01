@@ -57,13 +57,13 @@ class Hand() :
     def __post_init__(self) :
         self.hcp_value=0
         for card in self.spades :
-            self.hcp_value += spade.hcp_value
+            self.hcp_value += card.hcp_value
         for card in self.hearts :
-            self.hcp_value += spade.hcp_value
+            self.hcp_value += card.hcp_value
         for card in self.diamonds :
-            self.hcp_value += spade.hcp_value
+            self.hcp_value += card.hcp_value
         for card in self.clubs :
-            self.hcp_value += spade.hcp_value
+            self.hcp_value += card.hcp_value
 
     def clear(self) :
         for suit in [self.spades,self.hearts,self.diamonds,self.clubs] :
@@ -150,6 +150,14 @@ class Diagramm() :
             return True
         else :
             return False
+
+class ErrorBid(Exception):
+    def __init__(self, value):
+        self.value = value
+        print("Incorrect bid")
+        print(value)
+    def __str__(self):
+        return repr(self.value)
 
 if __name__ == '__main__':
     pass

@@ -103,16 +103,6 @@ class FinalContract() :
         return id(self)
 
 
-
-class ErrorBid(Exception):
-    def __init__(self, value):
-        self.value = value
-        print("Incorrect bid")
-        print(value)
-    def __str__(self):
-        return repr(self.value)
-
-
 @dataclass
 class Sequence() :
     """Bridge sequence"""

@@ -1,6 +1,6 @@
 import os
 from Hand import Diagramm
-from Parameters import MAIN_REPERTORY2
+from Parameters import MAIN_REPERTORY
 from Board import Board,SetOfBoards
 
 class PbnReader() :

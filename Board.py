@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 from Séquence import Sequence,FinalContract
 from Hand import Diagramm
 import os
-from Parameters import MAIN_REPERTORY2
+from Parameters import MAIN_REPERTORY
 from ast import literal_eval
 
 @dataclass
@@ -118,7 +118,7 @@ class SetOfBoards() :
 
     def init_from_pbn(self,file) -> None :
         """open a file given its name and return the set of boards included"""
-        os.chdir(MAIN_REPERTORY2+'/Pbns')
+        os.chdir(MAIN_REPERTORY+'/Pbns')
         with open (file,'r') as f :
             list_of_boards = f.read().split("\n\n")
             at_the_head = list_of_boards[0].split("\n")
