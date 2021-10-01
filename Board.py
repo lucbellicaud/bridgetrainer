@@ -2,8 +2,11 @@ from dataclasses import dataclass, field
 from Séquence import Sequence,FinalContract
 from Hand import Diagramm
 import os
-from Parameters import MAIN_REPERTORY2
+from Parameters import MAIN_REPERTORY
 from ast import literal_eval
+
+PBN_TO_LIN_VUL = {'None' : "0", "NS" : "N", "EW" : "E", "All" : "B"}
+LIN_DEALER_DICT = {'S' : str(1),'O' : str(2), 'N' : str(3), 'E' : str(4)}
 
 @dataclass
 class Board() :
@@ -15,8 +18,8 @@ class Board() :
     points_scale : dict = field(default_factory=list)
     title : str = ""
     board_number : int = 0
-    vul : str = ""
-    dealer : str = ""
+    vul : str = "" # "None" "NS" "EW" "All"
+    dealer : str = "" # in N,S,W,E
 
 
     def init_from_pbn (self,board_str : str) : #return self
@@ -30,7 +33,7 @@ class Board() :
                 self.set_dealer(line.split('"')[1])
             if 'Deal ' in line :
                 deal = line.replace("Deal ","")
-                self.set_diagramm(Diagramm(deal,self.get_dealer()))
+                self.set_diagramm(Diagramm().init_from_string(deal,self.get_dealer()))
             if 'Exercice Title' in line :
                 self.set_title(line.split('"')[1])
             if 'Points Scale' in line :
@@ -59,9 +62,16 @@ class Board() :
             dict[FinalContract().init_from_string(step.split(":")[0])]=int(step.split(":")[1])
         return dict
 
+    def print_as_lin(self) :
+        string = "qx|o%d|md|" % (self.get_board_number())
+        string += LIN_DEALER_DICT[self.get_dealer()]
+        string += self.get_diagramm().print_as_lin()
+        string += '|rh||ah|Board %d|sv|%s|pg||' %(self.get_board_number(), PBN_TO_LIN_VUL[self.get_vul()])
+        return string
+
     """set and get"""
     def get_board_number(self) -> int :
-        return self.board_number
+        return int(self.board_number)
 
     def set_board_number(self, board_number : int) -> None :
         self.board_number = board_number
@@ -113,12 +123,12 @@ class Board() :
 class SetOfBoards() :
     """List of boards"""
     boards : list[Board] = field(default_factory=list)
-    title : str = field(init=False)
-    date : str = field(init=False)
+    title : str = ""
+    date : str = ""
 
     def init_from_pbn(self,file) -> None :
         """open a file given its name and return the set of boards included"""
-        os.chdir(MAIN_REPERTORY2+'/Pbns')
+        os.chdir(MAIN_REPERTORY+'/Pbns')
         with open (file,'r') as f :
             list_of_boards = f.read().split("\n\n")
             at_the_head = list_of_boards[0].split("\n")
@@ -157,9 +167,16 @@ class SetOfBoards() :
     def get_boards(self) -> list[Board] :
         return self.boards
     def get_board_by_board_number (self, board_number : int) -> Board :
-        for board in boards :
+        for board in self.boards :
             if board.get_diagramm().get_board_number() == board_number :
                 return board
+
+    def print_as_lin(self) :
+        #https://stackoverflow.com/questions/66663179/how-to-use-windows-file-explorer-to-select-and-return-a-directory-using-python
+        os.chdir(MAIN_REPERTORY+'/CreatedLin')
+        with open(self.get_title()+".lin",'w') as f :
+            for board in self.get_boards() :
+                f.write(board.print_as_lin()+"\n")
 
     def append(self,board : Board) -> None :
         self.boards.append(board)
