@@ -172,6 +172,13 @@ class Diagramm() :
         return string[:-1]
 
 
+class ErrorBid(Exception):
+    def __init__(self, value):
+        self.value = value
+        print("Incorrect bid")
+        print(value)
+    def __str__(self):
+        return repr(self.value)
 
 if __name__ == '__main__':
     pass
