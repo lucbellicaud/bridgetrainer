@@ -4,10 +4,15 @@ from Hand import Diagramm
 import os
 from Parameters import MAIN_REPERTORY
 from ast import literal_eval
+from inspect import getmembers, isfunction
 from ddstable import ddstable
 
+functions_list = getmembers(ddstable, isfunction)
+print(functions_list)
+#from ddstable import ddstable,calcDDtablePBN
 PBN_TO_LIN_VUL = {'None' : "0", "NS" : "N", "EW" : "E", "All" : "B"}
 LIN_DEALER_DICT = {'S' : str(1),'O' : str(2), 'N' : str(3), 'E' : str(4)}
+LIN_TO_PBN_DEALER = {"1" : "S", "2" : "O", "3" : "N", "4" : "E"}
 
 @dataclass
 class Board() :
@@ -43,6 +48,17 @@ class Board() :
                 self.set_sequence_user(Sequence().append_multiple_from_string(line.split('"')[1]))
             if 'Correction Sequence' in line :
                 self.set_sequence_correction(Sequence().append_multiple_from_string(line.split('"')[1]))
+        return self
+
+    def init_from_lin(self,line) : #return self
+        
+        self.set_board_number(int(line[line.find('o')+1:line.find(',')]))
+        self.set_vul(line[line.find('|sv|')+4:line.find('|sk|')])
+        line = line[line.find('|md|')+4:line.find('|sv|')] # Retourne les 4 jeux
+        self.set_dealer(LIN_TO_PBN_DEALER[line[0]])
+        line = line[1:]
+        diag = Diagramm()
+        self.set_diagramm(diag.init_from_lin(line,self.get_dealer()))
         return self
 
     def is_valid(self) -> bool :
@@ -150,10 +166,24 @@ class SetOfBoards() :
                 list_of_boards = list_of_boards[1:]
 
             for board_str in list_of_boards :
+                
                 board = Board()
                 board.init_from_pbn(board_str)
                 if board.is_valid() :
                     self.append(board) #read and add each bords
+
+    def init_from_lin (self,file) -> None :
+        """open a file given its name and return the set of boards included"""
+        os.chdir(MAIN_REPERTORY+'/New LIN')
+        with open (file,'r') as f :
+            lines = f.read().split("\n")
+            i=0
+            for line in lines :
+                if line[0:3]=='qx|' :
+                    i+=1
+                    board = Board()
+                    board.init_from_lin(line)
+                    self.append(board)
 
     def __str__(self) :
         string = ""
@@ -194,6 +224,13 @@ class SetOfBoards() :
             
     def append(self,board : Board) -> None :
         self.boards.append(board)
+    
+
+    def get_par(self) -> int :
+        for board in self.get_boards() :
+            # ddstable.get_ddstable(board.print_as_pbn().encode('utf-8'))
+            table = ddstable.get_ddstable(board.print_as_pbn().encode('utf-8'))
+            print(table)
 
 class PbnError(Exception):
     def __init__(self, value):
@@ -203,22 +240,11 @@ class PbnError(Exception):
     def __str__(self):
         return repr(self.value)
 
+def calculatePar(dico : dict, vul : str) :
+    
 
 if __name__ == '__main__':
-    # set_of_boards = SetOfBoards()
-    # set_of_boards.init_from_pbn('DF1.pbn')
-    # set_of_boards.print_as_pbn()
-
-    PBN = b"E:QJT5432.T.6.QJ82 .J97543.K7532.94 87.A62.QJT4.AT75 AK96.KQ8.A98.K63"
-    all = ddstable.get_ddstable(PBN)
-    print("{:>5} {:>5} {:>5} {:>5} {:>5} {:>5}".format("", "S", "H", "D", "C", "NT"))
-    # may use  card_suit=["C", "D", "H", "S", "NT"]
-    for each in all.keys():
-        print("{:>5}".format(each),end='')
-        for suit in ddstable.dcardSuit:
-            trick=all[each][suit]
-            if trick>7:
-                print(" {:5}".format(trick - 6),end='')
-            else:
-                print(" {:>5}".format("-"),end='')
-        print("")
+    set_of_boards = SetOfBoards()
+    set_of_boards.init_from_lin('test.LIN')
+    set_of_boards.get_par()
+    pass
