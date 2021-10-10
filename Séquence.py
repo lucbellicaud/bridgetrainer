@@ -64,7 +64,7 @@ class FinalContract() :
         return self.bid
 
     def set_declaration (self,decla : Declaration) -> None :
-        self.declaration = declaration
+        self.declaration = decla
 
     def get_declaration (self,decla : Declaration) -> Declaration :
         return self.declaration
@@ -227,6 +227,14 @@ class Sequence() :
             string += atom.__str__() +" "
         return string
 
+class ErrorBid(Exception):
+    def init(self, value):
+        self.value = value
+        print("Incorrect bid")
+        print(value)
+    def str(self):
+        return repr(self.value)
+        
 if __name__ == '__main__':
     seq = Sequence()
     seq.append_multiple_from_string('P,P,P,1C,X,2C,X,XX,3C')

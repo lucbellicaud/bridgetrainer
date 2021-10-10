@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from abc import ABC,abstractmethod
+from Séquence import ErrorBid
 
 SUITS = 'S H D C'.split()
 LEVELS = '2 3 4 5 6 7 8 9 T J Q K A'.split()
@@ -12,7 +13,7 @@ class Card(ABC) :
 
     def __post_init__(self):
         if self.level not in LEVELS :
-            raise ErrorBid("Invalid level (must be in 1-7 range)")
+            raise ErrorBid("Invalid level (must be in 2 3 4 5 6 7 8 9 T J Q K A)")
         self.sort_index = LEVELS.index(self.level)+2
         if self.level == 'J' :
             self.hcp_value = 1
@@ -101,12 +102,31 @@ class Hand() :
             string+='\n'
         return string
 
+    def print_as_lin(self) -> str:
+        string=""
+        for i,suit in enumerate([self.spades,self.hearts,self.diamonds,self.clubs]) :
+            string += SUITS [i]
+            for card in suit :
+                string += card.__str__()
+            
+        return string
+
+    def print_as_pbn(self) -> str :
+        string=""
+        for i,suit in enumerate([self.spades,self.hearts,self.diamonds,self.clubs]) :
+            for card in suit :
+                string += card.__str__()
+            string+='.'
+            
+        return string[:-1]
+
+
 @dataclass
 class Diagramm() :
-    south : Hand()
-    north : Hand()
-    west : Hand()
-    east : Hand()
+    south : Hand() = Hand()
+    north : Hand() = Hand()
+    west : Hand() = Hand()
+    east : Hand() = Hand()
 
     def __str__(self) :
         string = ""
@@ -114,7 +134,7 @@ class Diagramm() :
             string += hand.__str__() +"\n"
         return string
 
-    def __init__(self, string : str,dealer : str) :
+    def init_from_string(self, string : str,dealer : str) :
         """ Create a diagramm from this syntax : 'N:752.Q864.84.AT62 A98.AT9.Q753.J98 KT.KJ73.JT.K7543 QJ643.52.AK962.Q'"""
         string = string[4:-2]
         hand_list = string.split(" ")
@@ -137,6 +157,8 @@ class Diagramm() :
         self.south = Hand().create_from_string(hand_list[2])
         self.west = Hand().create_from_string(hand_list[3])
 
+        return self
+
     def is_valid(self) -> bool :
         list_of_cards = []
         for hand in [self.north,self.south,self.west,self.east] :
@@ -151,13 +173,19 @@ class Diagramm() :
         else :
             return False
 
-class ErrorBid(Exception):
-    def __init__(self, value):
-        self.value = value
-        print("Incorrect bid")
-        print(value)
-    def __str__(self):
-        return repr(self.value)
+    def print_as_lin(self) -> str :
+        string = ""
+        for hand in [self.south,self.west,self.north,self.east] :
+            string += hand.print_as_lin()
+            string += ","
+        return string[:-1]
+
+    def print_as_pbn(self) -> str :
+        string = "S:"
+        for hand in [self.south,self.west,self.north,self.east] :
+            string += hand.print_as_pbn()
+            string += " "
+        return string[:-1]
 
 if __name__ == '__main__':
     pass
