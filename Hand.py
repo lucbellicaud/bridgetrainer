@@ -2,9 +2,7 @@ from dataclasses import dataclass, field
 from abc import ABC,abstractmethod
 from os import error
 from Séquence import ErrorBid
-
-SUITS = 'S H D C'.split()
-LEVELS = '2 3 4 5 6 7 8 9 T J Q K A'.split()
+from Consts import SUITS,LEVELS
 
 @dataclass
 class Card(ABC) :
@@ -236,9 +234,6 @@ class Diagramm() :
         #     self.rotate(2)
         # if dealer == "W" :
         #     self.rotate(3)
-
-        print(hand_list)
-        print(self.print_as_pbn())
 
         return self
 
