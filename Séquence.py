@@ -56,6 +56,8 @@ class Declaration(SequenceAtom) :
 class FinalContract() :
     bid : Bid = None
     declaration : Declaration = 'P'
+    joueur : str = ''
+    valeur : int = 0
 
     def set_bid (self,bid : Bid) -> None :
         self.bid = bid
@@ -66,12 +68,26 @@ class FinalContract() :
     def set_declaration (self,decla : Declaration) -> None :
         self.declaration = decla
 
-    def get_declaration (self,decla : Declaration) -> Declaration :
+    def get_declaration (self) -> Declaration :
         return self.declaration
+
+    def set_joueur (self,joueur : str) -> None :
+        self.joueur = joueur
+
+    def get_joueur (self) -> str :
+        return self.joueur
+
+    def set_valeur (self,valeur : int) -> None :
+        self.valeur = valeur
+
+    def get_valeur (self) -> int :
+        return self.valeur
 
     def clear(self) -> None :
         self.bid = None
         self.declaration = None
+
+    
 
     def init_from_string(self,s : str) : # -> return self
         if len(s)==0 or len(s)>=4 :
