@@ -1,18 +1,21 @@
 from dataclasses import dataclass, field
-from Séquence import Sequence,FinalContract
+from Séquence import Sequence,FinalContract,Bid,ErrorBid
 from Hand import Diagramm
 import os
 from Parameters import MAIN_REPERTORY
-from ast import literal_eval
-from inspect import getmembers, isfunction
 from ddstable import ddstable
+from Consts import PBN_TO_LIN_VUL,LIN_DEALER_DICT,LIN_TO_PBN_DEALER,LIN_TO_PBN_VUL,BID_SUITS,LEVELS, CONTRACTS
+from functions_for_par import pretty_print_dds,ordonner_joueurs,return_if_vul,maximum,calculate_bridge_score
+from statistics import mean,median, stdev
+from time import time,sleep
 
-functions_list = getmembers(ddstable, isfunction)
-print(functions_list)
-#from ddstable import ddstable,calcDDtablePBN
-PBN_TO_LIN_VUL = {'None' : "0", "NS" : "N", "EW" : "E", "All" : "B"}
-LIN_DEALER_DICT = {'S' : str(1),'O' : str(2), 'N' : str(3), 'E' : str(4)}
-LIN_TO_PBN_DEALER = {"1" : "S", "2" : "O", "3" : "N", "4" : "E"}
+class PbnError(Exception):
+    def __init__(self, value):
+        self.value = value
+        print("Pbn Error")
+        print(value)
+    def __str__(self):
+        return repr(self.value)
 
 @dataclass
 class Board() :
@@ -26,6 +29,8 @@ class Board() :
     board_number : int = 0
     vul : str = "" # "None" "NS" "EW" "All"
     dealer : str = "" # in N,S,W,E
+    dds_dic : dict = field(default_factory=list)
+    par_contract : FinalContract = field(init=False)
 
 
     def init_from_pbn (self,board_str : str) : #return self
@@ -48,12 +53,18 @@ class Board() :
                 self.set_sequence_user(Sequence().append_multiple_from_string(line.split('"')[1]))
             if 'Correction Sequence' in line :
                 self.set_sequence_correction(Sequence().append_multiple_from_string(line.split('"')[1]))
+            if "OptimumScore" in line :
+                par = line.split('"')[1]
+                par= int(par.split(";")[1])
+                self.set_par_contract(FinalContract(None,"P","",par))
+        if self.get_vul()=="" :
+            self.set_vul("None")
         return self
 
     def init_from_lin(self,line) : #return self
         
         self.set_board_number(int(line[line.find('o')+1:line.find(',')]))
-        self.set_vul(line[line.find('|sv|')+4:line.find('|sk|')])
+        self.set_vul(LIN_TO_PBN_VUL[line[line.find('|sv|')+4:line.find('|sk|')]])
         line = line[line.find('|md|')+4:line.find('|sv|')] # Retourne les 4 jeux
         self.set_dealer(LIN_TO_PBN_DEALER[line[0]])
         line = line[1:]
@@ -78,6 +89,21 @@ class Board() :
         for step in s.split(",") :
             dict[FinalContract().init_from_string(step.split(":")[0])]=int(step.split(":")[1])
         return dict
+
+    def calculatePar(self) -> None :
+        """Calculate the Par of the board""" # "None" "NS" "EW" "All"
+        dic = {}
+        joueurs = ordonner_joueurs(self.get_dealer())
+        for joueur in joueurs :
+            dic[joueur]={}
+            vul = return_if_vul(joueur,self.get_vul())
+            table_joueur = self.get_dds_dic()[joueur]
+            for suit in BID_SUITS :
+                dic[joueur][suit]=[]
+                for level in CONTRACTS :
+                    dic[joueur][suit].append(calculate_bridge_score(Bid(level,suit),table_joueur[suit],vul,joueur))
+        self.set_par_contract(maximum (dic, joueurs, FinalContract(None,'P','',0)))
+        #print(self.get_par_contract().get_bid(),self.get_par_contract().get_joueur(),self.get_par_contract().get_valeur())
 
     def print_as_lin(self) :
         """Print as in a .lin file"""
@@ -134,11 +160,28 @@ class Board() :
     def get_sequence_user(self) -> Sequence :
         return self.sequence_user
 
+    def get_par_contract(self) -> FinalContract :
+        return self.par_contract
+
+    def set_par_contract(self, final_contract : FinalContract) -> None :
+        self.par_contract = final_contract
+
     def get_sequence_correction(self) -> Sequence :
         return self.sequence_correction
 
     def get_diagramm(self) -> Diagramm :
         return self.diag
+
+    def get_dds_dic(self) -> dict :
+        return self.dds_dic
+
+    def set_dds_dic_with_NT_change(self, dic : dict) :
+        for joueur in dic :
+            dic[joueur]["N"] = dic[joueur].pop("NT")
+        self.dds_dic = dic
+
+    def set_dds_dic(self, dic : dict) -> None :
+        self.dds_dic = dic
     """set and get end"""
 
 @dataclass
@@ -166,15 +209,16 @@ class SetOfBoards() :
                 list_of_boards = list_of_boards[1:]
 
             for board_str in list_of_boards :
-                
                 board = Board()
                 board.init_from_pbn(board_str)
                 if board.is_valid() :
+                    print(board.get_board_number())
                     self.append(board) #read and add each bords
 
     def init_from_lin (self,file) -> None :
         """open a file given its name and return the set of boards included"""
         os.chdir(MAIN_REPERTORY+'/New LIN')
+        self.title = file
         with open (file,'r') as f :
             lines = f.read().split("\n")
             i=0
@@ -225,26 +269,90 @@ class SetOfBoards() :
     def append(self,board : Board) -> None :
         self.boards.append(board)
     
+    def set_dds_tables(self) :
+        for i,board in enumerate(self.get_boards()) :
+            board.set_dds_dic_with_NT_change(ddstable.get_ddstable(board.print_as_pbn().encode('utf-8')))
 
-    def get_par(self) -> int :
+
+    def get_mean_par(self) -> int :
+        par_list=[]
         for board in self.get_boards() :
-            # ddstable.get_ddstable(board.print_as_pbn().encode('utf-8'))
-            table = ddstable.get_ddstable(board.print_as_pbn().encode('utf-8'))
-            print(table)
+            par_list.append(board.get_par_contract().get_valeur())
+        return int(mean(par_list))
 
-class PbnError(Exception):
-    def __init__(self, value):
-        self.value = value
-        print("Pbn Error")
-        print(value)
-    def __str__(self):
-        return repr(self.value)
+    def get_median_par(self) -> int :
+        par_list=[]
+        for board in self.get_boards() :
+            par_list.append(board.get_par_contract().get_valeur())
+        return int(median(par_list))
 
-def calculatePar(dico : dict, vul : str) :
-    
+    def get_stddev_par(self) -> int :
+        par_list=[]
+        for board in self.get_boards() :
+            par_list.append(board.get_par_contract().get_valeur())
+        return int(stdev(par_list))
+
+    def get_absolute_mean_par(self) : 
+        par_list=[]
+        for board in self.get_boards() :
+            par_list.append(abs(board.get_par_contract().get_valeur()))
+        return int(mean(par_list))
+
+    def get_repartition_contrats(self) :
+        dic = {"C":0,"D" :0,"H" : 0,"S" : 0, "N" : 0}
+        total_len=0
+        for board in self.get_boards() :
+            dic [board.get_par_contract().get_bid().suit] +=1
+            total_len+=1
+        for suit in dic :
+            print(suit, " : ", 100*dic[suit]/total_len,"%")
+
+    def get_repartition_joueurs(self) :
+        dic = {"EW" : 0, "NS" : 0}
+        total_len=0
+        for board in self.get_boards() :
+            if board.get_par_contract().get_joueur() in "NS" :
+                dic ["NS"] +=1
+            elif board.get_par_contract().get_joueur() in "EW" :
+                dic["EW"]+=1
+            total_len+=1
+        for suit in dic :
+            print(suit, " : ", 100*dic[suit]/total_len,"%")
+
+
+    def print_stats_par(self) -> None :
+        print("Statistiques du par du fichier ", self.get_title())
+        print("Moyenne du par : ",self.get_mean_par())
+        print("Moyenne du par absolu :", self.get_absolute_mean_par())
+        print("Médiane du par : ", self.get_median_par())
+        print("Ecart type du par : ", self.get_stddev_par())
+        print("Répartition des contrats :")
+        self.get_repartition_contrats()
+        self.get_repartition_joueurs()
+
+    def init_pars(self) -> None :
+        for board in self.get_boards() :
+            board.calculatePar()
+
 
 if __name__ == '__main__':
-    set_of_boards = SetOfBoards()
-    set_of_boards.init_from_lin('test.LIN')
-    set_of_boards.get_par()
+    # start = time()
+    for fichier in ['MAIN NUMÉRO 1 BURN.LIN','MAIN NUMÉRO 2 BURN.LIN',"PIQUES ET COEURS INVERSÉS.LIN"] :
+    # fichier ='test2.LIN'
+        set_of_boards2 = SetOfBoards()
+        set_of_boards2.init_from_lin(fichier)
+        set_of_boards2.set_dds_tables()
+        set_of_boards2.init_pars()
+        set_of_boards2.print_stats_par()
+    #     end = time()
+    #     print("Temps écoulé : ",end - start)
+
+    # set_of_boards = SetOfBoards()
+    # set_of_boards.init_from_pbn("boards.pbn")
+    # for board in set_of_boards.get_boards() :
+    #     print(board.get_par_contract().get_valeur())
+    
+    
+    # print(calculate_bridge_score(Bid(6,"N"),12,False))
     pass
+
