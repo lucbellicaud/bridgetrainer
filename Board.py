@@ -3,7 +3,7 @@ from Séquence import Sequence,FinalContract,Bid,ErrorBid
 from Hand import Diagramm
 import os
 from Parameters import MAIN_REPERTORY
-from ddstable import ddstable
+#from ddstable import ddstable
 from Consts import PBN_TO_LIN_VUL,LIN_DEALER_DICT,LIN_TO_PBN_DEALER,LIN_TO_PBN_VUL,BID_SUITS,LEVELS, CONTRACTS
 from functions_for_par import pretty_print_dds,ordonner_joueurs,return_if_vul,maximum,calculate_bridge_score
 from statistics import mean,median, stdev
@@ -26,6 +26,8 @@ class Board() :
     sequence_correction : Sequence = field(init=False)
     points_scale : dict = field(default_factory=list)
     title : str = ""
+    comment : str = ""
+    level : str = "" #None, Easy, Inter, Hard, Expert
     board_number : int = 0
     vul : str = "" # "None" "NS" "EW" "All"
     dealer : str = "" # in N,S,W,E
@@ -115,73 +117,76 @@ class Board() :
 
     def print_as_pbn(self) :
         """print as in a .pbn file"""
-        return self.get_diagramm().print_as_pbn()
+        string =""
+        string += '[Title "{}"]\n'.format(self.get_title())
+        string += '[Board "{}"]\n'.format(self.get_board_number())
+        string += '[Vulnerable "{}"]\n'.format(self.get_vul())
+        string += '[Deal "{}"]\n'.format(self.get_diagramm().print_as_pbn())
+        string += '[Comment "{}"]\n'.format(self.get_comment())
+        string += '[Level "{}"]\n'.format(self.get_level())
+
+        #To do : correction seq etc
+        return string+"\n"
+
+    def write_on_pbn(self,file_name : str) :
+        os.chdir(MAIN_REPERTORY+'/Board type')
+        with open(file_name+".lin",'a', encoding="utf-8") as f :
+            f.write(self.print_as_pbn())
+
 
     """set and get"""
     def get_board_number(self) -> int :
         return int(self.board_number)
-
     def set_board_number(self, board_number : int) -> None :
         self.board_number = board_number
-
     def get_vul(self) -> str :
         return self.vul
-
     def set_vul(self, vul : str) -> None :
         self.vul = vul
-
     def get_title(self) -> str :
         return self.title
-
     def set_title(self, title : str) -> None :
         self.title = title
-
     def get_dealer(self) -> str :
         return self.dealer
-
     def set_points_scale(self, dict : dict) -> None :
         self.points_scale = dict
-
     def get_points_scale(self) -> dict :
         return self.points_scale
-
     def set_dealer(self, dealer : str) -> None :
         self.dealer = dealer
-
     def set_sequence_user(self,sq : Sequence) -> None :
         self.sequence_user = sq
-
     def set_sequence_correction(self,sq : Sequence) -> None :
         self.sequence_correction = sq
-
     def set_diagramm(self,diag : Diagramm) -> None :
         self.diag = diag
-
     def get_sequence_user(self) -> Sequence :
         return self.sequence_user
-
     def get_par_contract(self) -> FinalContract :
         return self.par_contract
-
     def set_par_contract(self, final_contract : FinalContract) -> None :
         self.par_contract = final_contract
-
     def get_sequence_correction(self) -> Sequence :
         return self.sequence_correction
-
     def get_diagramm(self) -> Diagramm :
         return self.diag
-
     def get_dds_dic(self) -> dict :
         return self.dds_dic
-
     def set_dds_dic_with_NT_change(self, dic : dict) :
         for joueur in dic :
             dic[joueur]["N"] = dic[joueur].pop("NT")
         self.dds_dic = dic
-
     def set_dds_dic(self, dic : dict) -> None :
         self.dds_dic = dic
+    def set_comment(self, comment : str) -> None :
+        self.comment = comment
+    def get_comment(self) -> str :
+        return self.comment
+    def set_level(self, level : str) -> None :
+        self.level = level
+    def get_level(self) -> str :
+        return self.level
     """set and get end"""
 
 @dataclass
@@ -248,7 +253,7 @@ class SetOfBoards() :
         return self.boards
     def get_board_by_board_number (self, board_number : int) -> Board :
         for board in self.boards :
-            if board.get_diagramm().get_board_number() == board_number :
+            if board.get_board_number() == board_number :
                 return board
 
     def print_as_lin(self) :
@@ -262,8 +267,10 @@ class SetOfBoards() :
     def print_as_pbn(self) :
         #https://stackoverflow.com/questions/66663179/how-to-use-windows-file-explorer-to-select-and-return-a-directory-using-python
         os.chdir(MAIN_REPERTORY+'/CreatedPBN')
-        with open(self.get_title()+".pbn",'w') as f :
+        with open(self.get_title()+".pbn",'w', encoding="utf-8") as f :
             for board in self.get_boards() :
+                f.write('[Event "{}"]\n'.format(self.get_title()))
+                f.write('[Date "{}"]\n'.format(self.get_date()))
                 f.write(board.print_as_pbn()+"\n")
             
     def append(self,board : Board) -> None :
@@ -344,15 +351,5 @@ if __name__ == '__main__':
         set_of_boards2.set_dds_tables()
         set_of_boards2.init_pars()
         set_of_boards2.print_stats_par()
-    #     end = time()
-    #     print("Temps écoulé : ",end - start)
-
-    # set_of_boards = SetOfBoards()
-    # set_of_boards.init_from_pbn("boards.pbn")
-    # for board in set_of_boards.get_boards() :
-    #     print(board.get_par_contract().get_valeur())
-    
-    
-    # print(calculate_bridge_score(Bid(6,"N"),12,False))
     pass
 

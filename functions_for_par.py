@@ -1,5 +1,5 @@
 from Séquence import ErrorBid,FinalContract,Bid
-from ddstable import ddstable
+#from ddstable import ddstable
 from Consts import *
 from time import sleep
 

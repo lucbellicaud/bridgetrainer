@@ -84,6 +84,30 @@ class Hand() :
     def get_every_suit(self) -> list[list[Card]] :
         return [self.spades,self.hearts,self.diamonds,self.clubs]
 
+    def get_spades_as_text(self) -> str :
+        string =""
+        for card in self.spades :
+            string+= card.__str__()
+        return string
+
+    def get_hearts_as_text(self) -> str :
+        string =""
+        for card in self.hearts :
+            string+= card.__str__()
+        return string
+
+    def get_diamonds_as_text(self) -> str :
+        string =""
+        for card in self.diamonds :
+            string+= card.__str__()
+        return string
+
+    def get_clubs_as_text(self) -> str :
+        string =""
+        for card in self.clubs :
+            string+= card.__str__()
+        return string
+
     def len(self) -> int :
         length = 0
         for suit in [self.spades,self.hearts,self.diamonds,self.clubs] :
