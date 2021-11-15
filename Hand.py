@@ -249,16 +249,7 @@ class Diagramm() :
         self.north = Hand().init_from_lin(hand_list[2])
         self.east = Hand().clear()
         self.auto_complete()
-
-        # if dealer == "N" :
-        #     pass
-        # if dealer == "E" :
-        #     self.rotate(1)
-        # if dealer == "S" :
-        #     self.rotate(2)
-        # if dealer == "W" :
-        #     self.rotate(3)
-
+        
         return self
 
     def rotate(self, rotato : int) :

@@ -35,17 +35,49 @@ class Play(MenuOptions) :
         list_of_position = tk.OptionMenu(root,self.position, "South","North")
         list_of_position.grid(column=0,row=1)
 
+class SetofBoardsUI(tk.Frame) :
+    """Navigate trought the set of boards"""
+    def __init__(self, parent, set_of_boards : SetOfBoards) -> None:
+        tk.Frame.__init__(self, parent)
+        self.board_index = 0
+        self.current_board = set_of_boards.get_boards()[self.board_index]
+        self.boardUI = BoardEditUI(self,self.current_board)
+        self.boardUI.grid(row=0,column=0)
+
+        self.navigation = SetOfBoardsNavigation(self)
+        self.navigation.grid(row=1, column=0)
+
+        self.pack()
+
+    def save(self) : 
+        """Save the board as a pbn in the file indicated"""
+        print("save")
+        print(self.board_index)
+        
+class SetOfBoardsNavigation(tk.Frame) :
+    """Navigate trought the set of boards"""
+    def __init__(self, parent) -> None:
+        tk.Frame.__init__(self, parent)
+        self.previous_board = tk.Button(self, text=" < ")
+        self.save = tk.Button(self, text= "Save", command=parent.save)
+        self.next_board = tk.Button(self, text=" > ")
+
+        self.previous_board.grid(column=0,row=0)
+        self.save.grid(column=1,row=0)
+        self.next_board.grid(column=2,row=0)
+
+
+
 class BoardEditUI(tk.Frame) :
     """Main class of the board : contains all the sub elements"""
     def __init__(self, parent, board : Board) -> None:
         tk.Frame.__init__(self, parent)
         
         self.diag = DiagrammEditUI(self,board.get_diagramm())
-        self.save_options = SaveOptionUI(self)
+        self.save_options = BoardOptionsUI(self)
 
         self.diag.grid(row=0,column=0)
         self.save_options.grid(row=0,column=1)
-        self.pack()
         
 
 
@@ -61,9 +93,6 @@ class DiagrammEditUI(tk.Frame) :
         self.west.grid(row=1,column=2)
         self.east = HandEditUI(self, diag.east,4,5)
         self.east.grid(row=1,column=0)
-
-    def save(self) :
-        print("pouet pouet")
 
 class HandEditUI(tk.Frame) :
     """Construct one hand of a diagramm"""
@@ -93,7 +122,7 @@ class HandEditUI(tk.Frame) :
         self.clubs = tk.Entry(parent, textvariable=self.clubstext)
         self.clubs.grid(column=col+1, row=line+3)
 
-class SaveOptionUI(tk.Frame) :
+class BoardOptionsUI(tk.Frame) :
     """Options to save a board"""
     def __init__(self, parent) -> None:
         tk.Frame.__init__(self, parent)
@@ -108,16 +137,13 @@ class SaveOptionUI(tk.Frame) :
         self.comment_label=tk.Label(self, text="Comment")
         self.comment = tk.Text(self,height=3, width=20)
 
-        self.save_button = tk.Button(self,command=self.save, text="Save")
 
         self.where_to_save.grid(column=0,row=0,sticky="w")
         self.difficulty_level.grid(column=0, row=1,sticky="w")
         self.comment_label.grid(column=0,row=2,sticky="w")
         self.comment.grid(column=0,row=3,sticky="w")
-        self.save_button.grid(column=0,row=4,sticky="w")
 
-    def save(self) :
-        pass
+
 
 
 if __name__ == '__main__':
@@ -127,6 +153,6 @@ if __name__ == '__main__':
     set_of_boards2.print_as_pbn()
     my_board = set_of_boards2.get_board_by_board_number(1)
     root = tk.Tk()
-    play = BoardEditUI(root, my_board)
+    play = SetofBoardsUI(root, set_of_boards2)
     root.mainloop()
 
