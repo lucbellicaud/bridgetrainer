@@ -46,7 +46,7 @@ class Board() :
                 self.set_dealer(line.split('"')[1])
             if 'Deal ' in line :
                 deal = line.replace("Deal ","")
-                self.set_diagramm(Diagramm().init_from_string(deal,self.get_dealer()))
+                self.set_diagramm(Diagramm().init_from_pbn(deal,self.get_dealer()))
             if 'Exercice Title' in line :
                 self.set_title(line.split('"')[1])
             if 'Points Scale' in line :
@@ -255,6 +255,11 @@ class SetOfBoards() :
         for board in self.boards :
             if board.get_board_number() == board_number :
                 return board
+
+    def get_board_by_index(self,index : int) -> Board :
+        if index not in range(0,len(self.boards)) :
+            raise IndexError
+        return self.boards[index]
 
     def print_as_lin(self) :
         #https://stackoverflow.com/questions/66663179/how-to-use-windows-file-explorer-to-select-and-return-a-directory-using-python

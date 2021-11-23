@@ -219,9 +219,9 @@ class Diagramm() :
             hand.clear()
         return self
 
-    def init_from_string(self, string : str,dealer : str) :
+    def init_from_pbn(self, string : str,dealer : str) :
         """ Create a diagramm from this syntax : 'N:752.Q864.84.AT62 A98.AT9.Q753.J98 KT.KJ73.JT.K7543 QJ643.52.AK962.Q'"""
-        string = string[4:-2]
+        string = string[3:-2]
         hand_list = string.split(" ")
 
         self.north = Hand().create_from_string(hand_list[0])

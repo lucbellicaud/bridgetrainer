@@ -1,0 +1,100 @@
+[Event "test.LIN"]
+[Date ""]
+[Title ""]
+[Board "1"]
+[Vulnerable "None"]
+[Deal "S:K7.AQT632.K4.Q62 82.98.AT632.KT43 965.KJ5.QJ985.A5 AQJT43.74.7.J987"]
+[Comment ""]
+[Level ""]
+
+
+[Event "test.LIN"]
+[Date ""]
+[Title ""]
+[Board "2"]
+[Vulnerable "NS"]
+[Deal "S:K7.AQT632.K4.Q62 Q5.K9.QT753.K753 JT432.J854.A2.T4 A986.7.J986.AJ98"]
+[Comment ""]
+[Level ""]
+
+
+[Event "test.LIN"]
+[Date ""]
+[Title ""]
+[Board "3"]
+[Vulnerable "EW"]
+[Deal "S:K7.AQT632.K4.Q62 AJ98.987.AQ985.J Q653.J4.T2.AT975 T42.K5.J763.K843"]
+[Comment ""]
+[Level ""]
+
+
+[Event "test.LIN"]
+[Date ""]
+[Title ""]
+[Board "4"]
+[Vulnerable "All"]
+[Deal "S:K7.AQT632.K4.Q62 AQT6432.7.A32.73 J.KJ984.T65.AJT8 985.5.QJ987.K954"]
+[Comment ""]
+[Level ""]
+
+
+[Event "test.LIN"]
+[Date ""]
+[Title ""]
+[Board "5"]
+[Vulnerable "NS"]
+[Deal "S:K7.AQT632.K4.Q62 J32.J.985.J98743 A864.K5.AJT72.T5 QT95.9874.Q63.AK"]
+[Comment ""]
+[Level ""]
+
+
+[Event "test.LIN"]
+[Date ""]
+[Title ""]
+[Board "6"]
+[Vulnerable "EW"]
+[Deal "S:K7.AQT632.K4.Q62 A853.J7.J873.J75 JT96.K84.AQT92.9 Q42.95.65.AKT843"]
+[Comment ""]
+[Level ""]
+
+
+[Event "test.LIN"]
+[Date ""]
+[Title ""]
+[Board "7"]
+[Vulnerable "All"]
+[Deal "S:K7.AQT632.K4.Q62 Q85.J7.QT9832.J5 AT9432.8.75.K984 J6.K954.AJ6.AT73"]
+[Comment ""]
+[Level ""]
+
+
+[Event "test.LIN"]
+[Date ""]
+[Title ""]
+[Board "8"]
+[Vulnerable "None"]
+[Deal "S:K7.AQT632.K4.Q62 A85.K.AT92.T9853 JT942.J754.8.AJ4 Q63.98.QJ7653.K7"]
+[Comment ""]
+[Level ""]
+
+
+[Event "test.LIN"]
+[Date ""]
+[Title ""]
+[Board "9"]
+[Vulnerable "EW"]
+[Deal "S:K7.AQT632.K4.Q62 A9432.J87.QJT2.3 JT65.K54.9876.AT Q8.9.A53.KJ98754"]
+[Comment ""]
+[Level ""]
+
+
+[Event "test.LIN"]
+[Date ""]
+[Title ""]
+[Board "10"]
+[Vulnerable "All"]
+[Deal "S:K7.AQT632.K4.Q62 98642.98.QJT862. 5.K75.A975.AKT95 AQJT3.J4.3.J8743"]
+[Comment ""]
+[Level ""]
+
+
