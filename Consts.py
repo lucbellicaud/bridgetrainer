@@ -6,3 +6,4 @@ PBN_TO_LIN_VUL = {'None' : "0", "NS" : "N", "EW" : "E", "All" : "B"}
 LIN_DEALER_DICT = {'S' : str(1),'W' : str(2), 'N' : str(3), 'E' : str(4)}
 LIN_TO_PBN_DEALER = {"1" : "S", "2" : "W", "3" : "N", "4" : "E"}
 LIN_TO_PBN_VUL = {'O' : "None","N" : "NS","E" : "EW","B" : "All"}
+POSITIONS = ["N","E","S","W"]

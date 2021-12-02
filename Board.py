@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from Séquence import Sequence,FinalContract,Bid,ErrorBid
+from Séquence import Sequence,FinalContract,Bid,ErrorBid, SequenceAtom
 from Hand import Diagramm
 import os
 from Parameters import MAIN_REPERTORY
@@ -20,7 +20,6 @@ class PbnError(Exception):
 @dataclass
 class Board() :
     """A board contains a diagramm and two sequences : one made by the user and one made by the teacher"""
-    """Should board number, vul and dealer be here ?"""
     diag : Diagramm = field(init=False)
     sequence_user : Sequence = field(init=False)
     sequence_correction : Sequence = field(init=False)
@@ -33,15 +32,32 @@ class Board() :
     dealer : str = "" # in N,S,W,E
     dds_dic : dict = field(default_factory=list)
     par_contract : FinalContract = field(init=False)
-
+    result : float = 0
+    north : str =""
+    south : str =""
+    west : str = ""
+    east : str = ""
 
     def init_from_pbn (self,board_str : str) : #return self
         """read one pbn board and return it"""
+        reading_auction=False
         for line in board_str.split("\n") :
+            if reading_auction :
+                self.read_auction(line)
             if 'Board' in line :
                 self.set_board_number(int(line.split('"')[1]))
             if 'Vul' in line :
                 self.set_vul(line.split('"')[1])
+            if 'North' in line :
+                self.north=(line.split('"')[1])
+            if 'South' in line :
+                self.south=(line.split('"')[1])
+            if 'East' in line :
+                self.east=(line.split('"')[1])
+            if 'West' in line :
+                self.west=(line.split('"')[1])
+            if 'Result' in line :
+                self.result=float((line.split('"')[1]))
             if 'Dealer ' in line :
                 self.set_dealer(line.split('"')[1])
             if 'Deal ' in line :
@@ -59,9 +75,19 @@ class Board() :
                 par = line.split('"')[1]
                 par= int(par.split(";")[1])
                 self.set_par_contract(FinalContract(None,"P","",par))
+            if "Auction" in line :
+                reading_auction=True
         if self.get_vul()=="" :
             self.set_vul("None")
         return self
+
+    def read_auction(self,line : str) -> bool:
+        if line[0]=='[' :
+            return False
+        bids=line.split()
+        for bid in bids :
+            self.sequence_user.append(SequenceAtom.sequence_atom_filter(bid))
+        return True
 
     def init_from_lin(self,line) : #return self
         
@@ -124,6 +150,10 @@ class Board() :
         string += '[Deal "{}"]\n'.format(self.get_diagramm().print_as_pbn())
         string += '[Comment "{}"]\n'.format(self.get_comment())
         string += '[Level "{}"]\n'.format(self.get_level())
+        string += '[North "{}"]\n'.format(self.north)
+        string += '[South "{}"]\n'.format(self.south)
+        string += '[East "{}"]\n'.format(self.east)
+        string += '[West "{}"]\n'.format(self.west)
 
         #To do : correction seq etc
         return string+"\n"
@@ -195,6 +225,8 @@ class SetOfBoards() :
     boards : list[Board] = field(default_factory=list)
     title : str = ""
     date : str = ""
+    scoring : str ="" #BAM,IMPS,IMPS/2,Pairs
+    result : float = 0
 
     def init_from_pbn(self,file) -> None :
         """open a file given its name and return the set of boards included"""
@@ -209,6 +241,10 @@ class SetOfBoards() :
                         self.set_title(line.split('"')[1])
                     if 'Date' in line :
                         self.set_date(line.split('"')[1])
+                    if 'Scoring' in line :
+                        self.set_scoring(line.split('"')[1])
+                    if 'Result' in line :
+                        self.set_result(float(line.split('"')[1]))
                     if "</Main infos>" in line :
                         break
                 list_of_boards = list_of_boards[1:]
@@ -241,6 +277,14 @@ class SetOfBoards() :
             string += board.__str__() +"\n"
         return string
 
+    def set_scoring(self,scoring : str) -> None :
+        self.scoring=scoring
+    def get_scoring(self) -> str :
+        return self.scoring
+    def set_result(self,result : float) -> None :
+        self.result=result
+    def get_result(self) -> float :
+        return self.result
     def get_title (self)-> str :
         return self.title
     def get_date (self) -> str :
@@ -356,5 +400,6 @@ if __name__ == '__main__':
         set_of_boards2.set_dds_tables()
         set_of_boards2.init_pars()
         set_of_boards2.print_stats_par()
+        
     pass
 

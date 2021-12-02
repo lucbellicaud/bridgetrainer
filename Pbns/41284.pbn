@@ -1,0 +1,1556 @@
+% PBN 2.1 
+% File converted with "LinToPbnConverter" (Version 1.3)
+% (c) J.L PELISSON 2009  : pelissonjl@aol.com
+% Free for a non commercial use only 
+% 
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[HomeTeam "SWEDEN"]
+[VisitTeam "POLAND"]
+[Board "1"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "None"]
+[Dealer "N"]
+[Deal "N:T983.743.A9.K964 Q752.AT82.QJT7.5 4.KQJ9.K8652.Q87 AKJ6.65.43.AJT32"]
+{
+                   Nord
+                   X983
+                   743
+                   A9
+                   R964
+  Ouest                            Est
+  ARV6                             D752
+  65                               AX82
+  43                               DVX7
+  AVX32                            5
+                   Sud
+                   4
+                   RDV9
+                   R8652
+                   D87
+}
+[Declarer "W"]
+[Contract "4S"]
+[Result "9"]
+[Score "NS 50"]
+[Auction "N"]
+Pass  Pass  1D    1S
+Pass  2NT   Pass  3NT
+Pass  4S    Pass  Pass
+Pass
+[Play "N"]
+H3 H2 H9 H6
+H4 HA HQ H5
+H7 H8 HJ S6
+D9 DT DK D4
+C4 HT HK SA
+S3 S2 S4 SK
+S8 S5 D5 SJ
+DA D7 D6 D3
+C6 C5 CQ CA
+CK S7 C7 CJ
+S9 SQ D2 C2
+ST DQ D8 C3
+C9 DJ C8 CT
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "1"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "None"]
+[Dealer "N"]
+[Deal "N:T983.743.A9.K964 Q752.AT82.QJT7.5 4.KQJ9.K8652.Q87 AKJ6.65.43.AJT32"]
+{
+                   Nord
+                   X983
+                   743
+                   A9
+                   R964
+  Ouest                            Est
+  ARV6                             D752
+  65                               AX82
+  43                               DVX7
+  AVX32                            5
+                   Sud
+                   4
+                   RDV9
+                   R8652
+                   D87
+}
+[Declarer "W"]
+[Contract "4S"]
+[Result "8"]
+[Score "NS 100"]
+[Auction "N"]
+Pass  Pass  1D    2S
+Pass  4S    Pass  Pass
+Pass
+[Play "N"]
+S8 S2 S4 SK
+DA D7 D8 D4
+H4 HA H9 H5
+D9 DT DK D3
+H3 H2 HQ H6
+S3 DJ D5 C3
+ST S5 D2 SJ
+C4 C5 C8 CA
+C6 S7 C7 C2
+H7 H8 HJ S6
+C9 SQ CQ CJ
+S9 DQ D6 CT
+CK HT HK SA
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "2"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "NS"]
+[Dealer "E"]
+[Deal "E:K542.T7.AT53.JT9 QJT96.954.KJ8.AQ A7.Q63.Q762.8543 83.AKJ82.94.K762"]
+{
+                   Nord
+                   83
+                   ARV82
+                   94
+                   R762
+  Ouest                            Est
+  A7                               R542
+  D63                              X7
+  D762                             AX53
+  8543                             VX9
+                   Sud
+                   DVX96
+                   954
+                   RV8
+                   AD
+}
+[Declarer "S"]
+[Contract "4H"]
+[Result "10"]
+[Score "NS 620"]
+[Auction "E"]
+Pass  1S    Pass  2D  =1=
+Pass  3H    Pass  4H
+Pass  Pass  Pass
+[Note "1:5+!h s/o or inv"]
+[Play "W"]
+D2 D4 DA D8
+SA S3 S2 SQ
+C3 C2 C9 CA
+H3 HA H7 H4
+D7 D9 D3 DK
+H6 HJ HT H5
+-  HK -  -
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "2"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "NS"]
+[Dealer "E"]
+[Deal "E:K542.T7.AT53.JT9 QJT96.954.KJ8.AQ A7.Q63.Q762.8543 83.AKJ82.94.K762"]
+{
+                   Nord
+                   83
+                   ARV82
+                   94
+                   R762
+  Ouest                            Est
+  A7                               R542
+  D63                              X7
+  D762                             AX53
+  8543                             VX9
+                   Sud
+                   DVX96
+                   954
+                   RV8
+                   AD
+}
+[Declarer "N"]
+[Contract "4H"]
+[Result "10"]
+[Score "NS 620"]
+[Auction "E"]
+Pass  1S    Pass  2H
+Pass  3H    Pass  4H
+Pass  Pass  Pass
+[Play "E"]
+CJ CQ C8 C6
+C9 CA C3 C2
+H7 H4 H6 HA
+CT H9 C4 C7
+HT H5 H3 HJ
+S5 S6 HQ HK
+S2 D8 C5 CK
+SK S9 S7 S3
+D3 DK D2 D4
+S4 SQ SA S8
+DA DJ D6 D9
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "3"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "EW"]
+[Dealer "S"]
+[Deal "S:QT8.J97.KQ8.AKJ8 AKJ.A532.AJ32.T3 532.T4.T974.Q754 9764.KQ86.65.962"]
+{
+                   Nord
+                   532
+                   X4
+                   X974
+                   D754
+  Ouest                            Est
+  ARV                              9764
+  A532                             RD86
+  AV32                             65
+  X3                               962
+                   Sud
+                   DX8
+                   V97
+                   RD8
+                   ARV8
+}
+[Declarer "S"]
+[Contract "1NT"]
+[Result "4"]
+[Score "NS -150"]
+[Auction "S"]
+1NT   Pass  Pass  Pass
+[Play "W"]
+SA S2 S6 S8
+H2 H4 HQ H7
+SJ S3 S7 ST
+SK S5 S9 SQ
+H3 HT HK H9
+D2 D4 S4 D8
+HA C4 H6 HJ
+H5 D7 H8 C8
+DA D9 D5 DQ
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "3"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "EW"]
+[Dealer "S"]
+[Deal "S:QT8.J97.KQ8.AKJ8 AKJ.A532.AJ32.T3 532.T4.T974.Q754 9764.KQ86.65.962"]
+{
+                   Nord
+                   532
+                   X4
+                   X974
+                   D754
+  Ouest                            Est
+  ARV                              9764
+  A532                             RD86
+  AV32                             65
+  X3                               962
+                   Sud
+                   DX8
+                   V97
+                   RD8
+                   ARV8
+}
+[Declarer "E"]
+[Contract "3H"]
+[Result "10"]
+[Score "NS -170"]
+[Auction "S"]
+1NT   X =1=      Pass  Pass
+2C    Pass  Pass  2H
+Pass  3H    Pass  Pass
+Pass
+[Note "1:strong"]
+[Play "S"]
+CA C3 C4 C6
+DK DA D4 D6
+CJ CT C7 C2
+DQ D2 DT D5
+D8 DJ D9 S4
+H7 HA H4 H6
+H9 H2 HT HK
+HJ H3 C5 HQ
+S8 SJ S2 S6
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "4"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "All"]
+[Dealer "W"]
+[Deal "W:QT765.A8.AT764.3 A83.KJT5432.K5.K J942.76.Q98.AJ62 K.Q9.J32.QT98754"]
+{
+                   Nord
+                   A83
+                   RVX5432
+                   R5
+                   R
+  Ouest                            Est
+  DX765                            V942
+  A8                               76
+  AX764                            D98
+  3                                AV62
+                   Sud
+                   R
+                   D9
+                   V32
+                   DX98754
+}
+[Declarer "W"]
+[Contract "4S"]
+[Result "9"]
+[Score "NS 100"]
+[Auction "W"]
+2S    3H    4S    Pass
+Pass  Pass
+[Play "N"]
+S3 S2 SK S7
+H2 H6 HQ HA
+SA S4 C7 SQ
+HK H7 H9 H8
+S8 S9 C5 S5
+D5 D8 D2 DA
+DK D9 D3 D4
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "4"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "All"]
+[Dealer "W"]
+[Deal "W:QT765.A8.AT764.3 A83.KJT5432.K5.K J942.76.Q98.AJ62 K.Q9.J32.QT98754"]
+{
+                   Nord
+                   A83
+                   RVX5432
+                   R5
+                   R
+  Ouest                            Est
+  DX765                            V942
+  A8                               76
+  AX764                            D98
+  3                                AV62
+                   Sud
+                   R
+                   D9
+                   V32
+                   DX98754
+}
+[Declarer "W"]
+[Contract "3S"]
+[Result "9"]
+[Score "NS -140"]
+[Auction "W"]
+1S    2H    2S    Pass
+Pass  3H    3S    Pass
+Pass  Pass
+[Play "N"]
+S3 S2 SK S7
+H5 H6 HQ HA
+SA S4 C7 S6
+HK H7 H9 H8
+S8 S9 C4 ST
+DK D8 D3 D4
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "5"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "NS"]
+[Dealer "N"]
+[Deal "N:AKJ642.Q32.85.54 Q95.A54.KQJ6.A86 T3.86.A972.JT732 87.KJT97.T43.KQ9"]
+{
+                   Nord
+                   ARV642
+                   D32
+                   85
+                   54
+  Ouest                            Est
+  87                               D95
+  RVX97                            A54
+  X43                              RDV6
+  RD9                              A86
+                   Sud
+                   X3
+                   86
+                   A972
+                   VX732
+}
+[Declarer "E"]
+[Contract "4H"]
+[Result "10"]
+[Score "NS -420"]
+[Auction "N"]
+1S    1NT   Pass  2D
+Pass  2H    Pass  3NT
+Pass  4H    Pass  Pass
+Pass
+[Play "S"]
+ST S7 SK S5
+S3 S8 SA S9
+DA D3 D5 DQ
+D2 DT D8 D6
+H6 HJ H2 H4
+H8 HT H3 H5
+-  H7 HQ HA
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "5"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "NS"]
+[Dealer "N"]
+[Deal "N:AKJ642.Q32.85.54 Q95.A54.KQJ6.A86 T3.86.A972.JT732 87.KJT97.T43.KQ9"]
+{
+                   Nord
+                   ARV642
+                   D32
+                   85
+                   54
+  Ouest                            Est
+  87                               D95
+  RVX97                            A54
+  X43                              RDV6
+  RD9                              A86
+                   Sud
+                   X3
+                   86
+                   A972
+                   VX732
+}
+[Declarer "E"]
+[Contract "4H"]
+[Result "9"]
+[Score "NS 50"]
+[Auction "N"]
+2D    2NT   Pass  3D
+Pass  3H    Pass  3NT
+Pass  4H    Pass  Pass
+Pass
+[Play "S"]
+ST S7 SK S5
+S3 S8 SA S9
+C3 D3 S2 SQ
+H6 HJ HQ H5
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "6"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "EW"]
+[Dealer "E"]
+[Deal "E:Q65.KT765.A875.3 AKT7.Q2.KT3.KQ54 J9.A4.Q942.J8762 8432.J983.J6.AT9"]
+{
+                   Nord
+                   8432
+                   V983
+                   V6
+                   AX9
+  Ouest                            Est
+  V9                               D65
+  A4                               RX765
+  D942                             A875
+  V8762                            3
+                   Sud
+                   ARX7
+                   D2
+                   RX3
+                   RD54
+}
+[Declarer "S"]
+[Contract "3S"]
+[Result "7"]
+[Score "NS -100"]
+[Auction "E"]
+Pass  1C  =1=    Pass  1D  =2=
+1H    X     Pass  2H
+Pass  2S    Pass  3S
+Pass  Pass  Pass
+[Note "1:16+"]
+[Note "2:0-4 zz (may be FG strength!)"]
+[Play "W"]
+HA H3 H6 H2
+H4 H8 HK HQ
+S9 H9 HT S7
+D2 D6 DA D3
+SJ HJ H7 ST
+C6 -  -  -
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "6"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "EW"]
+[Dealer "E"]
+[Deal "E:Q65.KT765.A875.3 AKT7.Q2.KT3.KQ54 J9.A4.Q942.J8762 8432.J983.J6.AT9"]
+{
+                   Nord
+                   8432
+                   V983
+                   V6
+                   AX9
+  Ouest                            Est
+  V9                               D65
+  A4                               RX765
+  D942                             A875
+  V8762                            3
+                   Sud
+                   ARX7
+                   D2
+                   RX3
+                   RD54
+}
+[Declarer "E"]
+[Contract "2H"]
+[Result "8"]
+[Score "NS -110"]
+[Auction "E"]
+Pass  1NT   Pass  Pass
+2H    Pass  Pass  Pass
+[Play "S"]
+SA S9 S2 S5
+HQ HA H3 H7
+SK SJ S3 S6
+H2 H4 H9 HT
+C4 C2 H8 HK
+D3 D2 D6 DA
+DT DQ DJ D7
+-  D9 -  -
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "7"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "All"]
+[Dealer "S"]
+[Deal "S:843.AQ2.A43.A754 J92.5.Q52.J98632 7.K98763.JT96.KQ AKQT65.JT4.K87.T"]
+{
+                   Nord
+                   7
+                   R98763
+                   VX96
+                   RD
+  Ouest                            Est
+  V92                              ARDX65
+  5                                VX4
+  D52                              R87
+  V98632                           X
+                   Sud
+                   843
+                   AD2
+                   A43
+                   A754
+}
+[Declarer "S"]
+[Contract "4H"]
+[Result "11"]
+[Score "NS 650"]
+[Auction "S"]
+1NT   Pass  4D  =1=    Pass
+4H    Pass  Pass  Pass
+[Note "1:!h"]
+[Play "W"]
+C6 CQ CT C4
+H5 H3 HT HA
+C2 HK H4 H2
+C3 H6 HJ HQ
+C8 CK S5 C5
+D2 D6 D8 DA
+C9 S7 S6 CA
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "7"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "All"]
+[Dealer "S"]
+[Deal "S:843.AQ2.A43.A754 J92.5.Q52.J98632 7.K98763.JT96.KQ AKQT65.JT4.K87.T"]
+{
+                   Nord
+                   7
+                   R98763
+                   VX96
+                   RD
+  Ouest                            Est
+  V92                              ARDX65
+  5                                VX4
+  D52                              R87
+  V98632                           X
+                   Sud
+                   843
+                   AD2
+                   A43
+                   A754
+}
+[Declarer "E"]
+[Contract "4S"]
+[Result "10"]
+[Score "NS -620"]
+[Auction "S"]
+1C    Pass  1H    1S
+X =1=      2S    4H    4S
+Pass  Pass  Pass
+[Note "1:3!h"]
+[Play "S"]
+S4 S2 S7 SA
+C4 C2 CQ CT
+D4 DQ DJ D8
+C5 CJ CK S6
+S8 S9 H3 S5
+CA C9 H8 H4
+DA D2 D9 D7
+D3 D5 DT DK
+S3 SJ D6 ST
+C7 C8 H6 HT
+H2 C6 H7 HJ
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "8"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "None"]
+[Dealer "W"]
+[Deal "W:AQ85432.3.KQJ.93 T7.QT876.8.QJT74 K9.AKJ9542.T7.62 J6..A965432.AK85"]
+{
+                   Nord
+                   X7
+                   DX876
+                   8
+                   DVX74
+  Ouest                            Est
+  AD85432                          R9
+  3                                ARV9542
+  RDV                              X7
+  93                               62
+                   Sud
+                   V6
+                   -
+                   A965432
+                   AR85
+}
+[Declarer "W"]
+[Contract "4SX"]
+[Result "9"]
+[Score "NS 100"]
+[Auction "W"]
+1S    Pass  2H    3D
+3S    Pass  4S    X
+Pass  Pass  Pass
+[Play "N"]
+H8 HA S6 H3
+D8 D7 DA DQ
+CQ C2 CK C9
+CJ C6 C5 C3
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "8"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "None"]
+[Dealer "W"]
+[Deal "W:AQ85432.3.KQJ.93 T7.QT876.8.QJT74 K9.AKJ9542.T7.62 J6..A965432.AK85"]
+{
+                   Nord
+                   X7
+                   DX876
+                   8
+                   DVX74
+  Ouest                            Est
+  AD85432                          R9
+  3                                ARV9542
+  RDV                              X7
+  93                               62
+                   Sud
+                   V6
+                   -
+                   A965432
+                   AR85
+}
+[Declarer "W"]
+[Contract "4SX"]
+[Result "8"]
+[Score "NS 300"]
+[Auction "W"]
+1S    Pass  2H    3D
+3S    Pass  4S    X
+Pass  Pass  Pass
+[Play "N"]
+H7 HA S6 H3
+CQ C2 CK C9
+D8 D7 DA DQ
+C7 C6 C8 C3
+S7 DT D6 DK
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "9"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "EW"]
+[Dealer "N"]
+[Deal "N:A2.852.642.JT975 T8753.KQ76.Q873. Q6.AT4.J95.AKQ83 KJ94.J93.AKT.642"]
+{
+                   Nord
+                   A2
+                   852
+                   642
+                   VX975
+  Ouest                            Est
+  RV94                             X8753
+  V93                              RD76
+  ARX                              D873
+  642                              -
+                   Sud
+                   D6
+                   AX4
+                   V95
+                   ARD83
+}
+[Declarer "S"]
+[Contract "5CX"]
+[Result "8"]
+[Score "NS -500"]
+[Auction "N"]
+Pass  Pass  1C  =1=    Pass
+1D  =2=    X =3=      Pass  1S
+2C    2S    3C    4S
+Pass  Pass  5C    Pass
+Pass  X     Pass  Pass
+Pass
+[Note "1:16+"]
+[Note "2:0-4 zz (may be FG strength!)"]
+[Note "3:Majors"]
+[Play "W"]
+S4 S2 ST SQ
+C4 C5 S5 CK
+C6 C7 S3 CA
+C2 C9 S8 CQ
+S9 SA S7 S6
+DT D2 D3 D9
+DA D4 D7 D5
+DK D6 D8 DJ
+H9 H2 HK HA
+HJ H5 H6 H4
+H3 H8 HQ HT
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "9"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "EW"]
+[Dealer "N"]
+[Deal "N:A2.852.642.JT975 T8753.KQ76.Q873. Q6.AT4.J95.AKQ83 KJ94.J93.AKT.642"]
+{
+                   Nord
+                   A2
+                   852
+                   642
+                   VX975
+  Ouest                            Est
+  RV94                             X8753
+  V93                              RD76
+  ARX                              D873
+  642                              -
+                   Sud
+                   D6
+                   AX4
+                   V95
+                   ARD83
+}
+[Declarer "S"]
+[Contract "5CX"]
+[Result "8"]
+[Score "NS -500"]
+[Auction "N"]
+Pass  Pass  1NT   Pass
+Pass  X     2C    4S
+5C    Pass  Pass  X
+Pass  Pass  Pass
+[Play "W"]
+S9 S2 S8 SQ
+C4 C5 S7 CA
+C2 C7 S5 CK
+C6 C9 S3 C3
+S4 SA ST S6
+DT D2 D3 D9
+H3 H2 HQ H4
+H9 H5 H6 HA
+SJ CT H7 C8
+DK D4 D7 DJ
+DA D6 D8 D5
+HJ H8 HK HT
+SK CJ DQ CQ
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "10"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "All"]
+[Dealer "E"]
+[Deal "E:73.AJ9.62.JT9652 AQJ4.52.JT98.743 T96.KT873.KQ53.8 K852.Q64.A74.AKQ"]
+{
+                   Nord
+                   R852
+                   D64
+                   A74
+                   ARD
+  Ouest                            Est
+  X96                              73
+  RX873                            AV9
+  RD53                             62
+  8                                VX9652
+                   Sud
+                   ADV4
+                   52
+                   VX98
+                   743
+}
+[Declarer "N"]
+[Contract "4S"]
+[Result "10"]
+[Score "NS 620"]
+[Auction "E"]
+Pass  Pass  1H    1NT
+2H    X     Pass  2S
+Pass  4S    Pass  Pass
+Pass
+[Play "E"]
+CJ C3 C8 CK
+S7 SQ S6 S2
+D2 D8 D3 D4
+S3 SJ S9 S5
+C2 SA ST S8
+D6 D9 DQ DA
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "10"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "All"]
+[Dealer "E"]
+[Deal "E:73.AJ9.62.JT9652 AQJ4.52.JT98.743 T96.KT873.KQ53.8 K852.Q64.A74.AKQ"]
+{
+                   Nord
+                   R852
+                   D64
+                   A74
+                   ARD
+  Ouest                            Est
+  X96                              73
+  RX873                            AV9
+  RD53                             62
+  8                                VX9652
+                   Sud
+                   ADV4
+                   52
+                   VX98
+                   743
+}
+[Declarer "S"]
+[Contract "4S"]
+[Result "10"]
+[Score "NS 620"]
+[Auction "E"]
+Pass  Pass  Pass  1C
+Pass  1S    Pass  2D
+Pass  2S    Pass  2NT
+Pass  3D    Pass  4S
+Pass  Pass  Pass
+[Play "W"]
+C8 CA CT C4
+ST S2 S3 SJ
+DQ DA D2 DJ
+S6 S5 S7 SA
+S9 SK C6 S4
+DK D4 D6 DT
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "11"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "None"]
+[Dealer "S"]
+[Deal "S:KJ843.T73.J982.9 Q952.AQ64.A63.Q6 AT.J98.KQT.AKT83 76.K52.754.J7542"]
+{
+                   Nord
+                   AX
+                   V98
+                   RDX
+                   ARX83
+  Ouest                            Est
+  D952                             76
+  AD64                             R52
+  A63                              754
+  D6                               V7542
+                   Sud
+                   RV843
+                   X73
+                   V982
+                   9
+}
+[Declarer "N"]
+[Contract "2S"]
+[Result "8"]
+[Score "NS 110"]
+[Auction "S"]
+Pass  1C    1NT   Pass
+2H    Pass  2S    Pass
+Pass  Pass
+[Play "E"]
+D5 D2 DA DQ
+H2 H3 HQ H9
+HK H7 H4 HJ
+H5 HT HA H8
+D4 D8 D6 DK
+S6 S3 S2 SA
+S7 S4 SQ ST
+C2 C9 C6 CA
+-  -  -  C3
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "11"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "None"]
+[Dealer "S"]
+[Deal "S:KJ843.T73.J982.9 Q952.AQ64.A63.Q6 AT.J98.KQT.AKT83 76.K52.754.J7542"]
+{
+                   Nord
+                   AX
+                   V98
+                   RDX
+                   ARX83
+  Ouest                            Est
+  D952                             76
+  AD64                             R52
+  A63                              754
+  D6                               V7542
+                   Sud
+                   RV843
+                   X73
+                   V982
+                   9
+}
+[Declarer "S"]
+[Contract "3S"]
+[Result "8"]
+[Score "NS -50"]
+[Auction "S"]
+2S    Pass  3D    Pass
+3S    Pass  Pass  Pass
+[Play "W"]
+CQ CA C7 C9
+C6 CK C5 H3
+S2 SA S6 S3
+SQ ST S7 S4
+HA H8 H2 HT
+HQ H9 H5 H7
+H4 HJ HK S8
+S5 C3 D7 SK
+D6 DK D5 D2
+DA DT D4 D9
+H6 DQ C2 SJ
+D3 C8 C4 DJ
+S9 CT CJ D8
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "12"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "NS"]
+[Dealer "W"]
+[Deal "W:A87.T6.983.AKQ64 J43.AK952.T7.872 Q6.Q83.AKQJ52.J5 KT952.J74.64.T93"]
+{
+                   Nord
+                   V43
+                   AR952
+                   X7
+                   872
+  Ouest                            Est
+  A87                              D6
+  X6                               D83
+  983                              ARDV52
+  ARD64                            V5
+                   Sud
+                   RX952
+                   V74
+                   64
+                   X93
+}
+[Declarer "E"]
+[Contract "3NT"]
+[Result "12"]
+[Score "NS -490"]
+[Auction "W"]
+1C    1H    2D    Pass
+2H    Pass  3NT   Pass
+Pass  Pass
+[Play "S"]
+S5 SA S3 S6
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "12"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "NS"]
+[Dealer "W"]
+[Deal "W:A87.T6.983.AKQ64 J43.AK952.T7.872 Q6.Q83.AKQJ52.J5 KT952.J74.64.T93"]
+{
+                   Nord
+                   V43
+                   AR952
+                   X7
+                   872
+  Ouest                            Est
+  A87                              D6
+  X6                               D83
+  983                              ARDV52
+  ARD64                            V5
+                   Sud
+                   RX952
+                   V74
+                   64
+                   X93
+}
+[Declarer "W"]
+[Contract "3NT"]
+[Result "8"]
+[Score "NS 50"]
+[Auction "W"]
+1NT   Pass  3NT   Pass
+Pass  Pass
+[Play "N"]
+H5 H3 HJ H6
+HK H8 H7 HT
+HA HQ H4 -
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "13"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "All"]
+[Dealer "N"]
+[Deal "N:QT43.JT.962.J432 J76.985.A8753.A7 AK92.73.KQJ.KT95 85.AKQ642.T4.Q86"]
+{
+                   Nord
+                   DX43
+                   VX
+                   962
+                   V432
+  Ouest                            Est
+  85                               V76
+  ARD642                           985
+  X4                               A8753
+  D86                              A7
+                   Sud
+                   AR92
+                   73
+                   RDV
+                   RX95
+}
+[Declarer "S"]
+[Contract "1NT"]
+[Result "5"]
+[Score "NS -200"]
+[Auction "N"]
+Pass  Pass  1NT   Pass
+Pass  Pass
+[Play "W"]
+HK HT H9 H7
+HQ HJ H5 H3
+HA D2 H8 C5
+H2 D6 S6 S2
+H4 C2 S7 CT
+H6 D9 D3 DJ
+C8 C3 CA C9
+D4 C4 DA DQ
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "13"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "All"]
+[Dealer "N"]
+[Deal "N:QT43.JT.962.J432 J76.985.A8753.A7 AK92.73.KQJ.KT95 85.AKQ642.T4.Q86"]
+{
+                   Nord
+                   DX43
+                   VX
+                   962
+                   V432
+  Ouest                            Est
+  85                               V76
+  ARD642                           985
+  X4                               A8753
+  D86                              A7
+                   Sud
+                   AR92
+                   73
+                   RDV
+                   RX95
+}
+[Declarer "S"]
+[Contract "1NT"]
+[Result "5"]
+[Score "NS -200"]
+[Auction "N"]
+Pass  Pass  1NT   Pass
+Pass  Pass
+[Play "W"]
+HK HT H9 H7
+HA HJ H8 H3
+HQ D2 H5 S2
+H2 D6 D5 C5
+H4 D9 S7 C9
+H6 C2 S6 SK
+C6 C3 CA CT
+D4 C4 DA DJ
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "14"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "None"]
+[Dealer "E"]
+[Deal "E:AQJT32.532.Q85.7 .AJ986.T76.AKT95 K86.74.J9.J86432 9754.KQT.AK432.Q"]
+{
+                   Nord
+                   9754
+                   RDX
+                   AR432
+                   D
+  Ouest                            Est
+  R86                              ADVX32
+  74                               532
+  V9                               D85
+  V86432                           7
+                   Sud
+                   -
+                   AV986
+                   X76
+                   ARX95
+}
+[Declarer "S"]
+[Contract "6H"]
+[Result "12"]
+[Score "NS 980"]
+[Auction "E"]
+2D    4C    Pass  4D
+Pass  4H    Pass  5H
+Pass  6H    Pass  Pass
+Pass
+[Play "W"]
+S8 S4 SA H6
+C3 CQ C7 C5
+H4 HT H3 HJ
+C4 HQ S3 C9
+H7 HK H2 HA
+C6 D2 H5 H9
+D9 D3 D5 D6
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "14"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "None"]
+[Dealer "E"]
+[Deal "E:AQJT32.532.Q85.7 .AJ986.T76.AKT95 K86.74.J9.J86432 9754.KQT.AK432.Q"]
+{
+                   Nord
+                   9754
+                   RDX
+                   AR432
+                   D
+  Ouest                            Est
+  R86                              ADVX32
+  74                               532
+  V9                               D85
+  V86432                           7
+                   Sud
+                   -
+                   AV986
+                   X76
+                   ARX95
+}
+[Declarer "S"]
+[Contract "4H"]
+[Result "10"]
+[Score "NS 420"]
+[Auction "E"]
+2D    2H    Pass  4H
+Pass  Pass  Pass
+[Play "W"]
+SK S4 SA H6
+C2 CQ C7 C5
+DJ DA D5 D6
+S6 S5 S3 H8
+D9 DK D8 D7
+S8 S7 SQ H9
+C3 D2 H3 CA
+H4 HT H2 HA
+C4 HQ S2 C9
+C6 S9 SJ HJ
+C8 D3 H5 CK
+CJ D4 DQ DT
+H7 HK ST CT
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "15"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "NS"]
+[Dealer "S"]
+[Deal "S:94.J3.T8765.QT86 QJ.AKT5.AK93.K94 AT753.874.J4.A75 K862.Q962.Q2.J32"]
+{
+                   Nord
+                   AX753
+                   874
+                   V4
+                   A75
+  Ouest                            Est
+  DV                               R862
+  ARX5                             D962
+  AR93                             D2
+  R94                              V32
+                   Sud
+                   94
+                   V3
+                   X8765
+                   DX86
+}
+[Declarer "W"]
+[Contract "4H"]
+[Result "10"]
+[Score "NS -420"]
+[Auction "S"]
+Pass  2NT   Pass  3C
+Pass  3D    Pass  4D
+Pass  4H    Pass  Pass
+Pass
+[Play "N"]
+SA S2 S4 SJ
+S3 S6 S9 SQ
+H4 H2 H3 HA
+H7 HQ HJ H5
+H8 H6 D8 HK
+D4 DQ D7 D3
+S5 SK C6 C4
+DJ D2 D5 DA
+C5 C2 D6 DK
+S7 H9 DT D9
+-  C3 CT -
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "15"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "NS"]
+[Dealer "S"]
+[Deal "S:94.J3.T8765.QT86 QJ.AKT5.AK93.K94 AT753.874.J4.A75 K862.Q962.Q2.J32"]
+{
+                   Nord
+                   AX753
+                   874
+                   V4
+                   A75
+  Ouest                            Est
+  DV                               R862
+  ARX5                             D962
+  AR93                             D2
+  R94                              V32
+                   Sud
+                   94
+                   V3
+                   X8765
+                   DX86
+}
+[Declarer "W"]
+[Contract "4H"]
+[Result "10"]
+[Score "NS -420"]
+[Auction "S"]
+Pass  2C    Pass  2D
+Pass  2NT   Pass  3C
+Pass  3H    Pass  4H
+Pass  Pass  Pass
+[Play "N"]
+H7 H2 HJ HK
+H4 HQ H3 H5
+H8 H6 D6 HA
+SA S2 S4 SJ
+S5 S6 S9 SQ
+D4 DQ D5 D3
+S3 SK C6 C4
+DJ D2 D8 DA
+S7 S8 D7 DK
+C5 H9 DT D9
+CA C2 CT CK
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "16"]
+[West "KLUKOWSKI"]
+[North "UPMARK"]
+[East "GAWRYS"]
+[South "F NYSTROM"]
+[Room "Open"]
+[Scoring "IMP"]
+[Vulnerable "EW"]
+[Dealer "W"]
+[Deal "W:AT873.J2.AJ32.J3 KQ2.AT54.QT8754. 94.93.9.Q9876542 J65.KQ876.K6.AKT"]
+{
+                   Nord
+                   RD2
+                   AX54
+                   DX8754
+                   -
+  Ouest                            Est
+  AX873                            94
+  V2                               93
+  AV32                             9
+  V3                               D9876542
+                   Sud
+                   V65
+                   RD876
+                   R6
+                   ARX
+}
+[Declarer "S"]
+[Contract "6H"]
+[Result "10"]
+[Score "NS -100"]
+[Auction "W"]
+Pass  1D    Pass  1H
+1S    3H    Pass  5H
+Pass  6H    Pass  Pass
+Pass
+[Play "W"]
+SA S2 S4 S6
+DA D4 D9 D6
+D2 D5 -  -
+*
+
+[Event "BBO2-2015WBTC-BB"]
+[Site "F1"]
+[Board "16"]
+[West "SYLVAN"]
+[North "JASSEM"]
+[East "WRANG|"]
+[South "MAZURKIEWI"]
+[Room "Closed"]
+[Scoring "IMP"]
+[Vulnerable "EW"]
+[Dealer "W"]
+[Deal "W:AT873.J2.AJ32.J3 KQ2.AT54.QT8754. 94.93.9.Q9876542 J65.KQ876.K6.AKT"]
+{
+                   Nord
+                   RD2
+                   AX54
+                   DX8754
+                   -
+  Ouest                            Est
+  AX873                            94
+  V2                               93
+  AV32                             9
+  V3                               D9876542
+                   Sud
+                   V65
+                   RD876
+                   R6
+                   ARX
+}
+[Declarer "S"]
+[Contract "4H"]
+[Result "11"]
+[Score "NS 450"]
+[Auction "W"]
+1S    2D    Pass  2H
+Pass  4H    Pass  Pass
+Pass
+[Play "W"]
+SA S2 S4 SJ
+ST SQ S9 S6
+H2 H4 H3 HK
+HJ HA H9 H6
+DA D4 D9 DK
+*

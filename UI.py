@@ -1,10 +1,13 @@
 import tkinter as tk
 import tkinter.messagebox as messagebox
+from Tooltip import ToolTip
 from abc import ABC,abstractmethod
 import os
 from Board import Board,SetOfBoards
 from Hand import Diagramm, Hand
 from Parameters import MAIN_REPERTORY
+from Séquence import Sequence
+from Consts import POSITIONS
 
 class SetofBoardsUI(tk.Frame) :
     """Navigate trought the set of boards"""
@@ -219,8 +222,144 @@ class BoardOptionsUI(tk.Frame) :
         self.comment_label.grid(column=0,row=2,sticky="w")
         self.comment.grid(column=0,row=3,sticky="w")
 
+class BiddingSequenceUI(tk.Frame) :
+    """Represents a bidding sequence"""
+    def __init__(self,parent,dealer :str,vul :str,bidding_seq : Sequence) :
+        self.height=1
+        self.width=17
+        tk.Frame.__init__(self, parent)
+        self.text_variables=[]
+        self.entry_list=[]
+        self.current_index=0
+        self.init_top(dealer,vul)
+        for i,bid_atom in enumerate(bidding_seq.get_sequence()) :
+            self.append(bid_atom.description)
+            self.text_variables[-1].set(bid_atom.__str__())
+        self.pack()
 
+    def init_top(self,dealer :str,vul :str) :
+        i=0
+        if dealer == "N" :
+            pass
+        if dealer == "E" :
+            i=1
+        if dealer == "S" :
+            i=2
+        if dealer == "W" :
+            i=3
+        dic={}
+        match vul :
+                case "NS" :
+                    dic["NS"]="red"
+                    dic["EW"]="green"
+                case "All" :
+                    dic["NS"]="red"
+                    dic["EW"]="red"
+                case "None" :
+                    dic["NS"]="green"
+                    dic["EW"]="green"
+                case "EW" :
+                    dic["NS"]="red"
+                    dic["EW"]="red"
 
+        for i,pos in enumerate(self.rotate(i,POSITIONS)):
+            if pos=="N" or pos=="S" :
+                lab = tk.Label(self,text=pos,background=dic["NS"],borderwidth=1,relief="ridge")
+                lab.grid(row=0,column=i,sticky="ew",pady=2)
+            else :
+                lab = tk.Label(self,text=pos,background=dic["EW"],borderwidth=1,relief="ridge")
+                lab.grid(row=0,column=i,sticky="ew",pady=2)
+
+    def append(self,alert="") :
+        self.text_variables.append(tk.StringVar(self))
+        entry = BidUI(self,textvariable=self.text_variables[-1],index=len(self.entry_list),alert=alert,width=self.width,height=self.height)
+        self.entry_list.append(entry)
+        entry.grid(row=1+(len(self.entry_list)-1)//4, column=(len(self.entry_list)-1)%4)
+
+    def focus_next_widget(self,event):
+        self.current_index+=1
+        if self.current_index == len(self.entry_list) :
+            self.append()
+        self.focus_with_index(self.current_index)
+        return("break")
+
+    def focus_previous_widget(self,event):
+        if self.current_index!=0 :
+            self.current_index-=1
+            if self.current_index == len(self.entry_list) :
+                self.append()
+            self.focus_with_index(self.current_index)
+        return("break")
+
+    def up(self,event) :
+        if self.current_index//4!=0 :
+            self.current_index-=4
+            self.focus_with_index(self.current_index)
+        return("break")
+
+    def down(self,event) :
+        if self.current_index<=len(self.entry_list)-4 :
+            self.current_index+=4
+            self.focus_with_index(self.current_index)
+        return("break")
+
+    def on_click(self,event) :
+        self.current_index=event.widget.index
+
+    def rotate(self, rotato : int,liste : list) :
+        for i in range(rotato) :
+            liste.insert(0, liste.pop())
+        return liste
+
+    def focus_with_index(self,i : int) :
+        self.entry_list[i].focus()
+        self.entry_list[i].select_range(0, 'end')
+
+    def write_alert(self,event) :
+        event.widget.configure(state='disabled')
+        textalert = tk.StringVar(self,value=event.widget.alert)
+        alert=tk.Entry(self,textvariable=textalert)
+        alert.index=event.widget.index
+        alert.grid(row=2+(len(self.entry_list)//4),column=0,columnspan=4)
+        alert.focus()
+        alert.bind("<Return>",self.return_alert)
+        alert.bind("<FocusOut>", self.return_alert)
+
+    def return_alert(self,event) :
+        self.entry_list[event.widget.index].configure(state='normal')
+        self.entry_list[event.widget.index].set_alert(event.widget.get())
+        self.entry_list[self.current_index].focus()
+        event.widget.destroy()
+
+class BidUI(tk.Entry) :
+    def __init__(self,parent,textvariable,index,alert,width,height) :
+        tk.Entry.__init__(self, parent,textvariable = textvariable, justify='center')
+        self.place(width=width,height=height)
+        self.index=index
+        self.alert=alert
+        self.set_alert(alert)
+        self.refresh_tooltip()
+        self.bind("<Tab>", parent.focus_next_widget)
+        self.bind("<Shift-Tab>", parent.focus_previous_widget)
+        self.bind("<Right>", parent.focus_next_widget)
+        self.bind("<Left>", parent.focus_previous_widget)
+        self.bind("<Up>",parent.up)
+        self.bind("<Down>",parent.down)
+        self.bind("<Button-1>",parent.on_click)
+        self.bind('a',parent.write_alert)
+
+    def set_alert(self,alert : str) :
+        if not alert :
+            return
+        self.alert=alert
+        self.refresh_tooltip()
+        self.config({"background": "Yellow"})
+    
+    def refresh_tooltip(self) :
+        if self.alert :
+            self.tooltip=ToolTip(self,self.alert)
+
+    
 
 if __name__ == '__main__':
     set_of_boards2 = SetOfBoards()
@@ -228,7 +367,13 @@ if __name__ == '__main__':
     set_of_boards2.init_from_lin(fichier)
     set_of_boards2.print_as_pbn()
     my_board = set_of_boards2.get_board_by_board_number(1)
+    seq = Sequence()
+    seq.append_multiple_from_string('P,P,P,1C,X,2C,X,XX,3C')
+    seq.print_as_pbn()
+    seq.sequence[0].description="test"
     root = tk.Tk()
-    play = SetofBoardsUI(root, set_of_boards2)
+    root.title(string='Bridgetrainer')
+    # play = SetofBoardsUI(root, set_of_boards2)
+    play=BiddingSequenceUI(root,"S","All",seq)
     root.mainloop()
 

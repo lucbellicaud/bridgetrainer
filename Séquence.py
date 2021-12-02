@@ -4,7 +4,7 @@ from typing import List
 
 LEVELS = [1,2,3,4,5,6,7]
 SUITS = 'C D H S N'.split()
-DECLARATIONS = 'P X XX'.split()
+DECLARATIONS = 'Pass X XX'.split()
 
 @dataclass
 class SequenceAtom(ABC) :
@@ -19,7 +19,7 @@ class SequenceAtom(ABC) :
 
 @dataclass(order=True)
 class Bid(SequenceAtom):
-    """"""
+    """A bid."""
     sort_index: int = field(init=False, repr=False)
     level: int
     suit: str
@@ -45,7 +45,7 @@ class Declaration(SequenceAtom) :
 
     def __post_init__(self):
         if self.type not in DECLARATIONS :
-            raise ErrorBid("Only P, X and XX are valid declarations")
+            raise ErrorBid("Only Pass, X and XX are valid declarations")
     def __str__(self):
         return self.type
 
@@ -55,7 +55,7 @@ class Declaration(SequenceAtom) :
 @dataclass
 class FinalContract() :
     bid : Bid = None
-    declaration : Declaration = 'P'
+    declaration : Declaration = 'Pass'
     joueur : str = ''
     valeur : int = 0
 
@@ -90,13 +90,8 @@ class FinalContract() :
     
 
     def init_from_string(self,s : str) : # -> return self
-        if len(s)==0 or len(s)>=4 :
+        if len(s)==0 or len(s)>4 :
             raise ErrorBid ("Invalid final contract !")
-        if len(s)==1 : #Pass or nothin !
-            if s!="P" :
-                raise ErrorBid ("Invalid final contract !")
-            else :
-                self.declaration = Declaration('P')
         if len(s)==2 : #contract without double or redouble
             self.bid = Bid(int(s[0]),s[1])
         if len(s)==3 : #Doubled contract
@@ -105,7 +100,9 @@ class FinalContract() :
             self.bid = Bid(int(s[0]),s[1])
             self.declaration = Declaration('X')
         if len(s)==4 : #Pull off the blue card !
-            if s[3:]!="XX" :
+            if s=="Pass" :
+                self.declaration = Declaration('Pass')
+            elif s[3:]!="XX" :
                 raise ErrorBid ("Invalid final contract !")
             self.bid = Bid(int(s[0]),s[1])
             self.declaration = Declaration('XX')
@@ -146,7 +143,7 @@ class Sequence() :
     def check_if_done(self) -> None :
         if len(self.sequence)==4 : #Check if 4 passes
             for at in self.sequence :
-                if not(type(at) is Declaration and at.type == 'P') :
+                if not(type(at) is Declaration and at.type == 'Pass') :
                     self.done = False
                     return
             self.done = True
@@ -154,7 +151,7 @@ class Sequence() :
             return
         if len(self.sequence)>=5 : # Check is 3 passes
             for at in self.sequence[-3:] :
-                if not(type(at) is Declaration and at.type == 'P') :
+                if not(type(at) is Declaration and at.type == 'Pass') :
                     self.done = False
                     return
             self.done = True
@@ -175,9 +172,9 @@ class Sequence() :
         for seq_atom in reversed(self.get_sequence()) :
             if (type(seq_atom) is not Bid) :
                 break
-            if seq_atom.get_type()!="P" :
+            if seq_atom.get_type()!="Pass" :
                  return seq_atom
-            return Declaration('P')
+            return Declaration('Pass')
 
     def set_final_contract(self, bid : Bid, declaration : Declaration) :
         self.final_contract = FinalContract(bid,declaration)
@@ -195,14 +192,14 @@ class Sequence() :
             if at.type == 'X' :
                 if self.sequence and type(self.sequence[-1]) is Bid :
                     return True
-                if len(self.sequence)>=3 and type(self.sequence[-1]) is Declaration and self.sequence[-1].type =="P" and type(self.sequence[-2]) is Declaration and self.sequence[-2].type =="P" and type(self.sequence[-3]) is Bid :
+                if len(self.sequence)>=3 and type(self.sequence[-1]) is Declaration and self.sequence[-1].type =="Pass" and type(self.sequence[-2]) is Declaration and self.sequence[-2].type =="Pass" and type(self.sequence[-3]) is Bid :
                     return True
                 else :
                     return False
             elif at.type == 'XX' :
                 if self.sequence and type(self.sequence[-1]) is Declaration and self.sequence[-1].type =="X" :
                     return True
-                if len(self.sequence)>=3 and type(self.sequence[-1]) is Declaration and self.sequence[-1].type =="P" and type(self.sequence[-2]) is Declaration and self.sequence[-2].type =="P" and type(self.sequence[-3]) is Declaration and self.sequence[-3].type =="X":
+                if len(self.sequence)>=3 and type(self.sequence[-1]) is Declaration and self.sequence[-1].type =="Pass" and type(self.sequence[-2]) is Declaration and self.sequence[-2].type =="Pass" and type(self.sequence[-3]) is Declaration and self.sequence[-3].type =="X":
                     return True
                 else :
                     return False
@@ -237,11 +234,24 @@ class Sequence() :
         return self
 
     def __str__(self) :
-        """Print the bidding""" #To be improved
-        string =""
-        for atom in self.sequence :
-            string += atom.__str__() +" "
+        string=""
+        # string += '{0:6}{1:6}{2:6}{3:6}\n'.format('N','E','S','W')
+        seq = self.get_sequence()
+        for i in range(0,len(seq)) :
+            string+='{0:6}'.format(seq[i].__str__())
+            if i%4==3 :
+                string+="\n"
         return string
+
+    def print_as_pbn(self) :
+        string=""
+        seq = self.get_sequence()
+        for i in range(0,len(seq)) :
+            atom = seq[i].__str__()
+            string+='{0:6}'.format(atom)
+            if i%4==3 :
+                string+="\n"
+        print(string)
 
 class ErrorBid(Exception):
     def init(self, value):
@@ -253,6 +263,6 @@ class ErrorBid(Exception):
         
 if __name__ == '__main__':
     seq = Sequence()
-    seq.append_multiple_from_string('P,P,P,1C,X,2C,X,XX,3C')
-    seq.replace_with_index(4,Bid(1,'D'))
-    seq.replace_bid('3C','3D')
+    seq.append_multiple_from_string('Pass,Pass,Pass,1C,X,2C,X,XX,3C')
+    seq.print_as_pbn()
+    print(seq.__str__())
