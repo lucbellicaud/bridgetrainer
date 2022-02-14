@@ -1,9 +1,9 @@
 import tkinter as tk
 import tkinter.messagebox as messagebox
-from Tooltip import ToolTip
+from UI.Tooltip import ToolTip
 from abc import ABC,abstractmethod
 import os
-from Board import Board,SetOfBoards
+from Old.Board import Board,SetOfBoards
 from Hand import Diagramm, Hand
 from Parameters import MAIN_REPERTORY
 from Séquence import Sequence

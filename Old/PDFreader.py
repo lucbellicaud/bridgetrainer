@@ -1,11 +1,12 @@
-from Board import SetOfBoards
+from Old.Board import SetOfBoards
 from Parameters import MAIN_REPERTORY
 
 import fitz
 import os
 import shutil
 from Hand import Hand,Diagramm
-from Board import Board,SetOfBoards
+from Consts import PDF_TO_PBN_DEALER
+from Old.Board import Board,SetOfBoards
 
 VUL_TRAD={'Personne' : "None", "NS" : "NS", "EO" : "EW", "Tous" : "All"}
 
@@ -19,7 +20,7 @@ def readPDF(path) -> SetOfBoards :
         if 'DONNE' in pdftext :
             board = Board()
             board.set_diagramm(get_hands(pdftext,page))
-            board.set_dealer(pdftext[pdftext.find('Donneur : ')+len('Donneur : ')])
+            board.set_dealer(PDF_TO_PBN_DEALER[pdftext[pdftext.find('Donneur : ')+len('Donneur : ')]])
             board.set_vul(VUL_TRAD[pdftext[pdftext.find('Vulnérabilité : ')+len('Vulnérabilité : ') : pdftext.find('\n',pdftext.find('Vulnérabilité : ')+len('Vulnérabilité : '))]])
             board.set_board_number(pdftext[pdftext.find('DONNE N°')+len('DONNE N°') : pdftext.find('\n',pdftext.find('DONNE N°')+len('DONNE N°'))])
             set_of_boards.append(board)
@@ -27,12 +28,13 @@ def readPDF(path) -> SetOfBoards :
 
 def get_hands(pdftext,page : int) -> Diagramm :
     cursor = 0
-    west,cursor = get_hand(pdftext,cursor)
-    east,cursor = get_hand(pdftext,cursor)
-    north,cursor = get_hand(pdftext,cursor)
-    south,cursor = get_hand(pdftext,cursor)
+    diag = Diagramm()
+    diag.west,cursor = get_hand(pdftext,cursor)
+    diag.east,cursor = get_hand(pdftext,cursor)
+    diag.north,cursor = get_hand(pdftext,cursor)
+    diag.south,cursor = get_hand(pdftext,cursor)
     
-    return Diagramm(south,north,west,east)
+    return diag
     
 def get_hand(pdftext : str,begining :int=0) : # return cursor and hand
     symbole_pique = pdftext.find('♠',begining)

@@ -1,0 +1,12 @@
+{
+    "python.testing.pytestArgs": [
+        "Deal utils"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.minimap.enabled": false,
+    "python.analysis.extraPaths": [
+        "./bridge_trainer/common_utils"
+    ]
+}
