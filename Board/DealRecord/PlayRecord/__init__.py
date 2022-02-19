@@ -1,1 +1,1 @@
-from .PlayRecord import PlayRecord
+from .PlayRecord import PlayRecord,Trick

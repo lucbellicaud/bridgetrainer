@@ -1,0 +1,1948 @@
+% PBN 2.0
+% EXPORT
+% 
+% <META  name=Generator                  content="Magic Contest France">
+% <META  name=Version                    content="4.13.3.4">
+% <META  name=Author                     content="www.brenning.se">
+% 
+% <META  name=Licencee                   content="Fédération Française de Bridge">
+% <META  name=Arranger                   content="Fédération Française de Bridge">
+% <META  name=Signature                  content="FFB - Christian BORDONNEAU">
+% <META  name=Created                    content="2022-02-15 12:11:24">
+% 
+% <META  name=ContestDate                content="2022-01-22 - 02-06">
+% <META  name=ContestName                content="Open /2 DN1 National Finale directe 21-22 - Séance 5">
+% <META  name=ContestType                content="2">
+% <META  name=ScoringType                content="MatchPoints;MP1">
+% <META  name=Barometer                  content="Y">
+% <META  name=TournamentDirector         content="">
+% 
+% <META  name=TableCount                 content="22">
+% <META  name=PairCount                  content="44">
+% <META  name=PhantomCount               content="0">
+% <META  name=BoardCount                 content="144">
+% <META  name=RoundCount                 content="14">
+% <META  name=BoardCountSession          content="28">
+% <META  name=BoardCountSessionMax       content="28">
+% <META  name=Average                    content="3024.0">
+% <META  name=HandicapPercentageAverage  content="">
+% 
+% <META  name=Strata                     content="">
+% <META  name=StrataHcpLevel             content="">
+% 
+% <META  name=CRCategoryID               content="-2">
+% <META  name=Factor                     content="1">
+% <META  name=FactorReason               content="">
+% <META  name=ContestID                  content="29835">
+% <META  name=SerialNumber               content="">
+% <META  name=PlayerCategoryCount        content="">
+% 
+% <META  name=CRMultiSession             content="-1">
+% <META  name=CRMultiSessionID           content="29835">
+% <META  name=CRSession                  content="5">
+% <META  name=CRSessionCount             content="6">
+% <META  name=CRCutAfterSession          content="">
+% <META  name=CRReportMPAfter            content="">
+% 
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "1"]
+[West "Luc Bellicaud"]
+[North "Christophe Grosset"]
+[East "Pierre Bedouet"]
+[South "Esteban Vallet"]
+[Score "EW 110"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:94.T72.T6.AQT763 AQT875.J6.Q74.94 K62.Q943.AK985.J J3.AK85.J32.K852"]
+[Scoring "MatchPoints;MP1"]
+[Declarer "N"]
+[Contract "4SX"]
+[Result "9"]
+[Score "NS -150"]
+[Auction "N"]
+1S    Pass  2H    3D
+3S    Pass  4S    X
+Pass  Pass  XX	  4N
+Pass  Pass X      Pass
+Pass  XX   Pass   Pass
+5S    X    Pass   Pass
+Pass
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[TotalScoreTable "Rank\2R;PairId\2R;Table\2R;Direction\5R;TotalScoreMP\6R;TotalPercentage\5R;Names\51L;NrBoards\3R;NrBoardsSession\2R;SessionScoreMP\5R;SessionPercentage\5R;SessionRank\2R;SessionRankTie\2R;MemberID1\10R;MemberID2\10R;Sex1\3R;Sex2\3R;SessionRankWithoutHcp\1R"]
+ 1 44  1 "N-S" 3383.0 55.94 "Cédric LORENZINI - Thomas BESSIS"                  144 28 718.9 61.13  1  - "01856543" "06577227" "M" "M" 0
+ 2 37 22 "E-W" 3286.7 54.34 "Jerome ROMBAUT - Leo ROMBAUT"                      144 28 579.1 49.24 25  - "02588608" "05649994" "M" "M" 0
+ 3 35 20 "N-S" 3230.3 53.41 "Philippe CHOTTIN - Michel ABECASSIS"               144 28 611.1 51.96 17  - "00385212" "00800020" "M" "M" 0
+ 4 36 21 "N-S" 3217.9 53.21 "Alain LEVY - Robert REIPLINGER"                    144 28 619.9 52.71 13  - "00817439" "00002626" "M" "M" 0
+ 5  7 10 "N-S" 3177.4 52.54 "Philippe CHESNY - Rémi LEGRAS"                     144 28 634.9 53.99 10  - "00203787" "00835093" "M" "M" 0
+ 6 41 19 "E-W" 3165.3 52.34 "Paul SEGUINEAU - Lionel SEBBANE"                   144 28 588.1 50.01 23  - "01218008" "01326869" "M" "M" 0
+ 7 25 10 "E-W" 3123.0 51.64 "Julien BERNARD - Quentin ROBERT"                   144 28 637.1 54.18  9  - "05356151" "01622093" "M" "M" 0
+ 8  3 14 "N-S" 3107.5 51.38 "Théo GUILLEMIN - Arthur BOULIN"                    144 28 607.9 51.69 18  - "02395334" "02395045" "M" "M" 0
+ 9 43 17 "N-S" 3104.0 51.32 "Philippe ROGER - Jacques POTIER"                   144 28 618.9 52.63 14  - "00823270" "00822024" "M" "M" 0
+10 16  1 "E-W" 3094.1 51.16 "Gert Jan PAULISSEN - Olivier GIARD"                144 28 590.0 50.17 22  - "02654152" "00754417" "M" "M" 0
+11  9  8 "E-W" 3087.1 51.04 "Baptiste COMBESCURE - Pierre FRANCESCHETTI"        144 28 556.9 47.36 29  - "05339470" "06800933" "M" "M" 0
+12 34 19 "N-S" 3086.9 51.04 "Jean François KIEFFER - Michel CLARET"             144 28 532.1 45.25 36  - "01107029" "00899320" "M" "M" 0
+13  6 11 "N-S" 3082.5 50.97 "Franck RIEHM - Philippe MOLINA"                    144 28 454.1 38.61 44  - "00430546" "01137167" "M" "M" 0
+14 38 22 "N-S" 3069.0 50.74 "Albert BITRAN - Razvan SAVOIU"                     144 28 645.1 54.86  7  - "00482985" "00671900" "M" "M" 0
+15  4 13 "E-W" 3062.1 50.63 "Jean Luc AROIX - Jeremie TIGNEL"                   144 28 478.2 40.66 43  - "00221937" "09824633" "M" "M" 0
+16 27 12 "E-W" 3056.7 50.54 "Mme Bénédicte CRONIER - Nicolas DECHELETTE"        144 28 549.9 46.76 35  - "00026478" "00397085" "W" "M" 0
+17 20  5 "E-W" 3046.7 50.38 "Marc BOMPIS - Dominique PILON"                     144 28 602.9 51.27 19  - "00785272" "00821662" "M" "M" 0
+18  8  9 "E-W" 3043.5 50.32 "Philippe TOFFIER - Jacques BANNAIRE"               144 28 566.9 48.21 27  - "00826620" "00761602" "M" "M" 0
+19  2 15 "N-S" 3037.3 50.22 "Régis LESGUILLIER - Jean Louis MARLIER"            144 28 682.1 58.00  4  - "00817182" "00399510" "M" "M" 0
+20 12  5 "N-S" 3034.6 50.18 "Nicolas LHUISSIER - Laurent THUILLEZ"              144 28 602.1 51.20 20  - "06939229" "00282567" "M" "M" 0
+21 28 13 "N-S" 3034.3 50.17 "Guillaume AUSSUDRE - Yves JEANNETEAU"              144 28 530.1 45.08 37  - "04885078" "00559734" "M" "M" 0
+22  1 16 "N-S" 3017.9 49.90 "Hervé VINCIGUERRA - Philippe SOULET"               144 28 515.8 43.86 40  - "00331885" "00863581" "M" "M" 0
+23 29 14 "E-W" 3014.7 49.85 "Mme Carole PUILLET - Simon POULAT"                 144 28 560.9 47.70 28  - "06810312" "06915526" "W" "M" 0
+24 30 15 "E-W" 3011.0 49.79 "Bernard CABANES - Eric GAUTRET"                    144 28 623.1 52.98 11 12 "00354580" "01042548" "M" "M" 0
+25 18  3 "N-S" 2991.5 49.46 "Patrice DUMAZET - Gaston MEJANE"                   144 28 612.9 52.12 16  - "00809139" "00328775" "M" "M" 0
+26 32 17 "E-W" 2988.6 49.41 "Alain BENOIT - Jean Louis COUNIL"                  144 28 646.0 54.93  6  - "01491612" "00793142" "M" "M" 0
+27 42 18 "N-S" 2984.7 49.35 "Olivier DESAGES - Sam BAHBOUT"                     144 28 582.9 49.57 24  - "05049269" "02522242" "M" "M" 0
+28 13  4 "E-W" 2981.4 49.30 "Roland AGENES - René GIAVARINI"                    144 28 554.9 47.19 32  - "00897928" "00776130" "M" "M" 0
+29 33 18 "E-W" 2976.6 49.22 "Hervé FLEURY - Marc GIROLLET"                      144 28 554.1 47.12 33  - "00334566" "00764903" "M" "M" 0
+30 15  2 "N-S" 2974.9 49.19 "Thibaut CHARLETOUX - Xavier DUPUIS"                144 28 690.9 58.75  3  - "04512639" "03091030" "M" "M" 0
+31 21  6 "N-S" 2973.6 49.17 "François STRETZ - Jean XERRI"                      144 28 555.1 47.20 30 31 "00825846" "00762931" "M" "M" 0
+32 10  7 "N-S" 2967.2 49.06 "David HARARI - Bernard DOUSSOT"                    144 28 646.9 55.01  5  - "02176362" "02504042" "M" "M" 0
+33 40 20 "E-W" 2964.1 49.01 "Guillaume GRENTHE - Jerome GRENTHE"                144 28 555.1 47.20 30 31 "05096335" "05096343" "M" "M" 0
+34 31 16 "E-W" 2951.3 48.80 "Christophe GROSSET - Luc BELLICAUD"                144 28 523.9 44.55 38  - "01378399" "05576436" "M" "M" 0
+35 17  2 "E-W" 2943.2 48.66 "Christophe OURSEL - Dominique HIRTZ"               144 28 511.1 43.46 42  - "01611666" "00913039" "M" "M" 0
+36 24  9 "N-S" 2935.3 48.53 "Pierre SCHMIDT - Stéphane GARCIA"                  144 28 593.1 50.43 21  - "00379520" "01538208" "M" "M" 0
+37 26 11 "E-W" 2932.5 48.49 "Thierry BOURVIS - Michel DUGUET"                   144 28 512.9 43.61 41  - "00974867" "00635253" "M" "M" 0
+38 39 21 "E-W" 2907.1 48.07 "Hervé LAGREE - François CROZET"                    144 28 638.1 54.26  8  - "00297946" "00899205" "M" "M" 0
+39 23  8 "N-S" 2898.5 47.92 "Christophe ROBLIN - Clément THIZY"                 144 28 550.9 46.85 34  - "00660094" "01112888" "M" "M" 0
+40 14  3 "E-W" 2862.8 47.33 "Bruno LORRAIN - Philippe BODARD"                   144 28 710.9 60.45  2  - "00387060" "00512386" "M" "M" 0
+41 19  4 "N-S" 2854.9 47.20 "Erick MAUBERQUEZ - Alain GOLDSCHMIDT"              144 28 567.1 48.22 26  - "03257640" "00758716" "M" "M" 0
+42 22  7 "E-W" 2822.0 46.66 "Thierry DE SAINTE MARIE - Olivier DE SAINTE MARIE" 144 28 623.1 52.98 11 12 "00824070" "01063263" "M" "M" 0
+43  5 12 "N-S" 2805.6 46.39 "Mme Anne ROUANET LABE - Thibault DELMAS-SIRVEN"    144 28 613.1 52.13 15  - "02402692" "01197830" "W" "M" 0
+44 11  6 "E-W" 2800.3 46.30 "Martin LILAMAND - Guillaume FREJACQUES"            144 28 522.9 44.46 39  - "00916629" "01239822" "M" "M" 0
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+ 9  1 24  8 3N   W  6 H7   "150"      - 40.0  2.0  95   5
+13  1 28  4 3N   W  6 H7   "150"      - 40.0  2.0  95   5
+21  1 36 39 3N   W  6 H7   "150"      - 40.0  2.0  95   5
+18  1 42 33 3H   N  9 C9   "140"      - 36.0  6.0  86  14
+14  1  3 29 3C   N  9 HJ   "110"      - 33.0  9.0  79  21
+ 2  1 15 17 3C   N  9 D4   "110"      - 33.0  9.0  79  21
+12  1  5 27 3S   E  7 DA   "100"      - 27.0 15.0  64  36
+11  1  6 26 4S   E  8 DK   "100"      - 27.0 15.0  64  36
+20  1 35 40 3S   W  7 DT   "100"      - 27.0 15.0  64  36
+22  1 38 37 3S   E  7 DA   "100"      - 27.0 15.0  64  36
+ 3  1 18 14 2S   E  7 DK    "50"      - 22.0 20.0  52  48
+16  1  1 31 3C   N  8 HJ       -   "50" 15.0 27.0  36  64
+15  1  2 30 3C   N  8 SA       -   "50" 15.0 27.0  36  64
+ 6  1 21 11 3D   S  8 SJ       -   "50" 15.0 27.0  36  64
+19  1 34 41 3D   S  8 HA       -   "50" 15.0 27.0  36  64
+17  1 43 32 3C   N  8 SA       -   "50" 15.0 27.0  36  64
+ 1  1 44 16 3C   S  8 HA       -   "50" 15.0 27.0  36  64
+ 7  1 10 22 4HX  N  9 C9       -  "100"  7.0 35.0  17  83
+ 5  1 12 20 4C   N  8 HJ       -  "100"  7.0 35.0  17  83
+ 8  1 23  9 4D   S  7 HA       -  "150"  4.0 38.0  10  90
+10  1  7 25 4CX  N  8 HJ       -  "300"  1.0 41.0   2  98
+ 4  1 19 13 4CX  N  8 SA       -  "300"  1.0 41.0   2  98
+[OptimumScore "NS 140"]
+[OptimumContract "3H N 9"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  7
+W  H  4
+W  D  5
+W  C  4
+W NT  6
+N  S  5
+N  H  9
+N  D  8
+N  C  8
+N NT  6
+E  S  7
+E  H  4
+E  D  5
+E  C  4
+E NT  6
+S  S  5
+S  H  9
+S  D  8
+S  C  8
+S NT  6
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "2"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:KQT82.3.KJ8.QT54 A4.AK97.A763.AK7 J976.Q8652.54.83 53.JT4.QT92.J962"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+ 4  1 19 13 4SX  E  8 HA   "300"      - 38.0  4.0  90  10
+ 6  1 21 11 4SX  E  8 HA   "300"      - 38.0  4.0  90  10
+20  1 35 40 4SX  E  8 SA   "300"      - 38.0  4.0  90  10
+18  1 42 33 4SX  E  8 CK   "300"      - 38.0  4.0  90  10
+ 1  1 44 16 4SX  E  8 HA   "300"      - 38.0  4.0  90  10
+17  1 43 32 2N   S  9 H2   "150"      - 32.0 10.0  76  24
+10  1  7 25 3SX  E  8 SA   "100"      - 27.0 15.0  64  36
+ 7  1 10 22 3SX  E  8 HA   "100"      - 27.0 15.0  64  36
+ 5  1 12 20 3SX  E  8 HA   "100"      - 27.0 15.0  64  36
+ 9  1 24  8 3SX  E  8 HA   "100"      - 27.0 15.0  64  36
+22  1 38 37 3S   E  8 CA    "50"      - 22.0 20.0  52  48
+15  1  2 30 4C   N  8 SK       -  "200" 15.0 27.0  36  64
+14  1  3 29 4C   N  8 H3       -  "200" 15.0 27.0  36  64
+ 2  1 15 17 4C   N  8 SK       -  "200" 15.0 27.0  36  64
+13  1 28  4 5D   N  9 SK       -  "200" 15.0 27.0  36  64
+19  1 34 41 3N   N  7 SK       -  "200" 15.0 27.0  36  64
+21  1 36 39 4H   N  8 SK       -  "200" 15.0 27.0  36  64
+16  1  1 31 5D   N  8 SJ       -  "300"  6.0 36.0  14  86
+12  1  5 27 5C   N  8 SK       -  "300"  6.0 36.0  14  86
+ 3  1 18 14 4C   N  7 SK       -  "300"  6.0 36.0  14  86
+11  1  6 26 6D   S  8 S6       -  "400"  1.0 41.0   2  98
+ 8  1 23  9 4C   N  6 SK       -  "400"  1.0 41.0   2  98
+[OptimumScore "NS 130"]
+[OptimumContract "4D N 10"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  8
+W  H  4
+W  D  3
+W  C  5
+W NT  5
+N  S  5
+N  H  8
+N  D 10
+N  C  8
+N NT  8
+E  S  8
+E  H  5
+E  D  3
+E  C  5
+E NT  5
+S  S  5
+S  H  8
+S  D  9
+S  C  8
+S NT  8
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "3"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:K654.AK86.A.8532 QJT9.J73.T982.KQ A8.T4.KJ74.T9764 732.Q952.Q653.AJ"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+18  2 43 34 5C   S 11 SQ   "400"      - 42.0  0.0 100   0
+16  2  2 32 2N   S 10 H6   "180"      - 38.0  4.0  90  10
+10  2  8 26 1N   N 10 S7   "180"      - 38.0  4.0  90  10
+ 6  2 22 12 1N   N 10 H2   "180"      - 38.0  4.0  90  10
+17  2  1 33 2C   S 11 SQ   "150"      - 22.0 20.0  52  48
+15  2  3 31 1N   N  9 S7   "150"      - 22.0 20.0  52  48
+14  2  4 30 1N   N  9 S7   "150"      - 22.0 20.0  52  48
+11  2  7 27 1N   N  9 H2   "150"      - 22.0 20.0  52  48
+ 2  2 16 18 2C   S 11 SQ   "150"      - 22.0 20.0  52  48
+ 4  2 20 14 1N   N  9 H2   "150"      - 22.0 20.0  52  48
+ 9  2 25  9 2C   S 11 SQ   "150"      - 22.0 20.0  52  48
+13  2 29  5 3C   S 11 SQ   "150"      - 22.0 20.0  52  48
+19  2 35 42 2C   S 11 SQ   "150"      - 22.0 20.0  52  48
+20  2 36 41 1N   N  9 S7   "150"      - 22.0 20.0  52  48
+21  2 37 40 1N   N  9 S7   "150"      - 22.0 20.0  52  48
+22  2 39 38 1N   N  9 H2   "150"      - 22.0 20.0  52  48
+ 1  2 44 17 2C   S 11 SQ   "150"      - 22.0 20.0  52  48
+12  2  6 28 2C   S 10 SQ   "130"      -  5.0 37.0  12  88
+ 7  2 11 23 3C   S 10 SQ   "130"      -  5.0 37.0  12  88
+ 5  2 13 21 3C   S 10 SQ   "130"      -  5.0 37.0  12  88
+ 3  2 19 15 3C   S 10 SQ   "130"      -  5.0 37.0  12  88
+ 8  2 24 10 1N   N  8 H2   "120"      -  0.0 42.0   0 100
+[OptimumScore "NS 400"]
+[OptimumContract "5C S 11"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  4
+W  H  4
+W  D  5
+W  C  2
+W NT  4
+N  S  8
+N  H  9
+N  D  8
+N  C 11
+N NT  9
+E  S  4
+E  H  4
+E  D  5
+E  C  2
+E NT  4
+S  S  8
+S  H  9
+S  D  8
+S  C 11
+S NT  9
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "4"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:AQ3.J8762.A96.85 97.5.QJ752.AK743 J864.943.K43.QT6 KT52.AKQT.T8.J92"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+18  2 43 34 3N   S 10 H2   "630"      - 41.0  1.0  98   2
+ 1  2 44 17 3N   S 10 H6   "630"      - 41.0  1.0  98   2
+15  2  3 31 3N   S  9 H6   "600"      - 31.0 11.0  74  26
+14  2  4 30 3N   S  9 H2   "600"      - 31.0 11.0  74  26
+12  2  6 28 3N   S  9 SA   "600"      - 31.0 11.0  74  26
+ 5  2 13 21 3N   S  9 H6   "600"      - 31.0 11.0  74  26
+ 2  2 16 18 3N   N  9 H3   "600"      - 31.0 11.0  74  26
+ 6  2 22 12 3N   S  9 SA   "600"      - 31.0 11.0  74  26
+ 9  2 25  9 3N   S  9 DA   "600"      - 31.0 11.0  74  26
+13  2 29  5 3N   S  9 SQ   "600"      - 31.0 11.0  74  26
+16  2  2 32 1N   N  9 H2   "150"      - 22.0 20.0  52  48
+17  2  1 33 3C   S 10 H2   "130"      - 16.0 26.0  38  62
+ 4  2 20 14 3C   S 10 H2   "130"      - 16.0 26.0  38  62
+20  2 36 41 3C   S 10 H2   "130"      - 16.0 26.0  38  62
+21  2 37 40 2C   S 10 C5   "130"      - 16.0 26.0  38  62
+22  2 39 38 3C   S 10 H8   "130"      - 16.0 26.0  38  62
+ 8  2 24 10 1N   N  8 S4   "120"      - 10.0 32.0  24  76
+19  2 35 42 3C   S  9 H2   "110"      -  8.0 34.0  19  81
+11  2  7 27 3N   N  8 H3       -  "100"  5.0 37.0  12  88
+ 7  2 11 23 3N   S  8 D9       -  "100"  5.0 37.0  12  88
+10  2  8 26 3N   S  7 H6       -  "200"  1.0 41.0   2  98
+ 3  2 19 15 3N   S  7 H6       -  "200"  1.0 41.0   2  98
+[OptimumScore "NS 120"]
+[OptimumContract "2N N 8"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  5
+W  H  6
+W  D  4
+W  C  3
+W NT  5
+N  S  7
+N  H  7
+N  D  9
+N  C  8
+N NT  8
+E  S  5
+E  H  6
+E  D  4
+E  C  3
+E NT  5
+S  S  7
+S  H  6
+S  D  9
+S  C  8
+S NT  8
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "5"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:A7532.83.AKT.J65 J6.Q74.Q964.AQ84 K9.AKJT62.J752.2 QT84.95.83.KT973"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+ 8  3 25 11 4H   S 12 H8   "680"      - 42.0  0.0 100   0
+13  3 30  6 3N   N 11 D4   "660"      - 39.0  3.0  93   7
+19  3 36 43 3N   N 11 D4   "660"      - 39.0  3.0  93   7
+18  3  1 35 4H   S 11 D8   "650"      - 21.0 21.0  50  50
+17  3  2 34 4H   S 11 D8   "650"      - 21.0 21.0  50  50
+16  3  3 33 4H   N 11 D8   "650"      - 21.0 21.0  50  50
+14  3  5 31 4H   S 11 C2   "650"      - 21.0 21.0  50  50
+12  3  7 29 4H   S 11 D8   "650"      - 21.0 21.0  50  50
+11  3  8 28 4H   S 11 C3   "650"      - 21.0 21.0  50  50
+10  3  9 27 5H   S 11 CT   "650"      - 21.0 21.0  50  50
+ 7  3 12 24 4H   S 11 D8   "650"      - 21.0 21.0  50  50
+ 5  3 14 22 4H   S 11 CT   "650"      - 21.0 21.0  50  50
+ 2  3 17 19 4H   S 11 CT   "650"      - 21.0 21.0  50  50
+ 3  3 20 16 4H   S 11 D8   "650"      - 21.0 21.0  50  50
+ 4  3 21 15 4H   S 11 S4   "650"      - 21.0 21.0  50  50
+ 6  3 23 13 4H   S 11 D8   "650"      - 21.0 21.0  50  50
+ 9  3 26 10 4H   S 11 D8   "650"      - 21.0 21.0  50  50
+20  3 37 42 4H   S 11 C3   "650"      - 21.0 21.0  50  50
+21  3 38 41 4H   N 11 C3   "650"      - 21.0 21.0  50  50
+15  3  4 32 4H   S 10 CT   "620"      -  3.0 39.0   7  93
+ 1  3 44 18 4H   S 10 D8   "620"      -  3.0 39.0   7  93
+22  3 40 39 3H   S 11 D8   "200"      -  0.0 42.0   0 100
+[OptimumScore "NS 650"]
+[OptimumContract "5H N 11"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  4
+W  H  1
+W  D  3
+W  C  7
+W NT  3
+N  S  9
+N  H 11
+N  D 10
+N  C  6
+N NT  8
+E  S  4
+E  H  2
+E  D  3
+E  C  7
+E NT  3
+S  S  9
+S  H 11
+S  D 10
+S  C  6
+S NT  8
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "6"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:AQ954.QJ87.965.Q J832.5.QJ.AKT984 K76.9643.732.J52 T.AKT2.AKT84.763"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+14  3  5 31 3N   S 10 S6   "430"      - 38.0  4.0  90  10
+ 5  3 14 22 3N   S 10 S6   "430"      - 38.0  4.0  90  10
+13  3 30  6 3N   S 10 S6   "430"      - 38.0  4.0  90  10
+20  3 37 42 3N   S 10 S6   "430"      - 38.0  4.0  90  10
+21  3 38 41 3N   S 10 S6   "430"      - 38.0  4.0  90  10
+18  3  1 35 5C   N 11 S3   "400"      - 28.0 14.0  67  33
+17  3  2 34 3N   S  9 H6   "400"      - 28.0 14.0  67  33
+12  3  7 29 5C   S 11 S3   "400"      - 28.0 14.0  67  33
+11  3  8 28 5C   S 11 S6   "400"      - 28.0 14.0  67  33
+ 2  3 17 19 5C   S 11 C2   "400"      - 28.0 14.0  67  33
+22  3 40 39 3C   S 11 S2   "150"      - 22.0 20.0  52  48
+16  3  3 33 6C   S 11 S6       -   "50" 10.0 32.0  24  76
+15  3  4 32 6C   S 11 S6       -   "50" 10.0 32.0  24  76
+10  3  9 27 6C   S 11 D2       -   "50" 10.0 32.0  24  76
+ 7  3 12 24 6C   S 11 S3       -   "50" 10.0 32.0  24  76
+ 3  3 20 16 6C   S 11 S6       -   "50" 10.0 32.0  24  76
+ 4  3 21 15 6C   S 11 S6       -   "50" 10.0 32.0  24  76
+ 6  3 23 13 6C   S 11 S6       -   "50" 10.0 32.0  24  76
+ 8  3 25 11 6C   S 11 S3       -   "50" 10.0 32.0  24  76
+ 9  3 26 10 6C   S 11 S3       -   "50" 10.0 32.0  24  76
+19  3 36 43 6C   S 11 H4       -   "50" 10.0 32.0  24  76
+ 1  3 44 18 6C   S 11 S6       -   "50" 10.0 32.0  24  76
+[OptimumScore "NS 400"]
+[OptimumContract "5D S 11"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  5
+W  H  5
+W  D  2
+W  C  2
+W NT  4
+N  S  8
+N  H  8
+N  D 11
+N  C 11
+N NT  9
+E  S  5
+E  H  5
+E  D  2
+E  C  2
+E NT  4
+S  S  8
+S  H  8
+S  D 11
+S  C 11
+S NT  9
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "7"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:K2.A65.Q65.T8652 AJT.K972.AK873.3 74.QT84.JT4.AQJ9 Q98653.J3.92.K74"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+17  4  3 35 2D   W  8 H8       -   "90" 42.0  0.0 100   0
+ 4  4 22 16 2D   W 10 S8       -  "130" 40.0  2.0  95   5
+ 9  4 27 11 2S   E 11 C2       -  "200" 36.0  6.0  86  14
+22  4 41 40 3S   E 11 H5       -  "200" 36.0  6.0  86  14
+ 1  4 44 19 3S   E 11 C2       -  "200" 36.0  6.0  86  14
+ 2  4 18 20 2S   W 12 DJ       -  "230" 31.0 11.0  74  26
+ 3  4 21 17 3S   E 12 C2       -  "230" 31.0 11.0  74  26
+10  4 10 28 4S   E 10 C2       -  "620" 28.0 14.0  67  33
+18  4  2 36 4S   E 11 C2       -  "650" 19.0 23.0  45  55
+14  4  6 32 4S   W 11 H8       -  "650" 19.0 23.0  45  55
+12  4  8 30 4S   E 11 C2       -  "650" 19.0 23.0  45  55
+11  4  9 29 4S   E 11 C2       -  "650" 19.0 23.0  45  55
+ 7  4 13 25 4S   E 11 C2       -  "650" 19.0 23.0  45  55
+ 5  4 15 23 4S   E 11 C2       -  "650" 19.0 23.0  45  55
+ 6  4 24 14 4S   E 11 C2       -  "650" 19.0 23.0  45  55
+19  4 37  1 4S   E 11 C3       -  "650" 19.0 23.0  45  55
+16  4  4 34 4S   E 12 C2       -  "680"  5.0 37.0  12  88
+15  4  5 33 4S   E 12 C2       -  "680"  5.0 37.0  12  88
+ 8  4 26 12 4S   E 12 C2       -  "680"  5.0 37.0  12  88
+13  4 31  7 4S   E 12 D3       -  "680"  5.0 37.0  12  88
+20  4 38 43 4S   E 12 C2       -  "680"  5.0 37.0  12  88
+21  4 39 42 4S   E 12 HA       -  "680"  5.0 37.0  12  88
+[OptimumScore "NS -650"]
+[OptimumContract "5S W 11"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S 11
+W  H  7
+W  D  9
+W  C  7
+W NT  8
+N  S  1
+N  H  5
+N  D  3
+N  C  6
+N NT  3
+E  S 11
+E  H  7
+E  D  9
+E  C  7
+E NT  8
+S  S  1
+S  H  5
+S  D  4
+S  C  6
+S NT  5
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "8"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:AK43.J.KJ94.7543 J7.AT87543.Q5.KJ 8.KQ9.832.QT9862 QT9652.62.AT76.A"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+ 5  4 15 23 3SX  S 10 HJ   "630"      - 42.0  0.0 100   0
+15  4  5 33 5CX  W  9 HA   "300"      - 39.0  3.0  93   7
+12  4  8 30 5CX  E  9 CA   "300"      - 39.0  3.0  93   7
+10  4 10 28 3H   N  9 D2   "140"      - 32.0 10.0  76  24
+ 7  4 13 25 3H   N  9 D2   "140"      - 32.0 10.0  76  24
+ 4  4 22 16 3H   N  9 D2   "140"      - 32.0 10.0  76  24
+19  4 37  1 3H   N  9 D2   "140"      - 32.0 10.0  76  24
+21  4 39 42 3H   N  9 D2   "140"      - 32.0 10.0  76  24
+20  4 38 43 4C   W  8 SJ   "100"      - 25.0 17.0  60  40
+22  4 41 40 4CX  E  9 ST   "100"      - 25.0 17.0  60  40
+18  4  2 36 4C   E  9 H6    "50"      - 20.0 22.0  48  52
+ 2  4 18 20 4C   E  9 H8    "50"      - 20.0 22.0  48  52
+ 9  4 27 11 3C   E  8 H3    "50"      - 20.0 22.0  48  52
+17  4  3 35 3H   N  8 D2       -   "50" 12.0 30.0  29  71
+14  4  6 32 4H   S  9 CT       -   "50" 12.0 30.0  29  71
+ 3  4 21 17 3H   N  8 D2       -   "50" 12.0 30.0  29  71
+ 8  4 26 12 3H   N  8 D2       -   "50" 12.0 30.0  29  71
+ 1  4 44 19 4S   S  9 HJ       -   "50" 12.0 30.0  29  71
+11  4  9 29 3HX  N  8 D2       -  "100"  5.0 37.0  12  88
+13  4 31  7 4HX  N  9 CT       -  "100"  5.0 37.0  12  88
+16  4  4 34 3C   E  9 H6       -  "110"  1.0 41.0   2  98
+ 6  4 24 14 3C   E  9 ST       -  "110"  1.0 41.0   2  98
+[OptimumScore "NS 100"]
+[OptimumContract "4CX W 9"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  4
+W  H  4
+W  D  7
+W  C  9
+W NT  5
+N  S  9
+N  H  8
+N  D  6
+N  C  4
+N NT  5
+E  S  4
+E  H  4
+E  D  7
+E  C  9
+E NT  5
+S  S  9
+S  H  9
+S  D  6
+S  C  4
+S NT  5
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "9"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:9654.KQ73.Q73.QJ T73.862.JT82.A85 AQ.AJ95.K4.K9432 KJ82.T4.A965.T76"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+18  5  3 37 4H   S 11 C6   "450"      - 34.0  8.0  81  19
+15  5  6 34 4H   S 11 C6   "450"      - 34.0  8.0  81  19
+14  5  7 33 4H   S 11 C6   "450"      - 34.0  8.0  81  19
+ 7  5 14 26 4H   S 11 C6   "450"      - 34.0  8.0  81  19
+ 5  5 16 24 4H   S 11 C6   "450"      - 34.0  8.0  81  19
+ 2  5 19 21 4H   S 11 C6   "450"      - 34.0  8.0  81  19
+ 8  5 27 13 4H   S 11 C6   "450"      - 34.0  8.0  81  19
+13  5 32  8 4H   S 11 C3   "450"      - 34.0  8.0  81  19
+ 1  5 44 20 4H   S 11 C6   "450"      - 34.0  8.0  81  19
+16  5  5 35 3N   S 10 S2   "430"      - 23.0 19.0  55  45
+19  5 38  2 3N   S 10 S2   "430"      - 23.0 19.0  55  45
+17  5  4 36 4H   S 10 C6   "420"      - 10.0 32.0  24  76
+12  5  9 31 4H   S 10 D2   "420"      - 10.0 32.0  24  76
+11  5 10 30 4H   S 10 H4   "420"      - 10.0 32.0  24  76
+10  5 11 29 4H   N 10 DJ   "420"      - 10.0 32.0  24  76
+ 3  5 22 18 4H   S 10 C6   "420"      - 10.0 32.0  24  76
+ 4  5 23 17 4H   S 10 C6   "420"      - 10.0 32.0  24  76
+ 6  5 25 15 4H   S 10 C6   "420"      - 10.0 32.0  24  76
+ 9  5 28 12 4H   N 10 DJ   "420"      - 10.0 32.0  24  76
+20  5 39  1 4H   S 10 C6   "420"      - 10.0 32.0  24  76
+21  5 40 43 4H   N 10 D2   "420"      - 10.0 32.0  24  76
+22  5 42 41 4H   S 10 H6   "420"      - 10.0 32.0  24  76
+[OptimumScore "NS 450"]
+[OptimumContract "5H S 11"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  5
+W  H  2
+W  D  6
+W  C  3
+W NT  4
+N  S  7
+N  H 10
+N  D  6
+N  C 10
+N NT  8
+E  S  5
+E  H  2
+E  D  6
+E  C  3
+E NT  4
+S  S  8
+S  H 11
+S  D  6
+S  C 10
+S NT  9
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "10"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "E:KT43.QT76.3.A832 A52.J8.KQ865.T74 QJ.532.AJ94.Q965 9876.AK94.T72.KJ"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+18  5  3 37 3DX  N  9 H7   "670"      - 42.0  0.0 100   0
+12  5  9 31 2HX  E  6 DK   "500"      - 40.0  2.0  95   5
+ 5  5 16 24 2H   E  6 DK   "200"      - 36.0  6.0  86  14
+ 4  5 23 17 2H   W  6 D2   "200"      - 36.0  6.0  86  14
+ 6  5 25 15 3HX  E  8 DK   "200"      - 36.0  6.0  86  14
+ 1  5 44 20 2D   N  8 D3    "90"      - 32.0 10.0  76  24
+19  5 38  2 Pass -  - -      "0"      - 29.0 13.0  69  31
+20  5 39  1 Pass -  - -      "0"      - 29.0 13.0  69  31
+11  5 10 30 3D   N  8 H7       -  "100" 21.0 21.0  50  50
+10  5 11 29 1N   N  6 H6       -  "100" 21.0 21.0  50  50
+ 3  5 22 18 3D   N  8 H7       -  "100" 21.0 21.0  50  50
+ 8  5 27 13 3D   N  8 H6       -  "100" 21.0 21.0  50  50
+13  5 32  8 2S   N  7 HQ       -  "100" 21.0 21.0  50  50
+22  5 42 41 2D   N  7 D3       -  "100" 21.0 21.0  50  50
+21  5 40 43 2H   W  8 S8       -  "110" 14.0 28.0  33  67
+17  5  4 36 1N   S  5 SQ       -  "200"  9.0 33.0  21  79
+ 7  5 14 26 3D   N  7 D3       -  "200"  9.0 33.0  21  79
+ 2  5 19 21 1N   S  5 C5       -  "200"  9.0 33.0  21  79
+ 9  5 28 12 1N   S  5 SQ       -  "200"  9.0 33.0  21  79
+16  5  5 35 2N   S  5 SQ       -  "300"  2.0 40.0   5  95
+15  5  6 34 2N   S  5 CT       -  "300"  2.0 40.0   5  95
+14  5  7 33 3D   N  6 D3       -  "300"  2.0 40.0   5  95
+[OptimumScore "NS -120"]
+[OptimumContract "2N E 8"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  7
+W  H  7
+W  D  6
+W  C  8
+W NT  8
+N  S  6
+N  H  5
+N  D  7
+N  C  5
+N NT  5
+E  S  7
+E  H  7
+E  D  5
+E  C  8
+E NT  8
+S  S  6
+S  H  5
+S  D  7
+S  C  5
+S NT  5
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "11"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:J4.T984.J976.KT4 Q97.Q732.T5.8763 AK8.AJ65.42.AQJ2 T6532.K.AKQ83.95"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+14  6  8 34 4H   S 10 DT   "420"      - 40.0  2.0  95   5
+ 5  6 17 25 4H   N 10 DA   "420"      - 40.0  2.0  95   5
+ 1  6 44 21 4H   N 10 DA   "420"      - 40.0  2.0  95   5
+ 4  6 24 18 3N   N  9 DK   "400"      - 36.0  6.0  86  14
+ 7  6 15 27 3H   N 10 DA   "170"      - 33.0  9.0  79  21
+ 6  6 26 16 3H   N 10 DA   "170"      - 33.0  9.0  79  21
+17  6  5 37 2N   N  9 DQ   "150"      - 28.0 14.0  67  33
+15  6  7 35 2N   N  9 S6   "150"      - 28.0 14.0  67  33
+ 2  6 20 22 2N   N  9 DA   "150"      - 28.0 14.0  67  33
+21  6 41  1 2SX  E  7 SJ   "100"      - 23.0 19.0  55  45
+22  6 43 42 3SX  E  8 SJ   "100"      - 23.0 19.0  55  45
+18  6  4 38 4H   N  9 DA       -   "50" 12.0 30.0  29  71
+16  6  6 36 4H   N  9 DA       -   "50" 12.0 30.0  29  71
+12  6 10 32 4H   N  9 DA       -   "50" 12.0 30.0  29  71
+11  6 11 31 4H   N  9 DA       -   "50" 12.0 30.0  29  71
+10  6 12 30 2N   N  7 D5       -   "50" 12.0 30.0  29  71
+ 3  6 23 19 4H   S  9 DT       -   "50" 12.0 30.0  29  71
+ 8  6 28 14 4H   N  9 DA       -   "50" 12.0 30.0  29  71
+13  6 33  9 2N   N  7 S3       -   "50" 12.0 30.0  29  71
+20  6 40  2 4H   N  9 DA       -   "50" 12.0 30.0  29  71
+ 9  6 29 13 2SX  E  8 HT       -  "470"  2.0 40.0   5  95
+19  6 39  3 2SX  E  9 S4       -  "570"  0.0 42.0   0 100
+[OptimumScore "NS 420"]
+[OptimumContract "4H S 10"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  7
+W  H  3
+W  D  6
+W  C  4
+W NT  4
+N  S  6
+N  H 10
+N  D  7
+N  C  9
+N NT  8
+E  S  7
+E  H  3
+E  D  6
+E  C  4
+E NT  4
+S  S  6
+S  H 10
+S  D  7
+S  C  9
+S NT  8
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "12"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "W:87432.87.62.Q872 95.QJT.AK85.JT43 AKQJT.54.QJ973.K 6.AK9632.T4.A965"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+11  6 11 31 5H   S 11 S2   "650"      - 39.0  3.0  93   7
+ 7  6 15 27 5H   S 11 D6   "650"      - 39.0  3.0  93   7
+19  6 39  3 5H   S 11 S2   "650"      - 39.0  3.0  93   7
+ 1  6 44 21 5H   S 11 S2   "650"      - 39.0  3.0  93   7
+14  6  8 34 5HX  E  8 HA   "500"      - 28.0 14.0  67  33
+12  6 10 32 5SX  E  8 HA   "500"      - 28.0 14.0  67  33
+10  6 12 30 5SX  E  8 HA   "500"      - 28.0 14.0  67  33
+ 2  6 20 22 5HX  E  8 HA   "500"      - 28.0 14.0  67  33
+13  6 33  9 5SX  E  8 HA   "500"      - 28.0 14.0  67  33
+20  6 40  2 5SX  E  8 HA   "500"      - 28.0 14.0  67  33
+22  6 43 42 5SX  E  8 HA   "500"      - 28.0 14.0  67  33
+17  6  5 37 4SX  E  8 H3   "300"      - 17.0 25.0  40  60
+15  6  7 35 4SX  E  8 HA   "300"      - 17.0 25.0  40  60
+ 8  6 28 14 4SX  E  8 HA   "300"      - 17.0 25.0  40  60
+21  6 41  1 4SX  E  8 HA   "300"      - 17.0 25.0  40  60
+18  6  4 38 4S   E  8 HA   "100"      -  7.0 35.0  17  83
+16  6  6 36 4S   W  8 HA   "100"      -  7.0 35.0  17  83
+ 5  6 17 25 4S   W  8 DA   "100"      -  7.0 35.0  17  83
+ 3  6 23 19 4SX  E  9 HA   "100"      -  7.0 35.0  17  83
+ 4  6 24 18 4SX  E  9 HA   "100"      -  7.0 35.0  17  83
+ 6  6 26 16 4S   E  8 HA   "100"      -  7.0 35.0  17  83
+ 9  6 29 13 6H   S 11 S2       -  "100"  0.0 42.0   0 100
+[OptimumScore "NS 500"]
+[OptimumContract "5SX W 8"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  8
+W  H  2
+W  D  6
+W  C  2
+W NT  4
+N  S  5
+N  H 11
+N  D  6
+N  C 10
+N NT  8
+E  S  8
+E  H  2
+E  D  6
+E  C  2
+E NT  4
+S  S  5
+S  H 11
+S  D  6
+S  C 10
+S NT  8
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "13"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "All"]
+[Deal "N:Q65.T7.KJ93.QJT2 K.AKJ52.Q72.9865 873.64.8654.AK73 AJT942.Q983.AT.4"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+18  7  5 39 3H   E 12 CA       -  "230" 42.0  0.0 100   0
+16  7  7 37 4H   E 11 D6       -  "650" 40.0  2.0  95   5
+22  7  1 43 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+15  7  8 36 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+14  7  9 35 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+12  7 11 33 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+11  7 12 32 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+ 7  7 16 28 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+ 5  7 18 26 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+ 3  7 24 20 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+ 9  7 30 14 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+13  7 34 10 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+19  7 40  4 5H   E 12 CA       -  "680" 26.0 16.0  62  38
+20  7 41  3 4H   E 12 CA       -  "680" 26.0 16.0  62  38
+21  7 42  2 4H   W 12 CK       -  "680" 26.0 16.0  62  38
+17  7  6 38 6H   E 12 D2       - "1430"  6.0 36.0  14  86
+10  7 13 31 6H   E 12 CA       - "1430"  6.0 36.0  14  86
+ 2  7 21 23 6H   E 12 CA       - "1430"  6.0 36.0  14  86
+ 4  7 25 19 6H   E 12 CA       - "1430"  6.0 36.0  14  86
+ 6  7 27 17 6H   E 12 CA       - "1430"  6.0 36.0  14  86
+ 8  7 29 15 6H   E 12 CA       - "1430"  6.0 36.0  14  86
+ 1  7 44 22 6H   E 12 CA       - "1430"  6.0 36.0  14  86
+[OptimumScore "NS -1430"]
+[OptimumContract "6H E 12"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S 10
+W  H 12
+W  D  7
+W  C  7
+W NT  8
+N  S  2
+N  H  1
+N  D  5
+N  C  6
+N NT  5
+E  S 10
+E  H 12
+E  D  7
+E  C  7
+E NT  8
+S  S  2
+S  H  1
+S  D  5
+S  C  6
+S NT  5
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "14"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "E:KQT9642.J4.K7.A8 J3.Q32.AT8543.75 5.AT87.Q9.KQJ943 A87.K965.J62.T62"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+22  7  1 43 4S   E  9 DA    "50"      - 37.0  5.0  88  12
+14  7  9 35 4S   E  9 DA    "50"      - 37.0  5.0  88  12
+ 4  7 25 19 4S   E  9 DA    "50"      - 37.0  5.0  88  12
+ 6  7 27 17 4S   E  9 C7    "50"      - 37.0  5.0  88  12
+19  7 40  4 4S   E  9 H2    "50"      - 37.0  5.0  88  12
+ 1  7 44 22 4S   E  9 H2    "50"      - 37.0  5.0  88  12
+17  7  6 38 4S   W 10 DA       -  "420" 21.0 21.0  50  50
+16  7  7 37 4S   E 10 C7       -  "420" 21.0 21.0  50  50
+15  7  8 36 4S   E 10 H2       -  "420" 21.0 21.0  50  50
+12  7 11 33 4S   E 10 DA       -  "420" 21.0 21.0  50  50
+11  7 12 32 4S   E 10 H2       -  "420" 21.0 21.0  50  50
+10  7 13 31 4S   E 10 H2       -  "420" 21.0 21.0  50  50
+ 3  7 24 20 4S   E 10 DA       -  "420" 21.0 21.0  50  50
+ 8  7 29 15 4S   E 10 H2       -  "420" 21.0 21.0  50  50
+ 9  7 30 14 4S   E 10 DA       -  "420" 21.0 21.0  50  50
+13  7 34 10 4S   E 10 DA       -  "420" 21.0 21.0  50  50
+20  7 41  3 3N   W 10 H5       -  "430" 10.0 32.0  24  76
+18  7  5 39 4S   E 11 DA       -  "450"  4.0 38.0  10  90
+ 7  7 16 28 4S   E 11 DA       -  "450"  4.0 38.0  10  90
+ 5  7 18 26 4S   E 11 DA       -  "450"  4.0 38.0  10  90
+ 2  7 21 23 4S   E 11 DA       -  "450"  4.0 38.0  10  90
+21  7 42  2 4S   E 11 DA       -  "450"  4.0 38.0  10  90
+[OptimumScore "NS -420"]
+[OptimumContract "4S E 10"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S 10
+W  H  8
+W  D  6
+W  C 10
+W NT  8
+N  S  2
+N  H  5
+N  D  7
+N  C  3
+N NT  2
+E  S 10
+E  H  8
+E  D  6
+E  C 10
+E NT  8
+S  S  2
+S  H  5
+S  D  7
+S  C  3
+S NT  2
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "15"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "S:65.AKJT52.954.84 KJT.83.T876.JT73 AQ732.Q9764.A.K6 984..KQJ32.AQ952"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+10  8 14 32 6H   S 13 D6  "1460"      - 41.0  1.0  98   2
+20  8 42  4 6H   S 13 D4  "1460"      - 41.0  1.0  98   2
+11  8 13 33 4HX  S 11 CJ   "990"      - 38.0  4.0  90  10
+18  8  6 40 6CX  E  8 H2   "800"      - 35.0  7.0  83  17
+ 1  8 44 23 7CX  W  9 DA   "800"      - 35.0  7.0  83  17
+17  8  7 39 4HX  S 10 SJ   "790"      - 32.0 10.0  76  24
+16  8  8 38 4H   S 13 D8   "710"      - 22.0 20.0  52  48
+14  8 10 36 5H   N 13 DK   "710"      - 22.0 20.0  52  48
+12  8 12 34 5H   N 13 DK   "710"      - 22.0 20.0  52  48
+ 5  8 19 27 5H   N 13 DK   "710"      - 22.0 20.0  52  48
+ 3  8 25 21 5H   N 13 DK   "710"      - 22.0 20.0  52  48
+ 4  8 26 20 5H   N 13 DK   "710"      - 22.0 20.0  52  48
+ 8  8 30 16 5H   N 13 DK   "710"      - 22.0 20.0  52  48
+13  8 35 11 4H   S 13 SK   "710"      - 22.0 20.0  52  48
+21  8 43  3 4H   S 13 D6   "710"      - 22.0 20.0  52  48
+15  8  9 37 5H   S 11 D2   "650"      - 10.0 32.0  24  76
+ 7  8 17 29 5H   S 11 D8   "650"      - 10.0 32.0  24  76
+ 6  8 28 18 5H   S 11 CJ   "650"      - 10.0 32.0  24  76
+19  8 41  5 7DX  E 10 HK   "500"      -  6.0 36.0  14  86
+22  8  2  1 6CX  W 10 H4   "300"      -  3.0 39.0   7  93
+ 9  8 31 15 6DX  E 10 D3   "300"      -  3.0 39.0   7  93
+ 2  8 22 24 6H   S 11 CJ       -  "100"  0.0 42.0   0 100
+[OptimumScore "NS 500"]
+[OptimumContract "7DX W 10"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  5
+W  H  0
+W  D 10
+W  C  9
+W NT  4
+N  S  8
+N  H 12
+N  D  3
+N  C  4
+N NT  9
+E  S  3
+E  H  0
+E  D  9
+E  C  8
+E NT  4
+S  S  8
+S  H 11
+S  D  3
+S  C  3
+S NT  8
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "16"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "W:KT.T964.QJ8.AK87 52.A.AT9643.9432 QJ973.QJ853.72.J A864.K72.K5.QT65"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+20  8 42  4 3C   N 10 HQ   "130"      - 42.0  0.0 100   0
+22  8  2  1 3D   N  9 CJ   "110"      - 35.0  7.0  83  17
+17  8  7 39 3D   N  9 CJ   "110"      - 35.0  7.0  83  17
+ 7  8 17 29 3D   N  9 CJ   "110"      - 35.0  7.0  83  17
+ 5  8 19 27 3D   N  9 CJ   "110"      - 35.0  7.0  83  17
+ 6  8 28 18 3D   N  9 CJ   "110"      - 35.0  7.0  83  17
+ 1  8 44 23 3D   N  9 CJ   "110"      - 35.0  7.0  83  17
+16  8  8 38 3H   E  8 DK   "100"      - 19.0 23.0  45  55
+15  8  9 37 3H   E  8 DK   "100"      - 19.0 23.0  45  55
+14  8 10 36 3H   E  8 DA   "100"      - 19.0 23.0  45  55
+11  8 13 33 3H   E  8 DK   "100"      - 19.0 23.0  45  55
+10  8 14 32 3H   W  8 DA   "100"      - 19.0 23.0  45  55
+ 3  8 25 21 3H   W  8 S5   "100"      - 19.0 23.0  45  55
+ 8  8 30 16 3H   E  8 DK   "100"      - 19.0 23.0  45  55
+ 9  8 31 15 3H   E  8 DK   "100"      - 19.0 23.0  45  55
+13  8 35 11 3H   E  8 DK   "100"      - 19.0 23.0  45  55
+21  8 43  3 4H   E  9 S5   "100"      - 19.0 23.0  45  55
+18  8  6 40 4D   S  9 CJ       -   "50"  8.0 34.0  19  81
+ 2  8 22 24 4DX  N  9 CJ       -  "100"  6.0 36.0  14  86
+ 4  8 26 20 2H   W  8 DA       -  "110"  3.0 39.0   7  93
+19  8 41  5 2H   E  8 DK       -  "110"  3.0 39.0   7  93
+12  8 12 34 3H   W  9 C2       -  "140"  0.0 42.0   0 100
+[OptimumScore "NS 110"]
+[OptimumContract "3D N 9"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  6
+W  H  8
+W  D  3
+W  C  3
+W NT  5
+N  S  6
+N  H  4
+N  D  9
+N  C  9
+N NT  6
+E  S  6
+E  H  8
+E  D  3
+E  C  3
+E NT  5
+S  S  6
+S  H  4
+S  D  9
+S  C  9
+S NT  6
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "17"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AKJ.76.K94.QT532 Q2.T982.A652.J97 T9643.AK5.87.AK6 875.QJ43.QJT3.84"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+ 9  9 32 16 4S   N 13 H7   "510"      - 42.0  0.0 100   0
+14  9 11 37 4S   N 11 HT   "450"      - 39.9  2.1  95   5
+22  9  3  2 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+18  9  7 41 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+17  9  8 40 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+16  9  9 39 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+15  9 10 38 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+12  9 13 35 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+11  9 14 34 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+10  9 15 33 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+ 7  9 18 30 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+ 5  9 20 28 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+ 2  9 23 25 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+ 3  9 26 22 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+ 4  9 27 21 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+ 6  9 29 19 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+ 8  9 31 17 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+13  9 36 12 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+19  9 42  6 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+20  9 43  5 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+ 1  9 44 24 4S   S 10 DQ   "420"      - 18.9 23.1  45  55
+21  9  1  4 -    -  - -     "A-"   "A+" 16.8 25.2  40  60
+[OptimumScore "NS 990"]
+[OptimumContract "6N N 12"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  0
+W  H  6
+W  D  6
+W  C  1
+W NT  1
+N  S 12
+N  H  6
+N  D  7
+N  C 12
+N NT 12
+E  S  0
+E  H  6
+E  D  6
+E  C  1
+E NT  1
+S  S 11
+S  H  6
+S  D  6
+S  C 11
+S NT  9
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "18"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "E:K53.J863.AJ8.AT6 AQ962.K74.65.952 J874.952.T73.Q83 T.AQT.KQ942.KJ74"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+21  9  1  4 3N   N  9 SK   "600"      - 30.0 12.0  71  29
+15  9 10 38 3N   N  9 H3   "600"      - 30.0 12.0  71  29
+14  9 11 37 3N   N  9 H6   "600"      - 30.0 12.0  71  29
+11  9 14 34 3N   N  9 H3   "600"      - 30.0 12.0  71  29
+ 7  9 18 30 3N   N  9 H3   "600"      - 30.0 12.0  71  29
+ 5  9 20 28 3N   N  9 H3   "600"      - 30.0 12.0  71  29
+ 2  9 23 25 3N   N  9 H6   "600"      - 30.0 12.0  71  29
+ 3  9 26 22 3N   N  9 H3   "600"      - 30.0 12.0  71  29
+ 4  9 27 21 3N   N  9 H3   "600"      - 30.0 12.0  71  29
+ 6  9 29 19 3N   N  9 H3   "600"      - 30.0 12.0  71  29
+ 8  9 31 17 3N   N  9 H3   "600"      - 30.0 12.0  71  29
+ 9  9 32 16 3N   N  9 H3   "600"      - 30.0 12.0  71  29
+13  9 36 12 3N   N  9 H3   "600"      - 30.0 12.0  71  29
+18  9  7 41 2N   N 10 DA   "180"      - 15.0 27.0  36  64
+20  9 43  5 2N   N 10 H3   "180"      - 15.0 27.0  36  64
+10  9 15 33 1NX  E  6 S6   "100"      - 12.0 30.0  29  71
+17  9  8 40 3N   N  8 H3       -  "100"  6.0 36.0  14  86
+16  9  9 39 3N   N  8 S3       -  "100"  6.0 36.0  14  86
+12  9 13 35 3N   N  8 DJ       -  "100"  6.0 36.0  14  86
+19  9 42  6 3N   N  8 H3       -  "100"  6.0 36.0  14  86
+ 1  9 44 24 3N   N  8 H3       -  "100"  6.0 36.0  14  86
+22  9  3  2 3N   N  7 H3       -  "200"  0.0 42.0   0 100
+[OptimumScore "NS 130"]
+[OptimumContract "4C N 10"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  5
+W  H  4
+W  D  4
+W  C  3
+W NT  4
+N  S  8
+N  H  8
+N  D  9
+N  C 10
+N NT  8
+E  S  5
+E  H  4
+E  D  4
+E  C  3
+E NT  4
+S  S  8
+S  H  8
+S  D  9
+S  C  9
+S NT  8
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "19"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "S:KQJ73.Q75.852.JT T65.AT9.K76.AK54 A82.KJ82.Q93.762 94.643.AJT4.Q983"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+15 10 11 39 4DX  E  9 SK   "200"      - 42.0  0.0 100   0
+ 5 10 21 29 2S   S  8 CA   "110"      - 40.0  2.0  95   5
+21 10  2  5 2S   S  7 CA       -   "50" 32.0 10.0  76  24
+22 10  4  3 2S   S  7 CA       -   "50" 32.0 10.0  76  24
+18 10  8 42 2S   S  7 CA       -   "50" 32.0 10.0  76  24
+14 10 12 38 2S   S  7 CA       -   "50" 32.0 10.0  76  24
+12 10 14 36 2S   S  7 CA       -   "50" 32.0 10.0  76  24
+ 9 10 33 17 2S   S  7 S5       -   "50" 32.0 10.0  76  24
+13 10 37 13 2S   N  7 C8       -   "50" 32.0 10.0  76  24
+17 10  9 41 2SX  S  7 CA       -  "100" 24.0 18.0  57  43
+ 2 10 24 26 1N   E  8 SK       -  "120" 22.0 20.0  52  48
+20 10  1  6 4C   E 10 SK       -  "130" 10.0 32.0  24  76
+16 10 10 40 3C   W 10 C7       -  "130" 10.0 32.0  24  76
+11 10 15 35 3C   W 10 C6       -  "130" 10.0 32.0  24  76
+10 10 16 34 3C   W 10 C2       -  "130" 10.0 32.0  24  76
+ 7 10 19 31 3C   W 10 SA       -  "130" 10.0 32.0  24  76
+ 3 10 27 23 3C   W 10 C6       -  "130" 10.0 32.0  24  76
+ 4 10 28 22 3C   W 10 C7       -  "130" 10.0 32.0  24  76
+ 6 10 30 20 3C   W 10 C2       -  "130" 10.0 32.0  24  76
+ 8 10 32 18 4C   E 10 SK       -  "130" 10.0 32.0  24  76
+19 10 43  7 3C   W 10 C3       -  "130" 10.0 32.0  24  76
+ 1 10 44 25 3C   W 10 C7       -  "130" 10.0 32.0  24  76
+[OptimumScore "NS -130"]
+[OptimumContract "4C W 10"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  6
+W  H  7
+W  D  9
+W  C 10
+W NT  8
+N  S  7
+N  H  6
+N  D  4
+N  C  3
+N NT  4
+E  S  6
+E  H  7
+E  D  9
+E  C 10
+E NT  8
+S  S  7
+S  H  6
+S  D  4
+S  C  3
+S NT  4
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "20"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:765.AT2.J9643.95 A2.K5.KQ875.KQ62 T843.J9843.T.AT3 KQJ9.Q76.A2.J874"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+21 10  2  5 4N   S 11 S7   "660"      - 40.0  2.0  95   5
+10 10 16 34 3N   N 11 H4   "660"      - 40.0  2.0  95   5
+ 5 10 21 29 3N   N 11 H4   "660"      - 40.0  2.0  95   5
+20 10  1  6 3N   N 10 H5   "630"      - 30.0 12.0  71  29
+22 10  4  3 4N   N 10 H4   "630"      - 30.0 12.0  71  29
+14 10 12 38 3N   N 10 H4   "630"      - 30.0 12.0  71  29
+11 10 15 35 3N   N 10 H4   "630"      - 30.0 12.0  71  29
+13 10 37 13 3N   N 10 H4   "630"      - 30.0 12.0  71  29
+19 10 43  7 3N   N 10 H4   "630"      - 30.0 12.0  71  29
+ 1 10 44 25 3N   N 10 H4   "630"      - 30.0 12.0  71  29
+ 7 10 19 31 3N   N  9 H4   "600"      - 19.0 23.0  45  55
+ 2 10 24 26 3N   N  9 H4   "600"      - 19.0 23.0  45  55
+ 3 10 27 23 3N   N  9 H9   "600"      - 19.0 23.0  45  55
+ 6 10 30 20 3N   N  9 H4   "600"      - 19.0 23.0  45  55
+18 10  8 42 3N   N  8 H4       -  "100"  8.0 34.0  19  81
+17 10  9 41 3N   N  8 H4       -  "100"  8.0 34.0  19  81
+16 10 10 40 3N   N  8 H4       -  "100"  8.0 34.0  19  81
+15 10 11 39 3N   N  8 H4       -  "100"  8.0 34.0  19  81
+12 10 14 36 3N   N  8 H4       -  "100"  8.0 34.0  19  81
+ 4 10 28 22 3N   N  8 H4       -  "100"  8.0 34.0  19  81
+ 8 10 32 18 3N   N  8 H4       -  "100"  8.0 34.0  19  81
+ 9 10 33 17 6N   S 10 S7       -  "200"  0.0 42.0   0 100
+[OptimumScore "NS 630"]
+[OptimumContract "4N N 10"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  2
+W  H  5
+W  D  3
+W  C  2
+W NT  2
+N  S 10
+N  H  8
+N  D 10
+N  C 10
+N NT 10
+E  S  2
+E  H  5
+E  D  3
+E  C  2
+E NT  2
+S  S 10
+S  H  8
+S  D 10
+S  C 10
+S NT 10
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "21"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:KJ6.J84.AJ7.9743 Q98532.T.T96.T65 74.Q976.Q8432.Q8 AT.AK532.K5.AKJ2"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+17 11 10 42 3C   W  8 C3    "50"      - 38.0  4.0  90  10
+ 4 11 29 23 4S   E  9 D2    "50"      - 38.0  4.0  90  10
+ 6 11 31 21 5S   W 10 DA    "50"      - 38.0  4.0  90  10
+ 9 11 34 18 5S   W 10 C7    "50"      - 38.0  4.0  90  10
+13 11 38 14 4S   E  9 D2    "50"      - 38.0  4.0  90  10
+22 11  5  4 2H   W  8 C4       -  "110" 31.0 11.0  74  26
+ 1 11 44 26 1H   W  8 C7       -  "110" 31.0 11.0  74  26
+19 11  1  8 4S   E 11 H5       -  "450" 16.0 26.0  38  62
+20 11  2  7 4S   W 11 C7       -  "450" 16.0 26.0  38  62
+21 11  3  6 4S   E 11 D2       -  "450" 16.0 26.0  38  62
+18 11  9 43 4S   W 11 D2       -  "450" 16.0 26.0  38  62
+15 11 12 40 4S   W 11 C7       -  "450" 16.0 26.0  38  62
+14 11 13 39 5S   E 11 H7       -  "450" 16.0 26.0  38  62
+11 11 16 36 4S   E 11 H7       -  "450" 16.0 26.0  38  62
+10 11 17 35 4S   W 11 DA       -  "450" 16.0 26.0  38  62
+ 7 11 20 32 5S   W 11 DA       -  "450" 16.0 26.0  38  62
+ 5 11 22 30 4S   W 11 C4       -  "450" 16.0 26.0  38  62
+ 2 11 25 27 4S   W 11 C7       -  "450" 16.0 26.0  38  62
+ 3 11 28 24 4S   W 11 C7       -  "450" 16.0 26.0  38  62
+ 8 11 33 19 4S   W 11 C7       -  "450" 16.0 26.0  38  62
+12 11 15 37 3N   W 11 C7       -  "460"  2.0 40.0   5  95
+16 11 11 41 4N   W 12 C3       -  "490"  0.0 42.0   0 100
+[OptimumScore "NS -450"]
+[OptimumContract "5S W 11"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S 11
+W  H  8
+W  D  7
+W  C  9
+W NT  8
+N  S  2
+N  H  5
+N  D  6
+N  C  3
+N NT  3
+E  S 10
+E  H  8
+E  D  5
+E  C  9
+E NT  7
+S  S  2
+S  H  5
+S  D  6
+S  C  3
+S NT  3
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "22"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "E:AJ.K743.KQ762.Q3 T875.Q6.T984.J85 Q632.AT95.5.9762 K94.J82.AJ3.AKT4"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+17 11 10 42 1N   E  6 DT   "100"      - 38.0  4.0  90  10
+11 11 16 36 1N   E  6 S2   "100"      - 38.0  4.0  90  10
+ 2 11 25 27 1N   E  6 S7   "100"      - 38.0  4.0  90  10
+ 4 11 29 23 1N   E  6 DT   "100"      - 38.0  4.0  90  10
+ 1 11 44 26 1N   E  6 DT   "100"      - 38.0  4.0  90  10
+19 11  1  8 1N   E  7 DT       -   "90" 23.0 19.0  55  45
+20 11  2  7 1N   E  7 S5       -   "90" 23.0 19.0  55  45
+21 11  3  6 1N   E  7 DT       -   "90" 23.0 19.0  55  45
+18 11  9 43 1N   E  7 DT       -   "90" 23.0 19.0  55  45
+16 11 11 41 1N   E  7 DT       -   "90" 23.0 19.0  55  45
+15 11 12 40 1N   E  7 DT       -   "90" 23.0 19.0  55  45
+ 5 11 22 30 1N   E  7 DT       -   "90" 23.0 19.0  55  45
+ 3 11 28 24 1N   E  7 DT       -   "90" 23.0 19.0  55  45
+ 8 11 33 19 1N   E  7 DT       -   "90" 23.0 19.0  55  45
+13 11 38 14 1N   E  7 DT       -   "90" 23.0 19.0  55  45
+22 11  5  4 1N   E  8 DT       -  "120" 10.0 32.0  24  76
+14 11 13 39 1N   E  8 DT       -  "120" 10.0 32.0  24  76
+10 11 17 35 1N   E  8 DT       -  "120" 10.0 32.0  24  76
+12 11 15 37 3H   E  9 DT       -  "140"  5.0 37.0  12  88
+ 7 11 20 32 3H   E  9 DT       -  "140"  5.0 37.0  12  88
+ 6 11 31 21 1N   E  9 DT       -  "150"  2.0 40.0   5  95
+ 9 11 34 18 3HX  E  9 DT       -  "730"  0.0 42.0   0 100
+[OptimumScore "NS -140"]
+[OptimumContract "3H E 9"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  6
+W  H  9
+W  D  7
+W  C  6
+W NT  6
+N  S  6
+N  H  4
+N  D  6
+N  C  6
+N NT  7
+E  S  6
+E  H  9
+E  D  7
+E  C  6
+E NT  6
+S  S  6
+S  H  4
+S  D  6
+S  C  6
+S NT  6
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "23"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "S:AJ985.JT87.J32.5 K4.AK95.A87.7632 QT73.642.Q65.KQ8 62.Q3.KT94.AJT94"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+ 5 12 23 31 3N   W  7 S3   "200"      - 42.0  0.0 100   0
+19 12  2  9 3N   W  8 S3   "100"      - 32.0 10.0  76  24
+21 12  4  7 3N   W  8 S3   "100"      - 32.0 10.0  76  24
+22 12  6  5 3N   E  8 S3   "100"      - 32.0 10.0  76  24
+18 12 10  1 3N   W  8 S3   "100"      - 32.0 10.0  76  24
+15 12 13 41 3N   W  8 S3   "100"      - 32.0 10.0  76  24
+14 12 14 40 3N   W  8 S2   "100"      - 32.0 10.0  76  24
+ 4 12 30 24 3N   W  8 S3   "100"      - 32.0 10.0  76  24
+13 12 39 15 3N   W  8 S3   "100"      - 32.0 10.0  76  24
+ 1 12 44 27 3N   W  8 S7   "100"      - 32.0 10.0  76  24
+12 12 16 38 1N   E  8 S8       -  "120" 21.0 21.0  50  50
+10 12 18 36 1N   E  8 HJ       -  "120" 21.0 21.0  50  50
+20 12  3  8 3C   W 10 S7       -  "130" 15.0 27.0  36  64
+ 7 12 21 33 3C   W 10 S8       -  "130" 15.0 27.0  36  64
+ 2 12 26 28 3C   W 10 H4       -  "130" 15.0 27.0  36  64
+ 3 12 29 25 3C   W 10 S7       -  "130" 15.0 27.0  36  64
+ 6 12 32 22 3C   W 11 S7       -  "150" 10.0 32.0  24  76
+16 12 12 42 2SX  N  7 S4       -  "200"  8.0 34.0  19  81
+11 12 17 37 5C   W 11 S7       -  "600"  6.0 36.0  14  86
+17 12 11 43 4H   W 10 S7       -  "620"  4.0 38.0  10  90
+ 8 12 34 20 3N   W 10 S7       -  "630"  2.0 40.0   5  95
+ 9 12 35 19 3SX  S  6 HA       -  "800"  0.0 42.0   0 100
+[OptimumScore "NS -620"]
+[OptimumContract "4H W 10"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  7
+W  H 10
+W  D 10
+W  C 10
+W NT  8
+N  S  6
+N  H  3
+N  D  3
+N  C  3
+N NT  3
+E  S  7
+E  H 10
+E  D 10
+E  C 10
+E NT  8
+S  S  6
+S  H  3
+S  D  3
+S  C  3
+S NT  3
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "24"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "W:8754.QJ.QJ8.AJT5 KQ62.8542.AT65.2 AJ93.AK9.74.9764 T.T763.K932.KQ83"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+20 12  3  8 3S   W  7 C2   "100"      - 35.0  7.0  83  17
+21 12  4  7 3S   W  7 C2   "100"      - 35.0  7.0  83  17
+18 12 10  1 3S   E  7 CK   "100"      - 35.0  7.0  83  17
+17 12 11 43 3S   W  7 C2   "100"      - 35.0  7.0  83  17
+14 12 14 40 4S   E  8 CK   "100"      - 35.0  7.0  83  17
+ 9 12 35 19 3SX  W  8 H5   "100"      - 35.0  7.0  83  17
+13 12 39 15 3S   W  7 C2   "100"      - 35.0  7.0  83  17
+ 1 12 44 27 3SX  W  8 C2   "100"      - 35.0  7.0  83  17
+19 12  2  9 2S   E  7 CK    "50"      - 23.0 19.0  55  45
+16 12 12 42 2S   W  7 H5    "50"      - 23.0 19.0  55  45
+ 3 12 29 25 3S   W  8 H5    "50"      - 23.0 19.0  55  45
+ 6 12 32 22 2S   W  7 H5    "50"      - 23.0 19.0  55  45
+ 8 12 34 20 2H   N  7 D7       -   "50" 18.0 24.0  43  57
+ 5 12 23 31 3H   S  7 S8       -  "100" 16.0 26.0  38  62
+15 12 13 41 2S   W  8 C2       -  "110" 11.0 31.0  26  74
+12 12 16 38 2S   E  8 CK       -  "110" 11.0 31.0  26  74
+ 7 12 21 33 2S   E  8 CK       -  "110" 11.0 31.0  26  74
+ 4 12 30 24 2S   W  8 C2       -  "110" 11.0 31.0  26  74
+11 12 17 37 1N   W  8 H8       -  "120"  6.0 36.0  14  86
+ 2 12 26 28 1S   W  9 C2       -  "140"  4.0 38.0  10  90
+22 12  6  5 3HX  S  7 HQ       -  "300"  1.0 41.0   2  98
+10 12 18 36 3HX  N  7 D7       -  "300"  1.0 41.0   2  98
+[OptimumScore "NS -120"]
+[OptimumContract "2N W 8"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  8
+W  H  6
+W  D  6
+W  C  8
+W NT  8
+N  S  5
+N  H  7
+N  D  7
+N  C  5
+N NT  5
+E  S  8
+E  H  6
+E  D  6
+E  C  8
+E NT  8
+S  S  5
+S  H  7
+S  D  7
+S  C  5
+S NT  5
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "25"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:54.AQ96.974.QJ74 JT8632.87.85.K98 A97.K5.AJT632.A3 KQ.JT432.KQ.T652"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+22 13  7  6 3N   S 12 C6   "490"      - 42.0  0.0 100   0
+19 13  3 10 3N   N 11 H8   "460"      - 27.0 15.0  64  36
+20 13  4  9 3N   S 11 H3   "460"      - 27.0 15.0  64  36
+21 13  5  8 3N   N 11 H8   "460"      - 27.0 15.0  64  36
+17 13 12  1 3N   S 11 H6   "460"      - 27.0 15.0  64  36
+16 13 13 43 3N   S 11 H3   "460"      - 27.0 15.0  64  36
+15 13 14 42 3N   S 11 H3   "460"      - 27.0 15.0  64  36
+14 13 15 41 3N   N 11 SJ   "460"      - 27.0 15.0  64  36
+11 13 18 38 3N   S 11 C6   "460"      - 27.0 15.0  64  36
+10 13 19 37 3N   S 11 H3   "460"      - 27.0 15.0  64  36
+ 7 13 22 34 3N   S 11 H2   "460"      - 27.0 15.0  64  36
+ 2 13 27 29 3N   S 11 C5   "460"      - 27.0 15.0  64  36
+ 4 13 31 25 3N   S 11 H4   "460"      - 27.0 15.0  64  36
+ 6 13 33 23 3N   S 11 H3   "460"      - 27.0 15.0  64  36
+ 8 13 35 21 3N   S 11 H2   "460"      - 27.0 15.0  64  36
+18 13 11  2 3N   N 10 SJ   "430"      -  9.0 33.0  21  79
+12 13 17 39 3N   S 10 H3   "430"      -  9.0 33.0  21  79
+13 13 40 16 3N   N 10 H8   "430"      -  9.0 33.0  21  79
+ 1 13 44 28 3N   N 10 SJ   "430"      -  9.0 33.0  21  79
+ 3 13 30 26 3N   S  9 H3   "400"      -  3.0 39.0   7  93
+ 9 13 36 20 3N   S  9 C6   "400"      -  3.0 39.0   7  93
+ 5 13 24 32 3N   S  8 SK       -   "50"  0.0 42.0   0 100
+[OptimumScore "NS 460"]
+[OptimumContract "5N N 11"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  6
+W  H  4
+W  D  1
+W  C  4
+W NT  2
+N  S  7
+N  H  8
+N  D 11
+N  C  9
+N NT 11
+E  S  6
+E  H  4
+E  D  2
+E  C  4
+E NT  2
+S  S  7
+S  H  8
+S  D 11
+S  C  9
+S NT 11
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "26"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "E:9765.96.A975.Q97 Q83.AKJ832.JT2.J KJ.Q5.8643.A6532 AT42.T74.KQ.KT84"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+19 13  3 10 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+20 13  4  9 4H   S 11 CA   "650"      - 28.0 14.0  67  33
+21 13  5  8 4H   S 11 D3   "650"      - 28.0 14.0  67  33
+22 13  7  6 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+18 13 11  2 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+17 13 12  1 4H   S 11 D8   "650"      - 28.0 14.0  67  33
+14 13 15 41 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+11 13 18 38 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+10 13 19 37 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+ 5 13 24 32 4H   S 11 D5   "650"      - 28.0 14.0  67  33
+ 3 13 30 26 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+ 8 13 35 21 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+ 9 13 36 20 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+13 13 40 16 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+ 1 13 44 28 4H   S 11 D6   "650"      - 28.0 14.0  67  33
+16 13 13 43 4H   S 10 D6   "620"      -  6.0 36.0  14  86
+15 13 14 42 4H   S 10 D5   "620"      -  6.0 36.0  14  86
+12 13 17 39 4H   S 10 D6   "620"      -  6.0 36.0  14  86
+ 7 13 22 34 4H   S 10 D6   "620"      -  6.0 36.0  14  86
+ 2 13 27 29 4H   S 10 D6   "620"      -  6.0 36.0  14  86
+ 4 13 31 25 4S   S 10 D6   "620"      -  6.0 36.0  14  86
+ 6 13 33 23 4H   S 10 D6   "620"      -  6.0 36.0  14  86
+[OptimumScore "NS 630"]
+[OptimumContract "4N S 10"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  4
+W  H  2
+W  D  6
+W  C  6
+W NT  3
+N  S  9
+N  H 10
+N  D  6
+N  C  7
+N NT 10
+E  S  4
+E  H  2
+E  D  6
+E  C  6
+E NT  3
+S  S  9
+S  H 10
+S  D  6
+S  C  7
+S NT 10
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "27"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "S:K8742.762.J62.Q3 T95.J54.T874.KJ7 AQ.AT93.AK.T8654 J63.KQ8.Q953.A92"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+18 14 12  3 2S   N  9 HK   "140"      - 39.0  3.0  93   7
+16 14 14  1 2S   N  9 D5   "140"      - 39.0  3.0  93   7
+15 14 15 43 2S   N  9 HK   "140"      - 39.0  3.0  93   7
+14 14 16 42 3S   N  9 S2   "140"      - 39.0  3.0  93   7
+20 14  5 10 2S   N  8 HK   "110"      - 26.0 16.0  62  38
+21 14  6  9 2S   N  8 D3   "110"      - 26.0 16.0  62  38
+22 14  8  7 2S   N  8 HK   "110"      - 26.0 16.0  62  38
+17 14 13  2 2S   N  8 HK   "110"      - 26.0 16.0  62  38
+11 14 19 39 2S   N  8 HK   "110"      - 26.0 16.0  62  38
+ 5 14 25 33 2S   N  8 HK   "110"      - 26.0 16.0  62  38
+ 3 14 31 27 2S   N  8 H3   "110"      - 26.0 16.0  62  38
+ 4 14 32 26 2S   N  8 HK   "110"      - 26.0 16.0  62  38
+ 1 14 44 29 2S   N  8 HK   "110"      - 26.0 16.0  62  38
+19 14  4 11 3N   N  8 HQ       -   "50" 11.0 31.0  26  74
+12 14 18 40 3C   N  8 D5       -   "50" 11.0 31.0  26  74
+ 7 14 23 35 2S   N  7 HK       -   "50" 11.0 31.0  26  74
+ 2 14 28 30 2S   N  7 D5       -   "50" 11.0 31.0  26  74
+ 9 14 37 21 2S   N  7 HK       -   "50" 11.0 31.0  26  74
+13 14 41 17 2S   N  7 HK       -   "50" 11.0 31.0  26  74
+ 6 14 34 24 2N   N  6 D3       -  "100"  4.0 38.0  10  90
+10 14 20 38 3N   N  6 D3       -  "150"  1.0 41.0   2  98
+ 8 14 36 22 3N   N  6 D3       -  "150"  1.0 41.0   2  98
+[OptimumScore "NS 110"]
+[OptimumContract "2S S 8"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  4
+W  H  5
+W  D  6
+W  C  5
+W NT  6
+N  S  8
+N  H  8
+N  D  6
+N  C  8
+N NT  6
+E  S  4
+E  H  5
+E  D  6
+E  C  5
+E NT  6
+S  S  8
+S  H  8
+S  D  6
+S  C  8
+S NT  6
+
+[Event "Open /2 DN1 National Finale directe 21-22 - Séance 5"]
+[Site "Fédération Française de Bridge"]
+[Date "2022.02.06"]
+[Board "28"]
+[West ""]
+[North ""]
+[East ""]
+[South ""]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "W:J86.KJ75.A65.852 K7432.A6.42.QJ64 AT95.94.KT73.K97 Q.QT832.QJ98.AT3"]
+[Scoring "MatchPoints;MP1"]
+[Declarer ""]
+[Contract ""]
+[Result ""]
+[Competition "Pairs"]
+[EventDate "2022.01.22"]
+[Annotator "FFB - Christian BORDONNEAU"]
+[Application "Magic Contest France - Read more at www.brenning.se"]
+[ScoreTable "Table\2R;Round\2R;PairId_NS\2R;PairId_EW\2R;Contract\4L;Declarer\1R;Result\2R;Lead\3L;Score_NS\6R;Score_EW\6R;MP_NS\4R;MP_EW\4R;Percentage_NS\3R;Percentage_EW\3R"]
+19 14  4 11 2HX  S  8 S6   "670"      - 42.0  0.0 100   0
+16 14 14  1 2S   E  5 DQ   "150"      - 40.0  2.0  95   5
+10 14 20 38 2H   S  9 DA   "140"      - 38.0  4.0  90  10
+15 14 15 43 2H   S  8 S6   "110"      - 33.0  9.0  79  21
+ 7 14 23 35 2H   S  8 C5   "110"      - 33.0  9.0  79  21
+ 4 14 32 26 2H   S  8 C3   "110"      - 33.0  9.0  79  21
+ 6 14 34 24 2H   S  8 C3   "110"      - 33.0  9.0  79  21
+20 14  5 10 Pass -  - -      "0"      - 20.0 22.0  48  52
+22 14  8  7 Pass -  - -      "0"      - 20.0 22.0  48  52
+18 14 12  3 Pass -  - -      "0"      - 20.0 22.0  48  52
+14 14 16 42 Pass -  - -      "0"      - 20.0 22.0  48  52
+12 14 18 40 Pass -  - -      "0"      - 20.0 22.0  48  52
+ 5 14 25 33 Pass -  - -      "0"      - 20.0 22.0  48  52
+ 3 14 31 27 Pass -  - -      "0"      - 20.0 22.0  48  52
+13 14 41 17 Pass -  - -      "0"      - 20.0 22.0  48  52
+ 1 14 44 29 Pass -  - -      "0"      - 20.0 22.0  48  52
+21 14  6  9 2H   S  7 D2       -  "100"  6.0 36.0  14  86
+11 14 19 39 3C   N  8 D7       -  "100"  6.0 36.0  14  86
+ 2 14 28 30 2H   S  7 C6       -  "100"  6.0 36.0  14  86
+ 8 14 36 22 2C   S  7 C2       -  "100"  6.0 36.0  14  86
+ 9 14 37 21 2H   S  7 C2       -  "100"  6.0 36.0  14  86
+17 14 13  2 2N   N  5 S5       -  "300"  0.0 42.0   0 100
+[OptimumScore "NS 110"]
+[OptimumContract "2H N 8"]
+[OptimumResultTable "Declarer;Denomination\2R;Result\2R"]
+W  S  6
+W  H  5
+W  D  6
+W  C  5
+W NT  6
+N  S  7
+N  H  8
+N  D  7
+N  C  8
+N NT  7
+E  S  6
+E  H  5
+E  D  6
+E  C  5
+E NT  6
+S  S  7
+S  H  8
+S  D  7
+S  C  8
+S NT  6

@@ -1,5 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass
+import logging
 from typing import Dict, List, Optional, Tuple
 
 from common_utils import Direction, Card, BiddingSuit, Suit
@@ -16,14 +17,22 @@ class PlayRecord:
     def from_pbn(string: str) -> Optional[PlayRecord]:
         str_leader = Pbn.get_tag_content(string, "Play")
         str_result = Pbn.get_tag_content(string, "Result")
-        if not str_leader or not str_result :
+        if not str_result:
             return None
-        leader = Direction.from_str(str_leader)
+
+        str_declarer = Pbn.get_tag_content(
+            string, "Declarer") if not str_leader else None
+        leader = Direction.from_str(str_leader) if str_leader else Direction.from_str(
+            str_declarer) if str_declarer else None
+        if not leader:
+            return None
         result = int(str_result)
         trump = BiddingSuit.from_str(
-            Pbn.get_tag_content(string, "Contract").replace('X','')[1:])
-        str_tricks = Pbn.get_play_record(string).split('\n')
-
+            Pbn.get_tag_content(string, "Contract").replace('X', '')[1:])
+        raw_tricks_data = Pbn.get_content_under_tag(string, "Play")
+        str_tricks = raw_tricks_data.split('\n') if raw_tricks_data else None
+        if str_tricks is None:
+            return PlayRecord(tricks=int(result), leader=leader, record=None)
         tricks = []
         trick_winner = leader
         for str_trick in str_tricks:
@@ -33,7 +42,7 @@ class PlayRecord:
             for card in cards_str:
                 try:
                     trick_record[current_dir] = Card.from_str(card)
-                except KeyError:
+                except IndexError:
                     pass
                 current_dir = current_dir.next()
             trick = Trick(trick_winner, trick_record)
@@ -50,13 +59,19 @@ class PlayRecord:
                 string += trick.__str__() + "\n"
         return string
 
-    def print_as_pbn(self) -> str :
+    def print_as_pbn(self) -> str:
         string = ""
-        string += Pbn.print_tag("Play",self.leader.abbreviation())
-        if self.record :
-            for trick in self.record :
-                string+=trick.print_as_pbn(self.leader)+"\n"
-        return string +"*"
+        string += Pbn.print_tag("Play", self.leader.abbreviation())
+        if self.record:
+            for trick in self.record:
+                string += trick.print_as_pbn(self.leader)+"\n"
+        return string + "*"
+
+    def __len__(self) :
+        if self.record is None :
+            return 0
+        else :
+            return len(self.record)
 
 
 @dataclass
@@ -66,7 +81,11 @@ class Trick():
 
     def winner(self, trump: BiddingSuit) -> Direction:
         winner = self.lead
-        suit_led = self.cards[winner].suit
+        suit_led = self.lead #Default value, sould not append
+        try :
+            suit_led = self.cards[winner].suit
+        except :
+            logging.warning("The winner of the last trick didn't play in the following one")
         if trump == BiddingSuit.NO_TRUMP:
             for dir, card in self.cards.items():
                 if card.suit == suit_led:
@@ -102,3 +121,17 @@ class Trick():
                 string += "-  "
             first_dir = first_dir.offset(1)
         return string[:-1]
+
+    def __trick_as_list__(self) -> List[Tuple[Direction,Card]] :
+        trick_as_list : List[Tuple[Direction,Card]]= []
+        dir : Direction = self.lead
+        for _ in range(len(self.cards)) :
+            trick_as_list.append((dir,self.cards[dir]))
+            dir = dir.offset(1)
+        return trick_as_list
+
+    def __getitem__(self,key) :
+        return self.__trick_as_list__()[key]
+
+    def __len__(self) :
+        return len(self.cards)

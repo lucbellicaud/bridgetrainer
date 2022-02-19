@@ -30,6 +30,9 @@ class Bid:
     def print_as_pbn(self) -> str:
         return str(self.level)+self.suit.abbreviation(verbose_no_trump=True)
 
+    def __str__(self) -> str :
+        return str(self.level)+self.suit.symbol()
+
     @staticmethod
     def from_str(string: str) -> Bid:
         return Bid(int(string[0]), BiddingSuit.from_str(string[1:]))
@@ -41,6 +44,8 @@ class Declaration(Enum):
     REDOUBLE = 2, "XX", "r"
 
     __from_str_map__ = {"PASS": PASS, "P": PASS, "X": DOUBLE, "XX": REDOUBLE}
+
+    __color__ = {PASS : 'green', DOUBLE : 'red', REDOUBLE :"blue"}
 
     @classmethod
     def from_str(cls, declaration_str: str) -> Declaration:
@@ -58,6 +63,9 @@ class Declaration(Enum):
 
     def print_as_pbn(self) -> str:
         return self.value[1]
+
+    def color(self) -> str :
+        return self.__color__[self.value]
 
     @classmethod
     def is_str_declaration(cls, bidding_suit_str) -> bool:
@@ -121,7 +129,8 @@ class FinalContract:
         """
         4SXN,Pass...
         """
-        if string == 'Pass':
+        string = string.replace(' ','')
+        if 'P' in string :
             return FinalContract(bid=None, declaration=Declaration.PASS, declarer=None)
         declarer = Direction.from_str(string[-1])
         string = string[:-1]
@@ -149,6 +158,15 @@ class FinalContract:
             return string + Pbn.print_tag("Contract", self.bid.print_as_pbn())
         else:
             return string + Pbn.print_tag("Contract", self.bid.print_as_pbn()+self.declaration.print_as_pbn())
+
+    def print_pbn_abbrevation(self) -> str :
+        if not self.bid or not self.declarer:
+            return "Pass"
+        else:
+            if self.declaration != Declaration.PASS :
+                return self.bid.print_as_pbn()+self.declaration.value[1]
+            else :
+                return self.bid.print_as_pbn()
 
     def __str__(self) -> str:
         if not self.bid or not self.declarer:

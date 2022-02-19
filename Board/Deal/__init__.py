@@ -1,2 +1,2 @@
 from .PlayerHand import PlayerHand
-from .Deal import Deal
+from .Deal import Deal,Diag

@@ -16,6 +16,7 @@ class Direction(Enum):
     WEST = 3
 
     __from_str_map__ = {"N": NORTH, "E": EAST, "S": SOUTH, "W": WEST}
+    __to_str__ = {NORTH : "North",SOUTH : "South",EAST : "East",WEST : "West"}
 
     @classmethod
     def from_str(cls, direction_str: str) -> Direction:
@@ -42,6 +43,9 @@ class Direction(Enum):
     def abbreviation(self) -> str:
         return self.name[0]
 
+    def to_str(self) -> str :
+        return self.__to_str__[self.value]
+
 
 @total_ordering
 class Suit(Enum):
@@ -50,7 +54,12 @@ class Suit(Enum):
     HEARTS = 2
     SPADES = 3
 
-    __from_str_map__ = {"S": SPADES, "H": HEARTS, "D": DIAMONDS, "C": CLUBS}
+    __from_str_map__ = {"S": SPADES, "H": HEARTS, "D": DIAMONDS,
+                        "C": CLUBS, '♠': SPADES, '♥': HEARTS, '♦': DIAMONDS, '♣': CLUBS}
+
+    __to_symbol__ = {SPADES : '♠',HEARTS : '♥',DIAMONDS:'♦',CLUBS:'♣'}
+
+    __4_colors__ = {SPADES : 'blue',HEARTS : 'red',DIAMONDS:'orange',CLUBS:'green'}
 
     @classmethod
     def from_str(cls, suit_str: str) -> Suit:
@@ -64,6 +73,12 @@ class Suit(Enum):
 
     def abbreviation(self) -> str:
         return self.name[0]
+
+    def symbol(self) -> str :
+        return self.__to_symbol__[self.value]
+
+    def color(self) -> str :
+        return self.__4_colors__[self.value]
 
 
 @total_ordering
@@ -131,7 +146,10 @@ class BiddingSuit(Enum):
     NO_TRUMP = 4, None
 
     __from_str_map__ = {"S": SPADES, "H": HEARTS,
-                        "D": DIAMONDS, "C": CLUBS, "N": NO_TRUMP, "NT": NO_TRUMP}
+                        "D": DIAMONDS, "C": CLUBS, "N": NO_TRUMP, "NT": NO_TRUMP,
+                        '♠': SPADES, '♥': HEARTS, '♦': DIAMONDS, '♣': CLUBS, 'SA': NO_TRUMP}
+    __to_symbol__ = {SPADES : '♠',HEARTS : '♥',DIAMONDS:'♦',CLUBS:'♣', NO_TRUMP : "NT"}
+    __4_colors__ = {SPADES : 'blue',HEARTS : 'red',DIAMONDS:'orange',CLUBS:'green',NO_TRUMP : 'black'}
 
     def __lt__(self, other) -> bool:
         return self.value < other.value
@@ -146,6 +164,12 @@ class BiddingSuit(Enum):
         if self.value == BiddingSuit.NO_TRUMP.value and verbose_no_trump:
             return "NT"
         return self.name[0]
+
+    def symbol(self) -> str :
+        return self.__to_symbol__[self.value]
+    
+    def color(self) -> str :
+        return self.__4_colors__[self.value]
 
     @classmethod
     def from_str(cls, bidding_suit_str: str) -> BiddingSuit:
@@ -177,7 +201,10 @@ class Card:
 
     @classmethod
     def from_str(cls, card_str) -> Card:
-        return Card(Suit.from_str(card_str[0]), Rank.from_str(card_str[1]))
+        try:
+            return Card(Suit.from_str(card_str[0]), Rank.from_str(card_str[1]))
+        except:
+            return Card(Suit.from_str(card_str[1]), Rank.from_str(card_str[0]))
 
 
 TOTAL_DECK = []

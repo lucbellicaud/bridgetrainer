@@ -22,10 +22,12 @@ class DealRecord:
     names: Optional[Dict[Direction, str]]
 
     @staticmethod
-    def from_pbn(string: str) -> DealRecord:
+    def from_pbn(string: str) -> Optional[DealRecord]:
+        score = Pbn.get_score(string)
+        if score is None :
+            return None
         sequence = Sequence.from_pbn(string)
         play_record = PlayRecord.from_pbn(string)
-        score = Pbn.get_score(string)
         names = {dir: Pbn.get_tag_content(
             string, Pbn.direction_to_tag(dir)) for dir in Direction}
         return DealRecord(sequence=sequence, play_record=play_record, names=names, score=score)

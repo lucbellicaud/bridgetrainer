@@ -1,14 +1,15 @@
 from __future__ import annotations
 from typing import Dict, Iterable, List
 
-from common_utils import Suit, Rank,Card
+from common_utils import Suit, Rank, Card
+
 
 class PlayerHand():
     """Contain one hand"""
 
     def __init__(self, suits: Dict[Suit, List[Rank]]):
-        self.suits = suits
-        self.cards = []
+        self.suits: Dict[Suit, List[Rank]] = suits
+        self.cards: List[Card] = []
         for suit in reversed(Suit):
             for rank in self.suits[suit]:
                 self.cards.append(Card(suit, rank))
@@ -62,10 +63,10 @@ class PlayerHand():
         """Create a hand from a string with the following syntax SK7HAQT632DK4CQ62"""
         current_suit = Suit.SPADES
         cards = []
-        for str_card in string :
-            if str_card in ["S","H","D","C"] :
+        for str_card in string:
+            if str_card in ["S", "H", "D", "C"]:
                 current_suit = Suit.from_str(str_card)
-            else :
+            else:
                 cards.append(Card(current_suit, Rank.from_str(str_card)))
 
         return PlayerHand.from_cards(cards)
@@ -84,14 +85,14 @@ class PlayerHand():
         repr_str = ".".join("".join(suit) for suit in reversed(suit_arrays))
         return repr_str
 
-    def __repr__(self) -> str :
+    def __repr__(self) -> str:
         suit_arrays = [[], [], [], []]
         for card in self.cards:
             suit_arrays[card.suit.value].append(repr(card))
         repr_str = "|".join("".join(suit) for suit in reversed(suit_arrays))
         return f"PlayerHand({repr_str})"
 
-    def __str__(self) -> str :
+    def __str__(self) -> str:
         suit_arrays = [['♣'], ['♦'], ['♥'], ['♠']]
         for card in self.cards:
             suit_arrays[card.suit.value].append(repr(card))
@@ -104,12 +105,13 @@ class PlayerHand():
     def __hash__(self) -> int:
         return hash(set(self.cards))
 
-    def append(self,card : Card) :
+    def append(self, card: Card):
         self.cards.append(card)
         self.suits[card.suit].append(card.rank)
 
-    def len(self) -> int :
+    def len(self) -> int:
         return sum([len(ranks) for suit, ranks in self.suits.items()])
+
 
 if __name__ == '__main__':
     pass

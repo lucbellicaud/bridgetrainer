@@ -1,5 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass
+import logging
 
 from common_utils import Direction
 from common_utils.parsing_tools import Pbn
@@ -21,7 +22,7 @@ class Sequence:
     def check_append_validity(self, seq_atom_to_add: SequenceAtom) -> bool:
         """Check if a new bid is valid"""
         if self.is_done():
-            print("Done, can't add")
+            logging.warning("Bidding done, can't add")
             return False
         if seq_atom_to_add.bid:  # If bid
             for seq_atom in reversed(self.sequence):
@@ -72,7 +73,7 @@ class Sequence:
         checking_seq = Sequence([],None)
         for seq_atom in self.sequence:
             if not checking_seq.append_with_check(seq_atom):
-                print("Invalid atom : ", seq_atom)
+                logging.error("Invalid atom : ", seq_atom)
                 return False
         return True
 
@@ -94,10 +95,12 @@ class Sequence:
     #### Scrapping ####
 
     @staticmethod
-    def from_pbn(string: str) -> Sequence:
+    def from_pbn(string: str) -> Optional[Sequence]:
         sequence = []
+        str_sequence = Pbn.get_content_under_tag(string,"Auction")
+        if str_sequence is None :
+            return None
         alerts = Pbn.get_all_alerts(string)
-        str_sequence = Pbn.get_sequence(string)
         for str_seq_atom in str_sequence.split():
             if "=" in str_seq_atom:
                 sequence[-1].alert = alerts.pop(0)

@@ -1,10 +1,16 @@
-from Board.DealRecord.Sequence.tests import test as seq_test
-from Board.DealRecord.PlayRecord.tests import test as play_record_test
-from Board.DealRecord.tests import test as deal_record_test
-from Board.Deal.tests import test as deal_test
-from Board.tests import test as board_test
+import logging
+import tkinter as tk
+from UI.Deal import FixedDealUI
+from Board import PlayerHand, Diag, Deal, SetOfPairsBoard
 
-board_test()
-#play_record_test()
-#seq_test()
-# deal_test()
+
+logging.basicConfig(filename='bridgetrainer.log', level=logging.INFO)
+
+root = tk.Tk()
+set_1 = SetOfPairsBoard.from_pbn(
+    "C:\\Users\\lucbe\\OneDrive\\Documents\\Bridge\\bridgetrainer\\Boards\\Pbns\\41284.pbn")
+dealUI = FixedDealUI(
+    root, set_1.boards[0].deal, set_1.boards[0].main_deal_record)
+dealUI.pack()
+
+root.mainloop()

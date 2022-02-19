@@ -1,1 +1,1 @@
-from .Sequence import Sequence,SequenceAtom
+from .Sequence import Sequence,SequenceAtom,FinalContract
