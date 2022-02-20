@@ -1,4 +1,5 @@
 from __future__ import annotations
+from enum import Enum
 from common_utils import Direction
 
 position_dict = {
@@ -18,3 +19,6 @@ ColorDic = {
     True: "red",
     False: "green"
 }
+
+DEFAULT_GREY = '#D3D3D3'
+LIGHT_BLUE = '#71BAFF'

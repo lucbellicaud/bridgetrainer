@@ -1,10 +1,13 @@
+import logging
 import tkinter as tk
-from typing import Dict, Optional, Tuple
+from tkinter import messagebox
+from typing import Dict, List, Optional, Tuple
 from Board import PlayRecord, Trick
-from common_utils import Card, Direction
-from UI import MAIN_FONT_SMALL,MAIN_FONT_BIG,MAIN_FONT_STD,position_dict
+from common_utils import Card, Direction,BiddingSuit
+from UI import MAIN_FONT_SMALL, MAIN_FONT_BIG, MAIN_FONT_STD, position_dict
 
 from typing import TYPE_CHECKING
+
 if TYPE_CHECKING:
     from .Deal import FixedDealUI
 
@@ -48,13 +51,13 @@ class PlayRecordNavigationBar(tk.Frame):
     def __init__(self, parent) -> None:
         tk.Frame.__init__(self, parent)
         self.previous_trick = tk.Button(
-            self, text=" << ", command=parent.previous_trick)
+            self, text=" << ", command=parent.previous_trick, font=MAIN_FONT_SMALL)
         self.previous_card = tk.Button(
-            self, text=" < ", command=parent.previous_card)
+            self, text=" < ", command=parent.previous_card, font=MAIN_FONT_SMALL)
         self.next_card = tk.Button(
-            self, text=" > ", command=parent.display_next_card)
+            self, text=" > ", command= lambda : parent.display_next_card(None,None), font=MAIN_FONT_SMALL)
         self.next_trick = tk.Button(
-            self, text=" >> ", command=parent.display_next_trick)
+            self, text=" >> ", command=parent.display_next_trick, font=MAIN_FONT_SMALL)
 
         self.previous_trick.grid(column=0, row=0)
         self.previous_card.grid(column=1, row=0)
@@ -62,23 +65,43 @@ class PlayRecordNavigationBar(tk.Frame):
         self.next_trick.grid(column=3, row=0)
 
 
+class PlayRecordEditOptions(tk.Frame):
+    def __init__(self, parent) -> None:
+        tk.Frame.__init__(self, parent)
+        self.master: PlayRecordUI
+        self.edit_from_start = tk.Button(
+            self, text="Edit from start", font=MAIN_FONT_SMALL)
+        self.edit_from_here = tk.Button(
+            self, text="Edit from here", font=MAIN_FONT_SMALL, command=self.master.edit_play_record_from_current_state)
+
+        self.edit_from_start.grid(column=0, row=0)
+        self.edit_from_here.grid(column=1, row=0)
+
+
 class PlayRecordUI(tk.Frame):
-    def __init__(self, parent, play_record: PlayRecord) -> None:
+    """Class to navigate through a recorded card play"""
+
+    def __init__(self, parent, play_record: PlayRecord, trump : BiddingSuit) -> None:
         if play_record.record is None:
             return
         tk.Frame.__init__(self, parent)
         self.master: FixedDealUI
-        self.play_record = play_record
-        self.trick_index = -1
-        self.card_index = -1
-        self.current_trick = play_record.record[0]
+        self.trump : BiddingSuit = trump
+        self.play_record: PlayRecord = play_record
+        self.trick_index: int = -1
+        self.card_index: int = -1
+        self.current_trick: Trick = play_record.record[0]
         self.currents_cards: Dict[Direction, CardUI] = {
             dir: CardUI(self, None) for dir in Direction}
         self.init_cards()
-        self.play_record_navigation_bar = PlayRecordNavigationBar(self)
-        self.play_record_navigation_bar.grid(
+        self.navigation_bar = PlayRecordNavigationBar(self)
+        self.navigation_bar.grid(
             row=3, column=0, columnspan=3, sticky=tk.S)
-        self.display_next_card()
+        self.edit_options = PlayRecordEditOptions(self)
+        self.edit_options.grid(row=4, column=0, columnspan=3, sticky=tk.S)
+        self.edit_mode = False
+        self.new_record: List[Trick] = []
+        self.check_buttons_availability()
 
     def get_next_card(self) -> Tuple[Direction, Card]:
         if self.play_record.record is None:
@@ -90,38 +113,92 @@ class PlayRecordUI(tk.Frame):
             self.current_trick = self.play_record.record[self.trick_index]
         return self.current_trick[self.card_index]
 
-    def display_next_card(self) -> None:
-        dir, card = self.get_next_card()
-        self.currents_cards[dir].set_values(card)
-        self.master.play_a_card(dir=dir, card=card)
+    def display_next_card(self, card: Optional[Card], dir: Optional[Direction]) -> None:
+        # Not in edit mode
+        if not self.edit_mode and card is None and dir is None:
+            dir, card = self.get_next_card()
+            self.currents_cards[dir].set_values(card)
+            self.master.play_a_card(dir=dir, card=card)
+            if self.card_index!=3 :
+                self.master.has_to_play(dir.next(),self.current_trick[0][1].suit)
+            else :
+                self.master.has_to_play(self.current_trick.winner(self.trump),None)
+
+        # In edit mode
+        elif self.edit_mode and card and dir:            
+            if self.new_record == [] or len(self.new_record[-1]) == 4:
+                self.clear_cards()
+                self.new_record.append(Trick(lead=dir, cards={dir: card}))
+            else:
+                self.new_record[-1].cards[dir] = card
+            self.currents_cards[dir].set_values(card)
+            if len(self.new_record[-1])!=4 :
+                self.master.has_to_play(dir.next(),self.new_record[-1][0][1].suit)
+            else :
+                self.master.has_to_play(self.new_record[-1].winner(self.trump),None)
+        else:
+            messagebox.showerror(
+                "You're in edit mode and didn't submit a card or submited a card and wasn't in edit mode")
+            logging.error(
+                "You're in edit mode and didn't submit a card or submited a card and wasn't in edit mode")
         self.check_buttons_availability()
-        return
 
     def display_next_trick(self) -> None:
-        self.display_next_card()
+        self.display_next_card(None, None)
         while self.card_index != 3:
-            self.display_next_card()
+            self.display_next_card(None, None)
 
     def previous_card(self) -> None:
         if self.play_record.record is None:
             raise Exception("No play record !")
-        dir, last_card = self.current_trick[self.card_index]
-        self.master.give_back_a_card(dir=dir, card=last_card)
-        self.card_index = (self.card_index-1) % 4
-        if self.card_index != 3:
-            self.clear_card(dir)
-        else:  # go to last trick
-            self.trick_index -= 1
-            self.current_trick = self.play_record.record[self.trick_index]
-            self.clear_cards()
-            for dir, card in self.current_trick:
-                self.currents_cards[dir].set_values(card)
+
+        #Not in edit mode
+        self.master.end_of_turn_for_everyone()
+        if not self.edit_mode:
+            dir, last_card = self.current_trick[self.card_index]
+            self.master.give_back_a_card(dir=dir, card=last_card)
+            self.card_index = (self.card_index-1) % 4
+            if self.card_index != 3:
+                self.clear_card(dir)
+                self.master.has_to_play(dir,self.current_trick[0][1].suit)
+            elif self.card_index==3 and self.trick_index==0 : #Case of first card
+                self.clear_card(dir)
+                self.master.has_to_play(dir,None)
+                self.card_index=-1
+                self.trick_index=-1
+            else:  # go to last trick
+                self.trick_index -= 1
+                self.current_trick = self.play_record.record[self.trick_index]
+                self.clear_cards()
+                self.master.has_to_play(self.current_trick.winner(self.trump),None)
+                for dir, card in self.current_trick:
+                    self.currents_cards[dir].set_values(card)
+        #In edit mode
+        elif self.edit_mode:
+            if len(self.new_record[-1]) == 1:
+                dir, last_card = self.new_record.pop()[0]
+                self.master.give_back_a_card(dir=dir, card=last_card)
+                self.clear_cards()
+                if self.new_record :
+                    for dir, card in self.new_record[-1]:
+                        self.currents_cards[dir].set_values(card)
+            else:
+                dir, last_card = self.new_record[-1][-1]
+                self.new_record[-1].cards.pop(dir)
+                self.master.give_back_a_card(dir=dir, card=last_card)
+                self.clear_card(dir)
+
         self.check_buttons_availability()
 
     def previous_trick(self) -> None:
         self.previous_card()
-        while self.card_index != 3 and not (self.card_index == 0 and self.trick_index == 0):
-            self.previous_card()
+        if not self.edit_mode :
+            while self.card_index != 3 and not (self.card_index == 0 and self.trick_index == 0):
+                self.previous_card()
+        elif self.edit_mode :
+            while self.new_record and len(self.new_record[-1]) != 4 :
+                self.previous_card()
+
 
     def clear_card(self, dir: Direction) -> None:
         self.currents_cards[dir].clear_values()
@@ -134,36 +211,51 @@ class PlayRecordUI(tk.Frame):
             self.currents_cards[dir].grid(
                 row=position_dict[dir][0], column=position_dict[dir][1])
 
-    def check_if_max_tricks(self) :
-        if len(self.play_record)==self.trick_index+1 :
-            self.play_record_navigation_bar.next_trick['state']= tk.DISABLED
-        else :
-            self.play_record_navigation_bar.next_trick['state']= tk.NORMAL
+    def check_if_end_of_record(self):
+        if (len(self.play_record)+len(self.current_trick) == self.trick_index+1+self.card_index+1) or self.edit_mode:
+            self.navigation_bar.next_trick['state'] = tk.DISABLED
+            self.navigation_bar.next_card['state'] = tk.DISABLED
+        elif len(self.play_record) == self.trick_index+1:
+            self.navigation_bar.next_card['state'] = tk.NORMAL
+            self.navigation_bar.next_trick['state'] = tk.DISABLED
+        else:
+            self.navigation_bar.next_trick['state'] = tk.NORMAL
+            self.navigation_bar.next_card['state'] = tk.NORMAL
 
-    def check_if_end_of_record(self) :
-        if len(self.play_record)+len(self.current_trick)==self.trick_index+1+self.card_index+1 :
-            self.play_record_navigation_bar.next_trick['state']= tk.DISABLED
-            self.play_record_navigation_bar.next_card['state']= tk.DISABLED
-        elif len(self.play_record)==self.trick_index+1 :
-            self.play_record_navigation_bar.next_card['state']= tk.NORMAL
-            self.play_record_navigation_bar.next_trick['state']= tk.DISABLED
-        else :
-            self.play_record_navigation_bar.next_trick['state']= tk.NORMAL
-            self.play_record_navigation_bar.next_card['state']= tk.NORMAL
-
-
-    def check_if_record_begining(self) :
-        if self.trick_index==0 and self.card_index==0 :
-            self.play_record_navigation_bar.previous_card['state']= tk.DISABLED
-            self.play_record_navigation_bar.previous_trick['state']= tk.DISABLED
-        elif self.trick_index==0 :
-            self.play_record_navigation_bar.previous_card['state']= tk.NORMAL
-            self.play_record_navigation_bar.previous_trick['state']= tk.DISABLED
-        else :
-            self.play_record_navigation_bar.previous_card['state']= tk.NORMAL
-            self.play_record_navigation_bar.previous_trick['state']= tk.NORMAL
-
-    def check_buttons_availability(self) :
+    def check_if_record_begining(self):
+        if not self.edit_mode :
+            if self.trick_index <= 0 and self.card_index <= -1:
+                self.navigation_bar.previous_card['state'] = tk.DISABLED
+                self.navigation_bar.previous_trick['state'] = tk.DISABLED
+            elif self.trick_index <= 0:
+                self.navigation_bar.previous_card['state'] = tk.NORMAL
+                self.navigation_bar.previous_trick['state'] = tk.DISABLED
+            else:
+                self.navigation_bar.previous_card['state'] = tk.NORMAL
+                self.navigation_bar.previous_trick['state'] = tk.NORMAL
+        elif self.edit_mode :
+            if len(self.new_record)==0:
+                self.navigation_bar.previous_card['state'] = tk.DISABLED
+                self.navigation_bar.previous_trick['state'] = tk.DISABLED
+            elif len(self.new_record)==1:
+                self.navigation_bar.previous_card['state'] = tk.NORMAL
+                self.navigation_bar.previous_trick['state'] = tk.DISABLED
+            else:
+                self.navigation_bar.previous_card['state'] = tk.NORMAL
+                self.navigation_bar.previous_trick['state'] = tk.NORMAL
+                
+    def check_buttons_availability(self):
         self.check_if_end_of_record()
         self.check_if_record_begining()
-        
+
+    def edit_play_record_from_current_state(self):
+        if not self.play_record.record:
+            return
+        self.edit_mode = True
+        self.new_record = self.play_record.record[:self.trick_index] if self.trick_index > 0 else [
+        ]
+        last_trick = Trick(self.current_trick.lead, cards={
+                           self.current_trick[i][0]: self.current_trick[i][1] for i in range(self.card_index+1)})
+        self.new_record.append(last_trick)
+        self.master.edit_play_record_from_current_state()
+        self.check_buttons_availability()
