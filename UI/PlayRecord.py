@@ -179,13 +179,17 @@ class PlayRecordUI(tk.Frame):
                 dir, last_card = self.new_record.pop()[0]
                 self.master.give_back_a_card(dir=dir, card=last_card)
                 self.clear_cards()
-                if self.new_record :
+                if self.new_record!=[] :
+                    self.master.has_to_play(self.new_record[-1].winner(self.trump),None)
                     for dir, card in self.new_record[-1]:
                         self.currents_cards[dir].set_values(card)
+                else :
+                    self.master.has_to_play(dir=dir,suit=None)
             else:
                 dir, last_card = self.new_record[-1][-1]
                 self.new_record[-1].cards.pop(dir)
                 self.master.give_back_a_card(dir=dir, card=last_card)
+                self.master.has_to_play(dir,self.new_record[-1][0][1].suit)
                 self.clear_card(dir)
 
         self.check_buttons_availability()

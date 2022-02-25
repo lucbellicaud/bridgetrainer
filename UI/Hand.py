@@ -77,9 +77,6 @@ class PlayerHandUI(tk.Frame):
         if self.edit_mode :
             self.master.display_a_card(self.direction,card)
 
-        # Buttons
-        self.buttons_dicts[card.suit].disable_button(card.rank)
-
     def give_back_a_card(self, card: Card):
         current_state = self.suit_cards[card.suit].get()
         if card.rank.abbreviation() in current_state:
@@ -95,9 +92,6 @@ class PlayerHandUI(tk.Frame):
         self.suit_cards[card.suit].set(
             ("".join(rank.__str__() for rank in new_state_list)))
 
-        # Buttons
-        self.buttons_dicts[card.suit].enable_button(card.rank)
-
     def switch_to_edit_mode(self):
         self.edit_mode = True
         for i, suit in enumerate(reversed(Suit)):
@@ -108,11 +102,10 @@ class PlayerHandUI(tk.Frame):
         self.his_turn=True
         self.name_label.config(bg=LIGHT_BLUE,fg='white')
         for suit,button_list in self.buttons_dicts.items() :
-            if suit_played is None or suit == suit_played :
-                button_list.enable_all_buttons()
-            else :
-                button_list.disable_all_buttons()
-    
+            button_list.disable_all_buttons()
+            if suit_played is None or suit == suit_played or self.suit_cards[suit_played].get()=='':
+                button_list.enable_not_played([Rank.from_str(c) for c in self.suit_cards[suit].get()])
+
     def end_of_turn(self) :
         self.his_turn=False
         self.name_label.config(bg=DEFAULT_GREY)
@@ -150,10 +143,10 @@ class SuitButtons(tk.Frame):
         for button in self.buttons_list.values() :
             button.config(state=tk.DISABLED)
 
-    def diable_all_played_cards(self,ranks : List[Rank]) : 
+    def enable_not_played(self,not_played_ranks : List[Rank]) : 
         for rank,button in self.buttons_list.items() :
-            if rank not in ranks :
-                button.config(state=tk.DISABLED)
+            if rank in not_played_ranks :
+                button.config(state=tk.NORMAL)
     
     def enable_all_buttons(self) :
         for button in self.buttons_list.values() :

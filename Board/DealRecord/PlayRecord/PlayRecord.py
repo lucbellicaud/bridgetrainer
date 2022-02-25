@@ -81,11 +81,12 @@ class Trick():
 
     def winner(self, trump: BiddingSuit) -> Direction:
         winner = self.lead
-        suit_led = self.lead #Default value, sould not append
+        suit_led = self.lead #Default value, should not append
         try :
             suit_led = self.cards[winner].suit
         except :
             logging.warning("The winner of the last trick didn't play in the following one")
+            return winner
         if trump == BiddingSuit.NO_TRUMP:
             for dir, card in self.cards.items():
                 if card.suit == suit_led:
@@ -93,10 +94,10 @@ class Trick():
                         winner = dir
         else:  # Trump
             for dir, card in self.cards.items():
-                if card.suit == trump:
+                if card.suit == trump.to_suit():
                     if self.cards[winner].suit == suit_led:
                         winner = dir
-                    if self.cards[winner].suit == trump:
+                    if self.cards[winner].suit == trump.to_suit():
                         if card > self.cards[winner]:
                             winner = dir
                 elif card.suit == suit_led and self.cards[winner].suit == suit_led:
@@ -108,7 +109,7 @@ class Trick():
     def __str__(self) -> str:
         string = ""
         for dir in Direction:
-            if self.cards[dir]:
+            if dir in self.cards:
                 string += '{0:3}'.format(self.cards[dir].__str__())
         return string
 
